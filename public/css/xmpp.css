@@ -1,0 +1,44 @@
+body {
+	background: #000000;
+}
+
+
+.heading {
+	font-family: times new roman;
+	font-size: 50px;
+	letter-spacing: 2px;
+	background: -webkit-linear-gradient(#bf00ff, #00fff2);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+
+
+p {
+	margin: 20px;
+	margin-left: 10%;
+	margin-right: 10%;
+	font-family: times new roman;
+	color: #03c67f;
+}
+
+.img {
+	height: 70vh;
+	background-image: url(../img/xmppland.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	image-rendering: pixelated;
+}
+
+.content {	
+	border: 4px double #023538;
+	border-left: 1px dotted #2d0233;
+	border-right: 1px dotted #2d0233;
+	border-radius: 70px;
+	background: linear-gradient(to top, #091216, #000000);
+	padding: 1%;
+	margin-top: 1%;
+	height: 70vh;
+}
+
+

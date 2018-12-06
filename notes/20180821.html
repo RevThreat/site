@@ -1,0 +1,144 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>20180821 Show Notes</title>
+  <link rel="stylesheet" href="../public/css/hack.css"/>
+  <link rel="stylesheet" href="../public/css/themesdark.css"/>
+</head>
+<body class="hack dark">
+<pre>
+                                                                  ██         
+    ──────────────────────────────────────────────────────────── ▒██ ──────  
+   ████████ ███  ██ ███  ██  ██████  ██████ ███████ ███████  ██  ▒██ ███████ 
+  ▒▒▒▒███  ▒███ ▒██▒███ ▒██ ███     ███▒▒▒ ▒▒▒▒▒▒▒██▒▒▒▒▒▒██▒██ █▒██▒▒▒▒▒▒▒██
+     ▒███  ▒███████▒███ ▒██▒███  ██▒███      ██████  ██  ▒██▒███████  ███ ▒██
+     ▒███  ▒███▒▒██▒███ ▒██▒███ ▒██▒███     ▒██▒▒██ ▒██  ▒██▒███▒███ ▒███ ▒██
+     ▒███  ▒███ ▒██▒▒█████ ▒▒██████▒▒██████ ▒██ ▒▒██▒▒█████ ▒██ ▒▒██ ▒██████ 
+     ▒▒▒   ▒███ ▒▒  ▒▒▒▒▒   ▒▒▒▒▒▒  ▒▒▒▒▒▒  ▒▒   ▒▒  ▒▒▒▒▒  ▒▒   ▒▒  ▒▒▒▒▒▒  
+    ────── ▒▒▒  ───────────────────────────────────────────────────────────
+                    <a href="https://www.twitch.tv/hardchat">Twitch</a> || <a href="https://www.youtube.com/channel/UCN5WEXJ3tNn7z6LSs94ehng">YouTube</a> || <a href="https://twitter.com/thugcrowd">Twitter</a> || <a href="https://www.patreon.com/thugcrowd">Patreon</a>
+               Episode 23: @zuphzuph's Defensive Automation Jamboree
+    ┌──────┐
+  ┌─┘ NEWS └────────────────────────────────────────────────────────────────┐
+  │ ─────────────────────────────────────────────────────────────────────── │
+  │ > <a href="https://nakedsecurity.sophos.com/2018/08/16/australians-who-wont-unlock-their-phones-could-face-10-years-in-jail/">Australians who won’t unlock their phones could face 10 years in jail</a> │ 
+  │                                                                         │
+  │ > <a href="https://www.miaminewtimes.com/news/microsoft-fiu-hacker-gets-jail-for-reveton-ransomware-virus-10625753">Microsoft Worker Gets Jail Time for Fake FBI Ransomware Attacks</a>       │
+  │                                                                         │
+  │ > <a href="https://www.theregister.co.uk/2018/08/14/intel_l1_terminal_fault_bugs/">Three more data-leaking security holes found in Intel chips</a>           │
+  │                                                                         │
+  │ > <a href="U.S. government seeks Facebook help to wiretap Messenger">U.S. government seeks Facebook help to wiretap Messenger</a>              │
+  │                                                                         │
+  │ > <a href="https://www.bleepingcomputer.com/news/security/new-turning-tables-technique-bypasses-all-windows-kernel-mitigations/">Turning Tables" Technique Bypasses All Windows Kernel Mitigations</a>     │
+  │                                                                         │
+  │ > <a href="https://motherboard.vice.com/en_us/article/xwk3wq/hackers-sextortion-half-million-blackmail-caught-watching-porn ">Criminals Made Half a Million Dollars Pretending They Watched You</a>     │
+  │   <a href="https://motherboard.vice.com/en_us/article/xwk3wq/hackers-sextortion-half-million-blackmail-caught-watching-porn ">Watch Porn</a>                                                            │
+  │                                                                         │
+  │ > <a href="https://arstechnica.com/tech-policy/2018/08/verizon-throttled-fire-departments-unlimited-data-during-calif-wildfire/">Verizon throttled fire dept. “unlimited” data during CA wildfire</a>      │
+  │                                                                         │
+  │ > <a href="https://motherboard.vice.com/en_us/article/wjka84/intrusion-truth-group-doxing-hackers-chinese-intelligence">Intrusion Truth' the Mysterious Group Doxing Chinese Intel Hackers</a>    │
+  │                                                                         │
+  │ > <a href="https://theintercept.com/2018/08/15/nsa-vpn-hack-al-jazeera-sidtoday/">NSA Cracked Open Encrypted Networks of Russian Airlines, Al Jazeera,</a>  │
+  │   <a href="https://theintercept.com/2018/08/15/nsa-vpn-hack-al-jazeera-sidtoday/">and Other “High Potential” Targets</a>                                    │
+  │                                                                         │
+  │ > <a href="https://threatpost.com/blackiot-botnet-can-water-heaters-washers-bring-down-the-power-grid/136559/">BlackIoT Botnet: Can Water Heaters, Washers Bring Down A Power Grid?</a>  │
+  │ ─────────────────────────────────────────────────────────────────────── │
+  └─────────────────────────────────────────────────────────────────────────┘    
+    ┌────────────┐
+  ┌─┘ GOOD READS └──────────────────────────────────────────────────────────┐
+  │ ─────────────────────────────────────────────────────────────────────── │
+  │ > <a href="https://cdn2.hubspot.net/hubfs/3853213/us-18-Thomas-It%27s-A-PHP-Unserialization-Vulnerability-Jim-But-Not-As-We-....pdf">File Operation Induced Unserialization via “phar://” Stream Wrapper</a>   │
+  │                                                                         │
+  │ > <a href="https://cointelegraph.com/news/citrix-survey-more-than-half-of-uk-companies-hit-by-cryptojacking-malware-at-some-point">Citrix Survey: More Than Half of UK Companies Hit by Cryptojacking</a>    │
+  │   <a href="https://cointelegraph.com/news/citrix-survey-more-than-half-of-uk-companies-hit-by-cryptojacking-malware-at-some-point">Malware at Some Point</a>                                                 │
+  │                                                                         │
+  │ > <a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00161.html">Intel Advisory on new bugs (Mentioned in News)</a>                        │
+  │                                                                         │
+  │ > <a href="https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-heelan.pdf">Usenix - Automatic Heap Layout Manipulation for Exploitation</a>          │
+  │                                                                         │
+  │ > <a href="https://www.usenix.org/sites/default/files/conference/protected-files/security18_slides_daian.pdf">Usenix - Enter the Hydra: Toward Principled Bug Bounties and Exploit</a>  │
+  │   <a href="https://www.usenix.org/sites/default/files/conference/protected-files/security18_slides_daian.pdf">Resistant Smart Contracts</a>                                             │
+  │                                                                         │
+  │ > <a href="https://www.politico.com/magazine/story/2018/08/21/i-just-hacked-a-state-election-17-not-a-good-hacker-219374">I Just Hacked a State Election. I’m 17. And I’m Not Even a Very Good</a>  │
+  │   <a href="https://www.politico.com/magazine/story/2018/08/21/i-just-hacked-a-state-election-17-not-a-good-hacker-219374">Hacker.</a>                                                               │
+  │ ─────────────────────────────────────────────────────────────────────── │
+  └─────────────────────────────────────────────────────────────────────────┘
+    ┌───────────┐
+  ┌─┘ <a href="https://twitter.com/zuphzuph">@zuphzuph</a> └───────────────────────────────────────────────────────────┐
+  │ ─────────────────────────────────────────────────────────────────────── │
+  │ > Zuph going to drop some knowledge about Purple Teaming, DevSecSysOps, │
+  │   and Defense Automation. Bring your questions!                         │
+  │ > Resources mentioned will be posted here after the show!               │
+  │ ─────────────────────────────────────────────────────────────────────── │
+  └─────────────────────────────────────────────────────────────────────────┘
+    ┌───────────┐
+  ┌─┘ BAD KARMA └───────────────────────────────────────────────────────────┐
+  │ ─────────────────────────────────────────────────────────────────────── │
+  │ > <a href="https://www.bleepingcomputer.com/news/security/usbharpoon-is-a-badusb-attack-with-a-twist/">Old Dog, Old Trix</a>                                                     │
+  │ ─────────────────────────────────────────────────────────────────────── │
+  └─────────────────────────────────────────────────────────────────────────┘
+==+++++++++++????~++?????????????????????++?~:::::~??~~????=========~~==~==~~~~~
++=++++=++++++????~:::::::::::::::~?~==++?????????????~~????=============~~=~~~~~
++++++++++++++????~:::::::::::::::~?~:::::::::::::~~++~~????======~==========~~~~
++=+++++++++++????~:::::::::::::::~?~::::::::::::::~+?~~????================~~~~~
++++++++++++++????~:::::::::::::::~?~::::::::::::::~+?~~+???==========~?~======~~
++++++++++++++????~:::::::::::::::~?~::::::::::::::~++~~+???+=~======~???~===~~~~
++++++++++++++????~:::::::::::::::~?~:::::::::::::::++~~+??~???~=~=~~?+???~==~~~~
++++++++++++++????~:::::::::::::::~+=:::::::::::::::++~~+??=?++=+~~~~?I+???====~~
++++++++++++++????~:::::::::::::::~?=:::::::::::::::++~~=?????? PUBLIC   ??~===~~
++++++++++++++??=::::::::::,:::::::+=:::::::::::::::++~~=???=?? TWITTER  ??+====~
+++++++++++++~:::::::::::::::::::::?=:::::::::::::::++~~=???+~? RESEARCH ??+===~~
+++++++++++:::::::::::::::::::::::::::::::::::::::::++~~=???+=~+???=+~?:~=~======
++++++++++:::::::::::::::::::::::::,::::::::::::::::=?=~=???+===~~~??++??~=======
+?+++++++::::::::::::::+++++~:::::::::::::::::::::::=?=~~???+======???~+???======
+?+++++::::::::::::::=:++++++~+:::::++?????????????++?=~~???+=======??~~~=~======
++++++:::::::::::+::=:+++++++++:+::=:~~~~~~~~===++????+~=???+====================
+???+=::::::::::=~:+~::::=++++~,,::+~:::::::::::::::~++~=????====================
+?+++::::::::::=++==~::::~+++~~~~~:++:::::::::::::::~+=~=???+====================
+??++:::::::::+++=:++==:+~::::==+::?+:::::::::::::::~++~=???+====================
+??+?:::::=~:::::::++I?~+=~++~?::::?+:::::::::::::::~+=~=???+====================
+????:::=+~++:++++:++=??+:=++:==+::?+:::::::::::::::~++~=???+=+==================
+????:::++++==+++++~~:~~~++++~+++:~?+:::::::::::::::~++~=???+++==================
+????:::++++=+++++++++++++++++~++~~?+:::::::::::~::~~++~=???++++++===============
+?????::+~++=++++++++++++++++++++=~?+~::::::::::::::~++==???+++++++++============
+??????~:++~~++++++++++++++++++++=~??~::::::::::~+=~~++==???++++++++=+===========
+??????+::~++=++++++++++=~~:~:+++~~?+~:::::::~++++~:~++==???++++++++++++=========
+??????:+~:::++=++++++++++=~:=+++::?+~::::::++++=:::~++==???+++++++++++=++=======
+????????+:~:+++=++++++++++~~+++=::??~:::::++++:::::~++==???++++++++++++=+=+++===
+?+??????+++:+++++++++++++++++++==~?+~::::++++:::::::++==???+===+++++++=+++++++==
+??????+=???++++++++~=+++++++++~????????=+++++~+++=~~~=+++++++~=~++++++++++++++++
+?????+?????+++++++++++=~+++++=:::~?+~:~+++++++++++++++++++=~+=~=++++++++++++++++
+?????~~~~~~:?????+~++++++++~???+~~+?~:+++++++++++++++=~=+++~+:++++++++++++++++++
+?????~~~~~~~~~~?????+++++=+=???????=:~+++++++++++++++++=~+~+~++++++++++++++++=~=
+??++?=+~~~~~~~~~=??~~~:++++~?????????=+++++++++++++++++:+++?+++++++++++++~=+=:::
+~~=~+=+???~~~~~~~=~~~~~++++=?????????++++++++++++++++++~????+++++++++++=:::::::~
+???????+???~~~~~~~~~~~~+++++++~??????+++++++++++++++~+==????+++++++:::==~:::::~~
+????????=???+~~~~~~~~~~=+++++++?~???=++++++++++++=:~++==????+++++=::::::::~~~~~~
+?~???????=???+~~~~~~~~~~~~==~~++?=?=+++++++++++::::~++==????++++++~::::::::~~~~~
+??~???????~?????=~~~~~~~??????=??++++++++++++~:::::~++==????==::::::::::::::~~~~
+???=???????+?????+=~~~~:::++++?+~+++++++++++~+=::::~++==????=~~~~::::::::::~~~:~
+???+????????????????=~~~~~~~~++++++++++++++~?=????+:++==????=====:::::::::~~~~::
+????+????????+????????=~~~~~~~++++++++++++=??+???:~==::~????==~~~~~::::::::::~::
++???~?????????=?????????~~~~~+++++++++++++~~~+~?+:=++:::::::::~~~~~:::::::::::::
+?????+~????????+????????+=++=~~++++++++++~~~+??=~~=~~:=+~=++=~::::::::::::~:::::
+???+????+??????=??????=???????????==++++=+~????~:=~=::+==:+~+:++=+=~::::::::~:::
++=~++=+?+??????++????~?????????=????=+++=:=??+=+:=++::+:~:~:+:+::~+++++:::::::::
+?????+???=??????~+??=????7=~+                       ,+=++++++++::==:~=~:::::::::
+??????????+???????+++++??7:I+ IS THIS MINE To SELL? ?+:::~+++++=++=+:=::::::::::
+??????????++??++=~+?????+~+=?                       ,==:::::::::=++++=::::::::::
+???????????=?=?????????????=???????~=??~~~~???==+=:::=++++::::::::::::::::::::::
+??????????+++++?????????????++??????~+=~~~~+++~=~=:::::++++~::::::::::::::::::::
+    ┌──────────┐
+  ┌─┘ UPCOMING └────────────────────────────────────────────────────────────┐
+  │ ─────────────────────────────────────────────────────────────────────── │
+  │ > 8/28 Hacker Warehouse's @waveguyd                                     │
+  │ > 9/4  @georgiaweidman                                                  │
+  │ > 9/11 Virtual DFIR with ohnoitsmichaeljackson                          │
+  │ > 9/18 SDLC and DevSecOps with @xphreckx                                │
+  │ ─────────────────────────────────────────────────────────────────────── │
+  └─────────────────────────────────────────────────────────────────────────┘
+                                  <a href="20180814.html">PREV</a> || <a href="20180828.html">NEXT</a>   
+
+</pre>
+</body>
+</html>
