@@ -1,0 +1,60 @@
+body {
+	background: #000000;
+}
+
+.tcc {
+	margin: 20px;
+	padding: 20px;
+
+	border: 0;
+}
+
+.nest {
+	margin: 0 auto;
+	margin-top: 20px;
+	padding: 10px;
+	border: 1px solid #2e2e03;
+	border-radius: 40px;
+	width: 100%;
+	float: left;
+
+	border-top: 1px solid #2e2e03;
+	border-radius: 40px;
+	background: rgb(0,0,0);
+	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(2,24,29,0.8) 100%);
+	z-index: 1;
+	text-align: left;
+}
+
+.m {
+	width: 35vw;
+	height: 35vh;
+	background-position: bottom right;
+	background-image: url(../img/lillady.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 0;
+}
+
+
+
+
+
+.heading {
+	color: #04656f;
+}
+
+.subheading {
+	color: #033439;
+	margin-top: -10px;
+	letter-spacing: 2px;
+}
+
+p {
+	margin: 20px;
+	margin-left: 10%;
+	margin-right: 10%;
+}

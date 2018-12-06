@@ -1,0 +1,107 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>20180424 Show Notes</title>
+  <link href="../public/css/hack.css" rel="stylesheet">
+  <style>
+    body {
+      color: #B0ABA0;
+      background-color: #000012;
+    }
+    a {
+      color: #fff8bf;
+    }
+  </style>
+</head>
+<body>
+<pre>
+:::::::::::: ::   .:   ...    :::  .,-:::::/    .,-::::: :::::::..       ...    .::    .   .::::::::::-.  
+;;;;;;;;'''',;;   ;;,  ;;     ;;;,;;-'````'   ,;;;'````' ;;;;``;;;;   .;;;;;;;. ';;,  ;;  ;;;'  ;;,   `';,
+     [[    ,[[[,,,[[[ [['     [[[[[[   [[[[[[/[[[         [[[,/[[['  ,[[     \[[,'[[, [[, [['   `[[     [[
+     $$    "$$$"""$$$ $$      $$$"$$c.    "$$ $$$         $$$$$$c    $$$,     $$$  Y$c$$$c$P     $$,    $$
+     88,    888   "88o88    .d888 `Y8bo,,,o88o`88bo,__,o, 888b "88bo,"888,_ _,88P   "88"888      888_,o8P'
+     MMM    MMM    YMM "YmmMMMM""   `'YMUP"YMM  "YUMMMMMP"MMMM   "W"   "YMMMMMP"     "M "M"      MMMMP"` 
+
+██████████████████████████████████████████████████████████████████████████████████████████████ 20180424 ███
+
+ <iframe src="https://player.twitch.tv/?video=v254223273" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"> </iframe> 
+
+╭────── News ──────────────────────────────────────────────────────────────────────────────────────────────
+│  
+┽── Teen Who Hacked Ex-CIA Director John Brennan Gets Sentenced to 2 Years of Prison
+│   <a href="https://motherboard.vice.com/en_us/article/pax87v/kane-gamble-crackas-with-attitude-cwa-sentence-prison">Link</a>
+│  
+┽── Hijack of Amazon’s internet domain service used to reroute web traffic for two hours unnoticed
+│   <a href="https://doublepulsar.com/hijack-of-amazons-internet-domain-service-used-to-reroute-web-traffic-for-two-hours-unnoticed-3a6f0dda6a6f">Link</a>
+│  
+┽── Car-theft kit for sale on Amazon: How web giants are 'helping criminals' buy devices that can be used to
+│   steal vehicles for as little as £100
+│   <a href="http://www.dailymail.co.uk/news/article-5645063/Car-theft-kit-sale-Amazon.html">Link</a>
+│  
+┽── Chinese web giant finds Windows zero-day, stays schtum on specifics
+│   <a href="https://www.theregister.co.uk/2018/04/23/quihoo_360_yes_we_found_a_windows_0day_no_you_cant_know_what/">Link</a>
+│  
+┽── FDA Wants Medical Devices to Have Mandatory Built-In Update Mechanisms
+│   <a href="https://www.bleepingcomputer.com/news/government/fda-wants-medical-devices-to-have-mandatory-built-in-update-mechanisms/">Link</a>
+│  
+┽── Orangeworm Hackers Infect X-Ray and MRI Machines In Their Quest for Patient Data
+│   <a href="https://www.bleepingcomputer.com/news/security/orangeworm-hackers-infect-x-ray-and-mri-machines-in-their-quest-for-patient-data/">Link</a>
+│  
+┽── IoT Inspector: Princeton releases a tool to snoop on home IoT devices and figure out what they're doing
+│   <a href="https://boingboing.net/2018/04/23/promiscuous-mode.html">Link</a>
+│   <a href="https://iot-inspector.princeton.edu">Link</a>
+│  
+╰── Fails of the Week: Two Lovely Medical Leaks
+  ─ Newborn-care website leaves database of medics wide open
+    <a href="https://www.theregister.co.uk/2018/04/20/oh_baby_health_site_leaves_nrp_database_sitting_out_in_the_open/">Link</a>
+  ─ Transcription Service Leaked Medical Records
+    <a href="https://krebsonsecurity.com/2018/04/transcription-service-leaked-medical-records/">Link</a>
+
+███████████████████████████████████████████████████████████████████████████████████████████████████████████
+
+╭────── Topic: IoT Security ───────────────────────────────────────────────────────────────────────────────
+│
+┽── What are some of the major security fails you've found in IoT? 
+│
+┽── What are some of the challenges to IoT security as a whole?
+│   - Supply chain
+│   - End user error
+│   - Updating / Patching
+│
+┽── What are some ways that IoT vendors can address these issues and have a meaningful effect on security?
+│
+┽── Links ────
+│
+┽── Chaining together IoT bugs
+│   <a href="https://www.wired.com/story/elaborate-hack-shows-damage-iot-bugs-can-do/">Link</a>
+│
+┽── Trackmageddon - Backdoored Chinese Spy hardware
+│   <a href="https://0x0.li/trackmageddon/">Link</a>
+│
+┽── From 1zioup in Twitch Chat - Hardware Hacking with Bus Pirate
+│   <a href="https://www.slideshare.net/initd/bus-pirate-workshop-ruxcon-hardware-hacking-2017">Link</a>
+│
+╰── In the future, we will have more hardware security chats :3 For now...
+                                                                                  .___________.
+                                                                                  |           |
+      +---------------------------------------------------+        ___________.   |  |    /~\ |
+      |  import shodan                                    |       / __   __  /|   | _ _   |_| |
+      |  api = shodan.Shodan(SHODAN_API_KEY)              |      / /:/  /:/ / |   !________|__!
+      |  try:                                             |     / /:/  /:/ /  |            |
+      |     results = api.search('scada')                 |    / /:/  /:/ /   |____________!
+      |     print('Results found: %s' % results['total']) |   / /:/  /:/ /    |
+      |      for result in results['matches']:          --+  / /:/  /:/ /     |
+      |          print('IP: %s' % result['ip_str'])     \   /  ~~   ~~ /      |
+      |          print(result['data'])                ___\  |~~~~~~~~~~|      |
+      |          print('')               +-----------+      |    ::    |     /
+      |  except(shodan.APIError, e):     |                  |    ==    |    /
+      |      print('Error: %s' % e)      |                  |    ::    |   /
+      +----------------------------------+                  |    ::    |  /
+                                                            |    ::  @ | /
+                                                            !__________!/
+
+
+                                  <a href="20180417.html">PREV</a> || <a href="20180501.html">NEXT</a>   
+</pre>
+</body>
+</html>
