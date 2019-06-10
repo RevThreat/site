@@ -1,0 +1,380 @@
+<html>
+<head>
+  <title>20190326</title>
+  <meta charset="UTF-8">
+  <style>
+    @font-face {
+      font-family:"TopazPlus";
+      src: url(topazplus500.ttf);
+    }
+    body {
+      color: #CCCCCC;
+      background-color: black;
+      font-size: 16px;
+      line-height: 16px;
+      margin: 0 auto;
+      padding: 1em 0 1em 0;
+    }
+    pre { font-family:"TopazPlus", "Lucida Console", monospace, Monaco;}
+    a   { color: #9ef074; text-decoration: none;}
+    /* Scheme: Y #f0c674 B #74f0c6 P #c674f0 */ 
+    aoi { color: #74f0c6; } 
+    prp { color: #749ef0; }
+    a00 { color: #d79df4; }
+    a01 { color: #d18ff3; }
+    a02 { color: #cb81f1; }
+    a03 { color: #c674f0; }
+    a04 { color: #b268d8; }
+    a05 { color: #9e5cc0; }
+    a06 { color: #8a51a8; }
+    a07 { color: #764590; }
+    a08 { color: #633a78; }
+    a09 { color: #4f2e60; }
+    w   { color: #CCCCCC; }
+    Y   { color: #f0c674; } 
+    y0  { animation:bl0  2.8s infinite; }
+    y1  { animation:bl1  2.8s infinite; }
+    y2  { animation:bl2  2.8s infinite; }
+    y3  { animation:bl3  2.8s infinite; }
+    y4  { animation:bl4  2.8s infinite; }
+    y5  { animation:bl5  2.8s infinite; }
+    y6  { animation:bl6  2.8s infinite; }
+    y7  { animation:bl7  2.8s infinite; }
+    y8  { animation:bl8  2.8s infinite; }
+    y9  { animation:bl9  2.8s infinite; }
+    ya  { animation:bla  2.8s infinite; }
+    yb  { animation:blb  2.8s infinite; }
+    yc  { animation:blc  2.8s infinite; }
+    yd  { animation:bld  2.8s infinite; }
+    ye  { animation:ble  2.8s infinite; }
+    yf  { animation:blf  2.8s infinite; }
+    yg  { animation:blg  2.8s infinite; }
+    yh  { animation:blh  2.8s infinite; }
+    yi  { animation:bli  2.8s infinite; }
+    yj  { animation:blj  2.8s infinite; }
+    yk  { animation:blk  2.8s infinite; }
+    yl  { animation:bll  2.8s infinite; }
+    ym  { animation:blm  2.8s infinite; }
+    yn  { animation:bln  2.8s infinite; }
+    yo  { animation:blo  2.8s infinite; }
+    yp  { animation:blp  2.8s infinite; }
+    yq  { animation:blq  2.8s infinite; }
+    yr  { animation:blr  2.8s infinite; }
+    ys  { animation:bls  2.8s infinite; }
+    yt  { animation:blt  2.8s infinite; }
+    yu  { animation:blu  2.8s infinite; }
+    yv  { animation:blv  2.8s infinite; }
+    yw  { animation:blw  2.8s infinite; }
+    yx  { animation:blx  2.8s infinite; }
+    yy  { animation:bly  2.8s infinite; }
+    yz  { animation:blz  2.8s infinite; }
+    y10 { animation:bl10 2.8s infinite; }
+    @keyframes bl0 { 0% {color:#f0c674;}  3% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes bl1 { 0% {color:#f0c674;}  6% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes bl2 { 0% {color:#f0c674;}  9% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes bl3 { 0% {color:#f0c674;} 12% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes bl4 { 0% {color:#f0c674;} 15% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes bl5 { 0% {color:#f0c674;} 18% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes bl6 { 0% {color:#f0c674;} 21% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes bl7 { 0% {color:#f0c674;} 24% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes bl8 { 0% {color:#f0c674;} 27% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes bl9 { 0% {color:#f0c674;} 30% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes bla { 0% {color:#f0c674;} 33% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes blb { 0% {color:#f0c674;} 36% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes blc { 0% {color:#f0c674;} 39% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes bld { 0% {color:#f0c674;} 42% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes ble { 0% {color:#f0c674;} 45% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes blf { 0% {color:#f0c674;} 48% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes blg { 0% {color:#f0c674;} 51% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes blh { 0% {color:#f0c674;} 54% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes bli { 0% {color:#f0c674;} 57% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes blj { 0% {color:#f0c674;} 60% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes blk { 0% {color:#f0c674;} 63% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes bll { 0% {color:#f0c674;} 66% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes blm { 0% {color:#f0c674;} 69% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes bln { 0% {color:#f0c674;} 72% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes blo { 0% {color:#f0c674;} 75% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes blp { 0% {color:#f0c674;} 78% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes blq { 0% {color:#f0c674;} 81% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes blr { 0% {color:#f0c674;} 84% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes bls { 0% {color:#f0c674;} 87% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes blt { 0% {color:#f0c674;} 90% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes blu { 0% {color:#f0c674;} 91% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes blv { 0% {color:#f0c674;} 92% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes blw { 0% {color:#f0c674;} 93% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes blx { 0% {color:#f0c674;} 94% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes bly { 0% {color:#f0c674;} 95% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes blz { 0% {color:#f0c674;} 96% {color:transparent;} 100% {color:#f0c674;}}
+    @keyframes bl10{ 0% {color:#f0c674;} 97% {color:transparent;} 100% {color:#f0c674;}}
+  </style>
+</head>
+<body>
+<center><div style="display: inline-block; text-align: left;"><pre><div id="RenderBox"></div><prp>--------------------------------------------------------------------------------
+<aoi>                 <!--           --></aoi>| <a href="https://twitter.com/thugcrowd">TWTR</a> | <a href="https://twitch.tv/hardchat">TWTCH</a> | <a href="https://patreon.com/thugcrowd">PTRN</a> | <a href="https://open.spotify.com/show/1q1UO8s05MiSTtKEEfzjP6?si=BSCugTiwS3qTtQ71KYYGnw">SPTFY</a> | <a href="https://itunes.apple.com/us/podcast/thugcrowd/id1448045736?mt-2">iTNS</a> | <a href="http://vm.tiktok.com/J3Dfk8/">TKTK</a> | <a href="https://instagram.com/thugcrowd">iNSTGRM</a> | <a href="snapchat://add/thugcrowd">SNPCHT</a>
+<a00>     /\          <!--           --></a00>|--------------------------------------------------------------
+<a00>     \ \         <!--           --></a00>|
+<a00>    <y0> :</y0>\ \<y0>::</y0>      </a00>| <w>Today officially marks one year of our podcast!</w>
+<a00>   <y1>.::</y1>/ /\<y1>::</y1>     </a00>| 
+<a00>  <y2>:::</y2>/ /\ \<y2>:</y2>     </a00>| 
+<a01>    / /<y3>::</y3>\/\     <!--  --></a01>| <w>When we started ThugCrowd a year ago, we never expected any </w>
+<a01>   / /<y4>:::</y4>/ /     <!--  --></a01>| <w>of this to last. It's honestly pretty wild that we have </w>
+<a01>   \/<y5>:::</y5>/ /<y5>:</y5>     </a01>| <w>gotten as far as we have.</w>
+<a01>    <y6> ::</y6>/  \<y6>:</y6>     </a01>| 
+<a01>  <y7>::::</y7>/ /\ \<y7>::</y7>/\ </a01>| 
+<a02>  <y8>:::</y8>/\/<y8>::</y8>\ \/ / </a02>| <w>The podcast started out as merely a joke of an idea on IRC,</w>
+<a02>     \ \   \  /  <!--           --></a02>| <w>and somehow, we ended up spending the next 52 weeks (and then</w>
+<a02>      \ \  / /   <!--           --></a02>| <w>some) churning out episodes of a live stream together each </w>
+<a02>  <y9>::::</y9> \ \/ /<y9>:</y9>   </a02>| <w>week.</w>
+<a02> /\<ya>:::</ya>  \ \/<ya>::</ya>   </a02>| 
+<a03> \ \<yb>:::</yb> / /\<yb>:</yb>    </a03>| 
+<a03>  \ \<yc>::</yc>/ / /     <!--  --></a03>| <w>Y'all are incredible. We truly appreciate each and every one </w>
+<a03>   \ \/ / / /\   <!--           --></a03>| <w>of you who has supported us over the past year, and joined </w>
+<a03>    \  / /<yd>:</yd>/  \  <!--  --></a03>| <w>our katamari damacy ball of chaos.</w>
+<a03>    <ye>:</ye>\/ /<ye>::</ye>\/\ \ </a03>| 
+<a04>    <yf>::</yf>\ \<yf>::</yf>  / / </a04>| 
+<a04>    /\/\ \  / /  <!--           --></a04>| <w>It's been amazing to interact with some of the best minds in </w>
+<a04>  <yg>.</yg>/ /\ \ \/ /   <!--  --></a04>| <w>hacking and security, and get to see first hand some </w>
+<a04>  / /<yg>::</yg>\ \/\/<yg>:</yg>   </a04>| <w>incredible research and discoveries. </w>
+<a04> / /<yh>::</yh>  \/       <!--  --></a04>| 
+<a05> \ \<yi>::....</yi>/\     <!--  --></a05>| 
+<a05>  \ \<yi>::::</yi>/  \    <!--  --></a05>| <w>Admittedly, we were somewhat unprepared for what eventually </w>
+<a05>  <yj>:</yj>\ \  / /\ \   <!--  --></a05>| <w>became our community and show, and have decided to take a </w>
+<a05>  <yk>::</yk>\ \/  \<yk>.</yk>\ \  </a05>| <w>few weeks off in order to get our heads straight and figure</w>
+<a05>  <yl>:::</yl>\/ /\ \<yl>:</yl>\ \ </a05>| <w>out where to take all of this. We will be working to </w>
+<a06>     /\/  \ \/ / <!--           --></a06>| <w>streamline many of the things we've started, in order to</w>
+<a06>    /  \  / /\/  <!--           --></a06>| <w>have a more focused community for research and lulz. </w>
+<a06>   / /\ \<ym>:</ym>\/     <!--  --></a06>| 
+<a06>  / /<yn>::</yn>\ \/\     <!--  --></a06>| 
+<a06> / /<yo>::</yo>  \ \/<yo>:</yo>    </a06>| <w>We look forward to many more years of fun and adventure </w>
+<a07> \ \<yp>::..</yp>/ /\<yp>::</yp>   </a07>| <w>with you all, and hope that some time to ourselves will be </w>
+<a07>  \ \<yq>::</yq>/ /\ \<yq>:</yq>   </a07>| <w>good to recharge our souls and allow us to regroup in a </w>
+<a07>  <yr>:</yr>\ \/ /  \ \   <!--  --></a07>| <w>more healthy and productive way.</w>
+<a07>  <ys>::</ys>\  / /\ \ \  <!--  --></a07>| 
+<a07>     \/\ \ \ \ \ <!--           --></a07>| 
+<a08>  <yt>...</yt>/\ \<yt>.</yt>\ \/ / </a08>| <w>After we have a chance to catch our breath, we will come </w>
+<a08>  <yu>::</yu>/  \ \<yu>:</yu>\  /  </a08>| <w>back better than ever. Until then, watch our twitter for </w>
+<a08>  <yv>:</yv>/ /\ \ \/ /   <!--  --></a08>| <w>announcements on new things moving forward. Thank you all!</w>
+<a08>  / /<yw>..</yw>\ \  /<yw>:</yw>   </a08>|
+<a08> / /<yx>::::</yx>\/\/<yx>:</yx>    </a08>|
+<a09> \ \<yy>::</yy>  /\ <yy>:::</yy>   </a09>|
+<a09>  \ \<yz>:</yz> / / <yz>:::</yz>   </a09>|
+<a09>  <y10>:</y10>\ \/ /  <y10>:::</y10>   </a09>|
+<a09>    \/\/         <!--           --></a09>|
+<a09>                 <!--           --></a09>|
+--------------------------------------------------------------------------------
+                                                                       |<y> ___    </y>
+ <a href="https://www.forensicmag.com/news/2019/03/exclusive-fbi-had-already-accessed-family-tree-dnas-database-cooperation">FBI Already Accessed Family Tree DNA's Database Before Cooperation</a>    |<y> \  \   </y>
+                                                                       |<y>  \  \  </y>
+ <a href="https://www.zdnet.com/article/lithuanian-man-pleads-guilty-to-scamming-google-and-facebook-out-of-123-million/">Lithuanian man pleads guilty to scamming Google and Facebook out of</a>   |<y> ___    </y>
+ <a href="https://www.zdnet.com/article/lithuanian-man-pleads-guilty-to-scamming-google-and-facebook-out-of-123-million/">$123 million</a>                                                          |<y>  ___   </y>
+                                                                       |<y>   ___  </y>
+ <a href="https://www.bleepingcomputer.com/news/security/1-600-hotel-guests-secretly-live-streamed-to-4-000-subscribers/">1,600 Hotel Guests Secretly Live Streamed to 4,000+ Subscribers</a>       |        
+                                                                       |<y> \   \  </y>
+ <a href="https://krebsonsecurity.com/2019/03/facebook-stored-hundreds-of-millions-of-user-passwords-in-plain-text-for-years/">Facebook Stored Hundreds of Millions of User Passwords in Plain Text</a>  |<y>  \_\_\ </y>
+ <a href="https://krebsonsecurity.com/2019/03/facebook-stored-hundreds-of-millions-of-user-passwords-in-plain-text-for-years/">for Years</a>                                                             |<y>  ___   </y>
+                                                                       |<y>  \___  </y>
+ <a href="https://motherboard.vice.com/amp/en_us/article/pan9wn/hackers-hijacked-asus-software-updates-to-install-backdoors-on-thousands-of-computers">Criminals Hijacked ASUS Software Updates to Install Backdoors on</a>      |<y>    __> </y>
+ <a href="https://motherboard.vice.com/amp/en_us/article/pan9wn/hackers-hijacked-asus-software-updates-to-install-backdoors-on-thousands-of-computers">Thousands of Computers</a>                                                |        
+                                                                       |        
+ <a href="https://www.zdnet.com/article/researchers-find-36-new-security-flaws-in-lte-protocol/">Researchers find 36 new security flaws in LTE protocol</a>                |        
+                                                                       |        
+ <a href="https://www.bleepingcomputer.com/news/security/fake-cdc-emails-warning-of-flu-pandemic-push-ransomware/">Fake CDC Emails Warning of Flu Pandemic Push Ransomware</a>               |        
+                                                                       |        
+ <a href="https://motherboard.vice.com/en_us/article/j573k3/spyware-data-leak-pictures-audio-recordings">This Spyware Data Leak Is So Bad We Can't Even Tell You About It</a>      |        
+                                                                       |        
+ <a href="https://motherboard.vice.com/en_us/article/mbzd4x/in-china-fortnite-penalizes-minors-for-playing-too-much">In China, Fortnite Penalizes Minors for Playing Too Much</a>              |        
+                                                                       |        
+ <a href="https://krebsonsecurity.com/2019/03/alleged-child-porn-lord-faces-us-extradition/">Alleged Child Porn Lord Faces US Extradition</a>                          |        
+                                                                       |        
+ <a href="https://www.zdnet.com/article/fda-warning-scores-of-heart-implants-can-be-hacked-from-20ft-away/">FDA warning: Scores of heart implants can be hacked from 20ft away</a>    |        
+                                                                       |        
+ <a href="https://www.bleepingcomputer.com/news/security/fema-data-leak-exposes-personal-info-of-23m-disaster-survivors/">FEMA Data Leak Exposes Personal Info of 2.3M Disaster Survivors</a>       |        
+                                                                       |        
+ <a href="https://www.imperva.com/blog/now-patched-google-photos-vulnerability-let-hackers-track-your-friends-and-location-history/">Now-Patched Google Photos Vulnerability Let Hackers Track Your</a>        |        
+ <a href="https://www.imperva.com/blog/now-patched-google-photos-vulnerability-let-hackers-track-your-friends-and-location-history/">Friends and Location History</a>                                          |        
+                                                                       |        
+--------------------------------------------------------------------------------
+<y> ---    </y>|
+<y> \      </y>| <a href="https://www.techrepublic.com/article/windows-10-dhcp-vulnerability-allows-for-remote-code-execution/">Windows 10 DHCP vulnerability allows for remote code execution</a> 
+<y>  \__\  </y>|
+<y> ___    </y>| <a href="https://doublepulsar.com/how-lockergoga-took-down-hydro-ransomware-used-in-targeted-attacks-aimed-at-big-business-c666551f5880">How Lockergoga took down Hydro  -  ransomware used in targeted </a> 
+<y> \  \   </y>| <a href="https://doublepulsar.com/how-lockergoga-took-down-hydro-ransomware-used-in-targeted-attacks-aimed-at-big-business-c666551f5880">attacks aimed at big business</a> 
+<y>  \__\  </y>|
+<y> ___    </y>| <a href="https://gbhackers.com/azorult-malware-abusing-rdp-protocol/amp/">AZORult Malware: Abusing RDP Protocol To Steal Data by Establishing</a>
+<y> \  \   </y>| <a href="https://gbhackers.com/azorult-malware-abusing-rdp-protocol/amp/
+">a Remote Desktop Connection</a> 
+<y>  \__\  </y>|
+<y> ____   </y>| <a href="https://www.wired.co.uk/article/article-13-protests">Inside the giant German protest trying to bring down Article 13</a> 
+<y> \   \  </y>|
+<y>  \__/  </y>| <a href="https://nakedsecurity.sophos.com/2019/03/22/sacked-it-guy-annihilates-23-of-his-ex-employers-aws-servers/">Sacked IT guy annihilates 23 of his ex-employer's AWS servers  </a>
+<y> ____   </y>|
+<y> \___>  </y>| <a href="https://www.zdnet.com/article/canberra-underwhelmed-with-facebooks-live-streaming-defence/">Canberra 'underwhelmed' with Facebook's live-streaming defence</a>
+<y>  \  <_ </y>|
+<y> ___    </y>|
+<y>  ___   </y>|
+<y>   ___  </y>|
+<y> ___    </y>|
+<y> \__\   </y>|
+<y>  \  \  </y>|
+<y> ____   </y>|
+<y> \   \  </y>|
+<y>  \__/  </y>|
+<y>  ___   </y>|
+<y>  \___  </y>|
+<y>    __> </y>|
+<y>        </y>|
+--------------------------------------------------------------------------------
+                                                                       |<y> ---   </y>
+ <a href="https://www.fireeye.com/blog/threat-research/2019/03/silketw-because-free-telemetry-is-free.html">FireEye - SilkETW</a>                                                     |<y> \     </y>
+                                                                       |<y>  \___ </y>
+ <a href="https://seclists.org/oss-sec/2019/q1/189">CVE-2019-0204: Some Mesos components can be overwritten making</a>        |       
+ <a href="https://seclists.org/oss-sec/2019/q1/189">arbitrary code execution possible.</a>                                    |<y> \__\  </y>
+                                                                       |<y>  \  \ </y>
+ <a href="https://marcoramilli.com/malware/">Malware Static Analysis Engine</a>                                        |<y> ___   </y>
+                                                                       |<y>  ___  </y>
+ <a href="https://www.bleepingcomputer.com/news/technology/virustotal-goes-retro-with-new-ascii-site-for-older-browsers/">VirusTotal Goes Retro with New ASCII Site for Older Browsers</a>          |<y>   ___ </y>
+                                                                       |<y> ___   </y>
+ <a href="https://shadowhammer.kaspersky.com/">ShadowHammer Checker</a>                                                  |<y> \__\  </y>
+                                                                       |<y>  \  \ </y>
+ <a href="https://jenkins.io/security/advisory/2019-03-25/">Jenkins Security Advisory 2019-03-25</a>                                  |<y> ____  </y>
+                                                                       |<y>   \   </y>
+                                                                       |<y>    \  </y>
+                                                                       |<y>  ___  </y>
+                                                                       |<y>  \___ </y>
+                                                                       |<y>    __></y>
+                                                                       |        
+--------------------------------------------------------------------------------
+</prp></pre></div></center>
+</body>
+<script>
+// source: http://benryves.com/bin/jscript/fireworks2.htm
+var ScreenX = 130;
+var ScreenY = 30;
+
+var LoopDelay = 2;
+
+var NumParticles = 40;
+
+
+var Particles = new Array();
+
+var AsciiArray = new Array();
+var ColourArray = new Array();
+
+for (var x = 1; x <= ScreenX; x++) {
+    AsciiArray[x] = new Array();
+    AsciiArray[x].length = ScreenY + 1;
+    ColourArray[x] = new Array();
+    ColourArray[x].length = ScreenY + 1;
+}
+
+var GreyAscii = new Array("@", "#", "%", "&", "?", "+", "-", ";", ":", ".", " ");
+
+var ColourChoice = new Array("white", "#00CCFF", "#CCFFFF", "#33CCFF", "#00FF00", "#00FFCC", "#FFFF99", "#FF99FF");
+
+for (var i = 1; i <= NumParticles; i++) {
+    Particles[i] = new Array(100, 100, 100, 100, "filler!", "blue");
+}
+
+for (var y = 1; y <= ScreenY; y++) {
+    for (var x = 1; x <= ScreenX; x++) {
+        AsciiArray[x][y] = (GreyAscii.length - 1);
+    }
+}
+
+InitDelay();
+
+// Main loop:
+
+
+function RenderLoop() {
+
+    for (var y = 1; y <= ScreenY; y++) {
+        for (var x = 1; x <= ScreenX; x++) {
+            if (AsciiArray[x][y] != (GreyAscii.length - 1)) {
+                AsciiArray[x][y]++;
+            }
+        }
+    }
+
+
+    var SpawnAgain = 0;
+    for (var i = 1; i <= NumParticles; i++) {
+        if (Particles[i][1] <= ScreenY * 2) {
+            SpawnAgain = 1;
+        }
+    }
+
+    if (SpawnAgain == 0 && Particles[1][1] > ScreenY) {
+        Particles[1] = new Array(ScreenX / 2, ScreenY, (Math.random() * 2) - 1, -0.75 - Math.random(), "filler!", ColourChoice[Math.round(Math.random() * (ColourChoice.length - 1))]);
+    }
+
+    for (var i = 1; i <= NumParticles; i++) {
+        SetPixel(Math.round(Particles[i][0]), Math.round(Particles[i][1]), 0, Particles[i][5]);
+
+        Particles[i][0] += Particles[i][2];
+        Particles[i][1] += Particles[i][3];
+        Particles[i][3] += 0.06;
+
+        if (((Particles[i][0] < 0 || Particles[i][0] >= ScreenX || Particles[i][1] < 0 || Particles[i][1] >= ScreenY) && Math.round(Particles[1][3]) == 0) && i != 1) {
+            Particles[i][0] = Particles[1][0];
+            Particles[i][2] = (Math.random() * 1.5) - 0.75;
+            Particles[i][1] = Particles[1][1];
+            Particles[i][3] = 0 - Math.random();
+            Particles[i][5] = ColourChoice[Math.round(Math.random() * (ColourChoice.length - 1))];
+        }
+
+    }
+
+
+    // Copy to screen:
+    var CurPixel = ColourArray[1][1];
+
+    var cubeText = '<pre><font size="1"><font color=' + CurPixel + '>';
+    for (var y = 1; y < ScreenY; y++) {
+        for (var x = 1; x < ScreenX; x++) {
+            var Pixel = GreyAscii[AsciiArray[x][y]];
+
+            if (CurPixel != ColourArray[x][y] && Pixel != " ") {
+                Pixel = '</font><font color=' + ColourArray[x][y] + '>' + Pixel;
+                CurPixel = ColourArray[x][y];
+            }
+
+            cubeText += Pixel;
+        }
+        cubeText += '<br>';
+    }
+    cubeText += '</font></font></pre>';
+    document.getElementById("RenderBox").innerHTML = cubeText;
+
+    InitDelay();
+}
+
+function InitDelay() {
+    timeoutID = setTimeout("RenderLoop()", LoopDelay)
+}
+
+function SetPixel(x, y, Style, Colour) {
+    if (x > 0 && x <= ScreenX && y > 0 && y <= ScreenY) {
+        AsciiArray[x][y] = Style;
+        ColourArray[x][y] = Colour;
+    }
+}
+</script>
+</html>
+
+<!--     _______     _______     _______    
+   ______\      \____\      \____\      \   
+   \      \      \    \      \    \      \  
+    \                                     \ 
+_____\                                     \
+\     \                                    /
+ \                                        X 
+  \______________/\__________/\__________X  
+               ASCII by yuu   
+    ____         ___ ___ ___  __     ___
+      \  \__\\  \\  _\   \__><  \\  \\  \
+       \  \  \\__\\__>\___\ <_\__>\/\\\_/
+https://www.youtube.com/watch?v=e8FfbbORMzY 
+
+See you soon: https://www.youtube.com/watch?v=gYOEyzBFYa4 -->

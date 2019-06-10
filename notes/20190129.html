@@ -1,0 +1,163 @@
+<html>
+<head>
+    <title>20190129</title>
+    <meta charset="utf-8">
+    <style>
+      @font-face {
+           font-family:"TopazPlus a600a1200a4000";
+           src: url(../public/fonts/topazplus120010.ttf);
+           /*font-family:"BigBlue Terminal Plus";
+           src: url(fonts/BigBlue_TerminalPlus.TTF);*/
+      }
+      body {
+         color: white;
+         /*background-color: #0d0d18;*/
+         background-color: black;
+      }
+      pre {
+        font-family:"TopazPlus a600a1200a4000", "Lucida Console", monospace, Monaco;
+      }
+      a {
+        color: #fff58e;
+        text-decoration: none;
+      }
+      iky { color: #74ee15; }
+      y   { color: #f0c674; }
+      gr  { color: #aff981; }
+      r   { color: #f22e2e; }
+      w   { color: #ffffff; }
+      pnk { color: #f4b6e5; }
+      bb  { color: #9df2f2; }
+      prp { color: #daa3ff; }
+      l   { color: #c5c8c6; }
+      lg  { color: #9de9a9; }
+      stk { color: #c45100; }
+      gry { color: #a5b2b7; }
+      gx0 { color: #686868; }
+      gx1 { color: #696969; }
+      gx2 { color: #707070; }
+      gx3 { color: #787878; }
+      gx4 { color: #808080; }
+      gx5 { color: #888888; }
+      gx6 { color: #909090; }
+      gx7 { color: #989898; }
+      gx8 { color: #A0A0A0; }
+      gx9 { color: #A8A8A8; }
+      gxA { color: #A9A9A9; }
+      gxB { color: #B0B0B0; }
+      gxC { color: #B8B8B8; }
+      gxD { color: #BEBEBE; }
+      gxE { color: #C0C0C0; }
+      gxF { color: #C8C8C8; }
+      .blinking{
+          animation:blinkingText 0.8s infinite;
+      }
+      @keyframes blinkingText{
+          0%   { color: #c45100; }
+          50%  { color: transparent; }
+          100% { color: #c45100; }
+      }
+
+  </style>
+</head>
+<body class="hack dark"><center>
+<div style="display: inline-block; text-align: left;"><pre><lg>
+                                               ______________     ______      ___                                                         
+                                               \   _    _   /----/     /_____/   \________                                                
+                                               /___/    /___\  _/     //    /    /   _    \                                               
+                                                  /    //      \     //    /    /    /    /                                               
+                                                 /_____\       /_____\ _________\_____   /                                                
+                                                        \_____/       \/     \___________\                                                
+                                            _________  ___________ ________ _______   _________                                           
+                                          _/        /_ )   ._    //  __    X      /___\______  \                                          
+                                          \     |__/  \_   |/  _/     /   //     /      /   /   >                                         
+                                           \    |       /  /    \_   /    /_    /\     /   /   /                                          
+                                            \__________/   \      /______/ /____/\___  X      /                                           
+                                                      \___/ \____/                   \/ \____/                                            
+</lg>
+
+root@y33t:~$tshark -P -r 20190129.pcap
+ 1 <pnk>0.000000000</pnk>  <bb>130.211.45.45</bb> → <prp>23.192.22.58</prp>    HTTP 383 GET /index.php?page=<a href="https://twitch.tv/hardchat">https://twitch.tv/hardchat</a> HTTP/1.1
+ 2 <pnk>0.000311154</pnk>  <prp>23.192.22.58</prp>  → <bb>130.211.45.45</bb>   TCP 420 HTTP/1.0 200 OK  
+ 3 <pnk>0.000338512</pnk>  <bb>130.211.45.45</bb> → <prp>23.192.22.58</prp>    HTTP 389 GET /index.php?page=<a href="https://twitter.com/thugcrowd">https://twitter.com/thugcrowd</a> HTTP/1.1
+ 4 <pnk>0.000379313</pnk>  <prp>23.192.22.58</prp>  → <bb>130.211.45.45</bb>   TCP 420 HTTP/1.0 200 OK  
+ 5 <pnk>0.000407565</pnk>  <bb>130.211.45.45</bb> → <prp>23.192.22.58</prp>    HTTP 389 GET /index.php?page=<a href="https://patreon.com/thugcrowd">https://patreon.com/thugcrowd</a> HTTP/1.1
+ 6 <pnk>9.194182783</pnk>  <prp>23.192.22.58</prp>  → <bb>130.211.45.45</bb>   TCP 420 HTTP/1.0 200 OK  
+ 7 <pnk>9.194526597</pnk>  <bb>130.211.45.45</bb> → <prp>23.192.22.58</prp>    HTTP 412 GET /index.php?page=<a href="https://open.spotify.com/show/1q1UO8s05MiSTtKEEfzjP6">https://open.spotify.com/show/1q1UO8s05MiSTtKEEfzjP6</a> HTTP/1.1
+ 8 <pnk>9.194591897</pnk>  <prp>23.192.22.58</prp>  → <bb>130.211.45.45</bb>   TCP 420 HTTP/1.0 200 OK  
+ 9 <pnk>9.194627047</pnk>  <bb>130.211.45.45</bb> → <prp>23.192.22.58</prp>    HTTP 391 GET /index.php?page=<a href="https://instagram.com/thugcrowd">https://instagram.com/thugcrowd</a> HTTP/1.1
+10 <pnk>9.194647752</pnk>  <prp>23.192.22.58</prp>  → <bb>130.211.45.45</bb>   TCP 420 HTTP/1.0 200 OK  
+11 <pnk>9.194673906</pnk>  <bb>130.211.45.45</bb> → <prp>23.192.22.58</prp>    HTTP 378 GET /index.php?page=<a href="snapchat://add/thugcrowd">snapchat://add/thugcrowd</a> HTTP/1.1
+12 <pnk>9.198745152</pnk>  <prp>23.192.22.58</prp>  → <bb>130.211.45.45</bb>   TCP 420 HTTP/1.0 200 OK  
+13 <pnk>9.198965441</pnk>  <bb>130.211.45.45</bb> → <prp>23.192.22.58</prp>    HTTP 370 GET /index.php?page=<a href="http://leet.club">http://leet.club</a> HTTP/1.1
+14 <pnk>9.199001482</pnk>  <prp>23.192.22.58</prp>  → <bb>130.211.45.45</bb>   TCP 420 HTTP/1.0 200 OK  
+15 <pnk>9.199034689</pnk>  <bb>130.211.45.45</bb> → <prp>23.192.22.58</prp>    HTTP 377 GET /guestbook.php?comment=<a href="https://badpackets.net/">https://badpackets.net/</a> HTTP/1.1
+16 <pnk>9.199055885</pnk>  <prp>23.192.22.58</prp>  → <bb>130.211.45.45</bb>   TCP 420 HTTP/1.0 200 OK  
+17 <pnk>9.199074910</pnk>  <bb>130.211.45.45</bb> → <prp>23.192.22.58</prp>    HTTP 383 GET /guestbook.php?comment=<a href="https://twitter.com/bad_packets">https://twitter.com/bad_packets</a> HTTP/1.1
+18 <pnk>9.208661628</pnk>  <prp>23.192.22.58</prp>  → <bb>130.211.45.45</bb>   TCP 420 HTTP/1.0 200 OK  
+
+<w>>>> News</w>
+
+<prp>::</prp>  <a href="https://www.zdnet.com/article/authorities-shut-down-xdedic-marketplace-for-buying-hacked-servers/">Authorities shut down xDedic marketplace for buying hacked servers</a>
+
+<prp>::</prp>  <a href="https://9to5mac.com/2019/01/28/facetime-bug-hear-audio/">FaceTime bug allows you to hear audio before someone picks up</a>
+
+<prp>::</prp>  <a href="https://hotforsecurity.bitdefender.com/blog/user-of-the-worlds-biggest-ddos-for-hire-website-police-say-theyre-coming-after-you-20781.html">Police Targeting Former Users of webstresser.org</a>
+
+<prp>::</prp>  <a href="https://www.zdnet.com/article/hackers-are-going-after-cisco-rv320rv325-routers-using-a-new-exploit/">Criminals are going after Cisco RV320/RV325 routers using a new exploit</a>
+
+<prp>::</prp>  <a href="https://www.zdnet.com/google-amp/article/japanese-government-plans-to-hack-into-citizens-iot-devices/">Japanese government plans to hack into citizens' IoT devices</a>
+
+<prp>::</prp>  <a href="https://arstechnica.com/information-technology/2019/01/multiple-us-gov-domains-hit-in-serious-dns-hijacking-wave-dhs-warns/">DHS: Multiple US gov domains hit in serious DNS hijacking wave</a>
+
+<prp>::</prp>  <a href="https://arstechnica.com/information-technology/2019/01/pear-php-site-breach-lets-hackers-slip-malware-into-official-download/">If you installed PEAR PHP in the last 6 months, you may be infected</a>
+
+<prp>::</prp>  <a href="https://www.dailymail.co.uk/news/article-6620879/China-launches-app-tells-500-yards-debt.html">China launches an app that tells you if you are within 500 yards of someone in debt</a>
+
+<prp>::</prp>  <a href="https://motherboard.vice.com/amp/en_us/article/xwb8j7/watch-a-hacker-access-nest-cameras-and-demand-people-subscribe-to-pewdiepie">Watch a Hacker Access Nest Cameras and Demand People Subscribe to PewDiePie</a>
+
+<prp>::</prp>  <a href="https://www.zdnet.com/article/security-flaws-found-in-26-low-end-cryptocurrencies/">Security flaws found in 26 low-end cryptocurrencies</a>
+
+<w>>>> LOL</w>
+
+<prp>::</prp>  <a href="https://twitter.com/nedprice/status/1090003781729828864">The Dangers of Writing in Plaintext</a>
+
+<w>>>> Good Reads</w>
+
+<prp>::</prp>  <a href="https://www.cnn.com/interactive/2019/01/business/pentagons-race-against-deepfakes/">Inside the Pentagon's race against deepfake videos</a>
+
+<prp>::</prp>  <a href="https://www.networkworld.com/article/3336186/security/cisco-patches-serious-sd-wan-software-security-holes.amp.html">Cisco patches serious SD-WAN software security holes</a>
+
+<prp>::</prp>  <a href="https://medium.com/@moo_56558/why-hack-culture-needs-a-good-plunger-dfed953fc231">Why Hack Culture Needs a Good Plunging</a>
+
+<prp>::</prp>  <a href="https://twitter.com/tcp9k/status/1088953997778665473">UltraViolet - Listserv 16.5 Vuln Disclosure by Strudalz</a>
+
+<prp>::</prp>  <a href="https://vulnmind.io/i-heard-you-like-eop-to-system/">I heard you like EoP to System?</a>
+
+<prp>::</prp>  <a href="https://twitter.com/3lbios/status/1087848040583626753">7z Weak Crypto</a>
+
+<prp>::</prp>  <a href="https://github.com/hackerhouse-opensource/pyongyang_2407">Pyongyang 2407 - Android ROM from North Korea, modified to run on WBW5511_MAINBOARD_P2 devices.</a>
+
+<w>>>> Cheat codes</w>
+
+<prp>::</prp>  <a href="https://github.com/hook-s3c/CVE-2018-18852">Hook's PoC for CVE-2018-18852</a>
+
+<prp>::</prp>  <a href="https://github.com/lcashdol/IoT/blob/master/passwords/list-2019-01-29.txt">IoT Master Password List</a>
+
+<prp>::</prp>  <a href="https://github.com/0x27/CiscoRV320Dump">CiscoRV320Dump PoC</a>
+
+<prp>::</prp>  <a href="https://packetstormsecurity.com/files/151303">Microsoft Windows Contact File HTML Link Injection Remote Code Execution</a>
+
+<prp>::</prp>  <a href="http://blog.sevagas.com/?Yet-another-sdclt-UAC-bypass">Yet another sdclt UAC bypass</a>
+
+<prp>::</prp>  <a href="https://github.com/yuudev/gtfoplus">GTFOPlus - Linux Privesc Helper</a>
+
+>>> Playlist
+
+<prp>::</prp>  <a href="https://soundcloud.com/thugcrowd/sets/20190129mix">20190129 Mix</a>
+
+</pre>
+</div>
+</center>
+</body>
+</html>

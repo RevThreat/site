@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>20190312</title>
+<meta charset="utf-8">
+<style>
+  @font-face {
+    font-family:"BigBlue Terminal Plus";
+    src: url(../public/fonts/BigBlue_TerminalPlus.TTF);
+  }
+  body {
+    color: #c5c8c6;
+    background-color: black;
+  }
+  pre {
+    font-family:"BigBlue Terminal Plus", "Lucida Console", monospace, Monaco;
+    font-size: 12px;
+  }
+  a {
+    color: #00ff00;
+    text-decoration: none;
+  }
+  .sm { color: yellow; }
+  .ccnt {
+    height: 320px;
+    width: 652px;
+    padding-top: 0px;
+    line-height: 0.8em;
+    background-color: blue;
+    color: white;
+    overflow-y: scroll !important;  
+    display: inline-block; 
+    text-align: left;
+    margin-top: -3px;
+  }
+  .ccnt pre { margin-top: 0px; }
+  .chdr {
+    width: 652px;
+    background-color: black;
+    color: white;
+    display: inline-block; 
+    text-align: left;
+  }
+  .chdr pre { margin-bottom: 0px; }
+  .outer {
+    height: 320px;
+    width: 660px;
+    border-color:black;
+    border-style: solid;
+    background-color: black;
+    color: white;
+    display: inline-block; 
+    text-align: left;
+  }
+
+  hbg1 { background-color: red; color:yellow; } 
+  hbg2 { background-color: #6ea1f4; color:white; }
+  blue    { background-color: blue; }
+  n:hover { cursor:pointer; }
+  #ln1, #ln3, #ln6, #lg1, #lg3, #lc0 { color: red;}
+
+  .blnk{ animation:blinkingText 1s infinite; }
+  @keyframes blinkingText{
+    0%   { color: white; }
+    50%  { color: blue; }
+    100% { color: white; }
+  }
+</style>
+</head>
+<body><center><div class="outer">
+<div class="chdr"><pre>
+<marquee scrollamount="3">Connected to: THUGCROWD REMOTE PLC CONTROLLER | Protocol: MODBUS 1 | Address: 1 | Mode: RTU | Data Bits: 8 | Parity: EVEN | Stop Bits: 1 | Baud: 9600 | Device: COM1 | Status: <n style="color:limegreen;">ONLINE</n> | Fail: 0 | Message: H4CK3D BY R0BL0XG4NG!! WE STILL SPINNIN MANE!!</marquee>
+<hbg1> <a class="sm" href="https://twitch.tv/hardchat">Twitch</a>  <a class="sm" href="https://twitter.com/thugcrowd">Twitter</a>  <a class="sm" href="https://patreon.com/thugcrowd">Patreon</a>  <a class="sm" href="https://itunes.apple.com/us/podcast/thugcrowd/id1448045736?mt-2">iTunes</a>  <a class="sm" href="https://open.spotify.com/show/1q1UO8s05MiSTtKEEfzjP6?si=BSCugTiwS3qTtQ71KYYGnw">Spotify</a>  <a class="sm" href="https://instagram.com/thugcrowd">Instagram</a>  <a class="sm" href="snapchat://add/thugcrowd">Snapchat</a>  <a class="sm" href="http://vm.tiktok.com/J3Dfk8/">TikTok</a>  <a class="sm" href="https://thugcrowd.com">Return</a> </hbg1>
+<hbg2>   [1]     [2]      [3]      [4]     [5]       [6]        [7]      [8]     [9]  </hbg2>
+<blue>╔═══════════════════════════════╡ Ladder Editor ╞══════════════════════════════╗</blue></pre></div>
+<div class="ccnt"><pre>║                                                                              ║
+╟─┤ <span class="blnk">Episode 49</span> ───┤<n id="h0" onclick="hh('h0')">/</n>├──┐                  TRIG @ 9:30 PM EST                   ║
+║ │                    └──┤ <a id='lh1' href="https://twitter.com/hacks4pancakes">@hacks4pancakes</a> ─────┤<n id="h1" onclick="hh('h1','lh1')">/</n>├───────────────────────────╢
+║ │    │                                                                       ║
+║ ┤ News ┐                                                                     ║
+║ │      └┤ <a id="ln0" href="https://www.zdnet.com/article/japanese-police-charge-13-year-old-for-sharing-unclosable-popup-prank-online/">Japanese police charge 13-year-old for sharing ...</a> ───┤<n id="n0" onclick="hh('n0','ln0')">/</n>├──────────╢
+║ │       │                                                                    ║
+║ │       ┤ <a id="ln1" href="https://www.zdnet.com/article/citrix-discloses-security-breach-of-internal-network/">Citrix discloses security breach of internal ne...</a> ───┤<n id="n1" onclick="hh('n1','ln1')"> </n>├──────────╢
+║ │       │                                                                    ║
+║ │       ┤ <a id="ln2" href="https://motherboard.vice.com/en_us/article/panvm7/nsa-releases-ghidra-for-free-game-changer">Ghidra - Previously classified NSA tool release...</a> ───┤<n id="n2" onclick="hh('n2','ln2')">/</n>├──────────╢
+║ │       │                                                                    ║
+║ │       ┤ <a id="ln3" href="https://futurism.com/bizarre-malware-disabling-safety-systems-industrial-plants/">Malware Disabling Safety Systems at Industrial ...</a> ───┤<n id="n3" onclick="hh('n3','ln3')"> </n>├──────────╢
+║ │       │                                                                    ║
+║ │       ┤ <a id="ln4" href="https://appleinsider.com/articles/19/03/05/new-spoiler-vulnerability-in-all-intel-core-processors-exposed-by-researchers/amp/">"Spoiler" vulnerability in all Intel Core proce...</a> ───┤<n id="n4" onclick="hh('n4','ln4')">/</n>├──┐       ║
+║ │       │                                                            │       ║
+║ │       │                         ( )─ <a href="https://arxiv.org/pdf/1903.00446.pdf">Spoiler Whitepaper</a> ├──────────┘       ║
+║ │       │                                                                    ║
+║ │       ┤ <a id="ln5" href="https://www.bleepingcomputer.com/news/security/vulnerable-docker-hosts-actively-abused-in-cryptojacking-campaigns/">Vulnerable Docker Hosts Actively Abused in Cryp...</a> ───┤<n id="n5" onclick="hh('n5','ln5')">/</n>├──────────╢
+║ │       │                                                                    ║
+║ │       ┤ <a id="ln6" href="https://www.zdnet.com/google-amp/article/wordpress-accounted-for-90-percent-of-all-hacked-cms-sites-in-2018/">WordPress accounted for 90% of all hacked CMS s...</a> ───┤<n id="n6" onclick="hh('n6','ln6')"> </n>├──────────╢
+║ │       │                                                                    ║
+║ │       ┤ <a id="ln7" href="https://boingboing.net/2019/02/27/ftc-fines-app-tiktok-musical-l.html">FTC fines TikTok $5.7 million for child data pr...</a> ───┤<n id="n7" onclick="hh('n7','ln7')">/</n>├──────────╢
+║ │       │                                                                    ║
+║ │       ┤ <a id="ln8" href="https://www.techrepublic.com/google-amp/article/vulnerabilities-in-industrial-ethernet-switches-allow-for-credential-theft-denial-of-service-attacks/">Vulnerabilities in industrial Ethernet switches...</a> ───┤<n id="n8" onclick="hh('n8','ln8')">/</n>├──────────╢
+║ │       │                                                                    ║
+║ │       └───────────────────────────────────────────────────┘                ║
+║ │                                                                            ║
+║ ┤ Good Reads ┐                                                               ║
+║ │            └┤ <a id="lg0" href="https://capsule8.com/blog/practical-container-escape-exercise/">You Think That's Air You're Breathing? Containe...</a> ───┤<n id="g0" onclick="hh('g0','lg0')">/</n>├────╢
+║ │             │                                                              ║
+║ │             ┤ <a id="lg1" href="http://nebelwelt.net/blog/20190306-SMoTherSpectre.html">SMoTherSpectre: transient execution attacks thr...</a> ───┤<n id="g1" onclick="hh('g1','lg1')"> </n>├────╢
+║ │             │                                                              ║
+║ │             ┤ <a id='lg2' href="https://www.vulnano.com/2019/03/facebook-messenger-server-random-memory.html">Facebook Messenger server random memory exposur...</a> ───┤<n id="g2" onclick="hh('g2','lg2')">/</n>├────╢
+║ │             │                                                              ║
+║ │             ┤ <a id='lg3' href="https://shenaniganslabs.io/2019/01/28/Wagging-the-Dog.html">Abusing Resource-Based Constrained Delegation t...</a> ───┤<n id="g3" onclick="hh('g3','lg3')"> </n>├────╢
+║ │             │                                                              ║
+║ │             ┤ <a id='lg4' href="https://isc.sans.edu/diary/Quick+and+Dirty+Malicious+HTA+Analysis/24728">Quick and Dirty Malicious HTA Analysis</a>             ───┤<n id="g4" onclick="hh('g4','lg4')">/</n>├────╢
+║ │             │                                                              ║
+║ │             ┤ <a id='lg5' href="https://twitter.com/fs0c131y/status/1105261268083109888">63red Safe - Conservative Review App, gets rekt...</a> ───┤<n id="g5" onclick="hh('g5','lg5')">/</n>├────╢
+║ │             │                                                              ║
+║ │             └───────────────────────────────────────────────────┘          ║
+║ │                                                                            ║
+║ │                                                                            ║
+║ ┤ Cheats ┐                                                                   ║
+║          └┤ <a id='lc0' href="https://nvd.nist.gov/vuln/detail/CVE-2019-8904">CVE-2019-8904 - Buffer Overflow in readelf.c</a>       ───┤<n id="c0" onclick="hh('c0','lc0')"> </n>├────────╢
+║           │                                                                  ║
+║           ┤ <a id='lc1' href="https://github.com/ismailtasdelen/command-injection-payload-list">Command Injection Payload List</a>                     ───┤<n id="c1" onclick="hh('c1','lc1')">/</n>├────────╢
+║           │                                                                  ║
+║           ┤ <a id='lc2' href="https://github.com/antonioCoco/SharPyShell">SharPyShell - tiny and obfuscated ASP.NET websh...</a> ───┤<n id="c2" onclick="hh('c2','lc2')">/</n>├────────╢
+║           │                                                                  ║
+║           ┤ <a id='lc3' href="https://github.com/a13xp0p0v/kernel-hack-drill">kernel hack drill - Linux kernel exploitation e...</a> ───┤<n id="c3" onclick="hh('c3','lc3')">/</n>├────────╢
+║           │                                                                  ║
+║           └───────────────────────────────────────────────────┘              ║
+║                                                                              ║
+║                                                                              ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+</pre>
+<script>
+function hh(id,lid) {
+  var x = document.getElementById(id);
+  var y = document.getElementById(lid);
+  if (x.innerHTML == "/") {
+    x.innerHTML = " ";
+    y.style.color = "red";
+  } else if (x.innerHTML == " ") {
+    x.innerHTML = "/";
+    y.style.color = "#00ff00";
+  }
+}
+</script></div></div></center></body></html>
+

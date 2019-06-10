@@ -1,0 +1,168 @@
+<html>
+<head>
+    <title>20190212</title>
+    <meta charset="utf-8">
+    <style>
+      @font-face {
+           font-family:"BigBlue Terminal Plus";
+           src: url(../public/fonts/BigBlue_TerminalPlus.TTF);
+      }
+      body {
+         color: #eeeeee;
+         /*background-color: #0d0d18;*/
+         background-color: #121416;
+      }
+      pre {
+        font-family:"BigBlue Terminal Plus", "Lucida Console", monospace, Monaco;
+      }
+      a {
+        color: #fff58e;
+        text-decoration: none;
+      }
+      iky { color: #74ee15; }
+      y   { color: #f0c674; }
+      gr  { color: #aff981; }
+      r   { color: #f22e2e; }
+      w   { color: #ffffff; }
+      pnk { color: #f4b6e5; }
+      bb  { color: #9df2f2; }
+      prp { color: #daa3ff; }
+      l   { color: #c5c8c6; }
+      lg  { color: #9de9a9; }
+      stk { color: #c45100; }
+      gry { color: #a5b2b7; }
+      gx0 { color: #686868; }
+      gx1 { color: #696969; }
+      gx2 { color: #707070; }
+      gx3 { color: #787878; }
+      gx4 { color: #808080; }
+      gx5 { color: #888888; }
+      gx6 { color: #909090; }
+      gx7 { color: #989898; }
+      gx8 { color: #A0A0A0; }
+      gx9 { color: #A8A8A8; }
+      gxA { color: #A9A9A9; }
+      gxB { color: #B0B0B0; }
+      gxC { color: #B8B8B8; }
+      gxD { color: #BEBEBE; }
+      gxE { color: #C0C0C0; }
+      gxF { color: #C8C8C8; }
+      .blinking{
+          animation:blinkingText 0.8s infinite;
+      }
+      @keyframes blinkingText{
+          0%   { color: #c45100; }
+          50%  { color: transparent; }
+          100% { color: #c45100; }
+      }
+
+  </style>
+</head>
+<body class="hack dark"><center>
+<div style="display: inline-block; text-align: left;"><pre><bb>
+┌─────────┐┌────┐┌───┐┌────┐┌───┐┌─────────┐┌─────────┐┌────────┐ ┌─────────┐┌───┐┌─┐┌─┐┌────────┐ 
+│         ││    └┘   ││    └┘   ││         ││         ││    ┌┐  │ │    ┌┐   ││   └┘ └┘ ││    ┌┐  └┐
+│         ││         ││         ││         ││         ││    ││  │ │    ││   ││         ││    ││   │
+│         ││         ││         ││    ┌────┘│     ┌───┘│    └┘  └┐│    └┘   ││         ││    └┘   │
+└──┐   ┌──┘│    ┌┐   ││         ││    │┌───┐│     └───┐│    ┌┐   ││         ││    ┌┐   ││         │
+   │   │   │    ││   ││         ││    └┘   ││         ││    ││   ││         ││    ││   ││         │
+   └───┘   └────┘└───┘└─────────┘└─────────┘└─────────┘└────┘└───┘└─────────┘└────┘└───┘└─────────┘</bb>
+┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
+├── <a href="https://twitch.tv/hardchat">Twitch</a> ─── <a href="https://twitter.com/thugcrowd">Twitter</a> ─── <a href="https://patreon.com/thugcrowd">Patreon</a> ─── <a href="https://itunes.apple.com/us/podcast/thugcrowd/id1448045736?mt-2">iTunes</a> ─── <a href="https://open.spotify.com/show/1q1UO8s05MiSTtKEEfzjP6?si=BSCugTiwS3qTtQ71KYYGnw">Spotify</a> ─── <a href="snapchat://add/thugcrowd">Snapchat</a> ─── <a href="https://instagram.com/thugcrowd">Instagram</a> ─── <a href="http://vm.tiktok.com/J3Dfk8/">TikTok</a> ──┤
+├───────────────────────┬────────────────────────────────────────────────┬────────────────────────┤
+│                       └─ <gr>Episode 46 - Machine Learning Security Tools</gr> ─┘                        │
+│                                                                                                 │
+│ In this episode, we'll be discussing Machine Learning based Security Tools for Offense/Defense  │
+│                                                                                                 │
+│ BLURB: <a href="https://twitter.com/khodges42">K Hodges</a> graduated with a GED from the South Florida Juvenile Justice Center. He's       │
+│        written code for numerous three letter agencies that wish to remain nameless, built      │
+│        Defensive ML for an infosec company that also wishes to remain nameless, and is part     │
+│        of a band of delightful degenerates called #GAYSEC                                       │
+│                                                                                                 │
+│ <bb>┌────┐┌───┐┌─┐┌┐┌─┐┌───┐</bb>                                                                        │
+│ <bb>│    ││ ┌─┘│ └┘└┘ ││ ┌─┘</bb>                                                                        │
+│ <bb>│ ┌┐ ││ └┐ │      ││ └─┐</bb>                                                                        │
+│ <bb>│ ││ ││ ┌┘ │      │└─┐ │</bb>                                                                        │
+│ <bb>│ ││ ││ └─┐│  ┌┐  │┌─┘ │</bb>                                                                        │
+│ <bb>└─┘└─┘└───┘└──┘└──┘└───┘</bb>                                                                        │
+│                                                                                                 │
+╞═ <a href="https://www.nydailynews.com/opinion/ny-oped-the-nypds-new-dna-dragnet-20190206-story.html">The NYPD's new DNA dragnet: The department is collecting and storing genetic information,</a>      │
+│  <a href="https://www.nydailynews.com/opinion/ny-oped-the-nypds-new-dna-dragnet-20190206-story.html">with virtually no rules to curb their use</a>                                                      │
+│                                                                                                 │
+╞═ <a href="https://thehackernews.com/2019/02/hack-android-with-image.html">Android Phones Can Get Hacked Just by Looking at a PNG Image</a>                                   │
+│                                                                                                 │
+╞═ <a href="https://mobile.reuters.com/article/amp/idUSKCN1PV141">China hacked Norway's Visma to steal client secrets: investigators</a>                             │
+│                                                                                                 │
+╞═ <a href="https://securityaffairs.co/wordpress/80978/breaking-news/cve-2019-5736-runc-flaw.html">Docker runc flaw opens the door to a 'Doomsday scenario'</a>                                       │
+╞═══ <a href="https://seclists.org/oss-sec/2019/q1/119">Seclists Advisory</a>                                                                            │
+│                                                                                                 │
+╞═ <a href="https://www.pcmag.com/news/366478/evil-usb-cable-can-remotely-accept-commands-from-hacker?amp=1">Evil USB Cable Can Remotely Accept Commands From Hacker</a>                                        │
+│                                                                                                 │
+╞═ <a href="https://blog.malwarebytes.com/threat-analysis/2019/02/new-critical-vulnerability-open-source-office-suites/">New critical vulnerability discovered in open-source office suites</a>                             │
+│                                                                                                 │
+╞═ <a href="https://techcrunch.com/2019/02/06/iphone-session-replay-screenshots/amp/">Many popular iPhone apps secretly record your screen without asking</a>                            │
+│                                                                                                 │
+╞═ <a href="https://www.yahoo.com/news/swiss-govt-offers-reward-hacking-electronic-vote-system-204101744.html">Swiss govt offers reward for hacking its electronic vote system</a>                                │
+│                                                                                                 │
+╞═ <a href="https://techcrunch.com/2019/02/08/industrial-refrigerators-defrost-flaw/">Internet-connected industrial refrigerators can be remotely defrosted, thanks to</a>               │
+│  <a href="https://techcrunch.com/2019/02/08/industrial-refrigerators-defrost-flaw/">default passwords</a>                                                                              │
+│                                                                                                 │
+╞═ <a href="https://www.zdnet.com/article/russia-to-disconnect-from-the-internet-as-part-of-a-planned-test/">Russia to disconnect from the internet as part of a planned test</a>                               │
+│                                                                                                 │
+╞═ <a href="https://www.technologyreview.com/s/612887/how-quantum-terrorists-could-bring-down-the-future-internet/">How quantum terrorists could bring down the future internet</a>                                    │
+│                                                                                                 │
+╞═ <a href="https://www.bleepingcomputer.com/news/security/adobe-reader-zero-day-micropatch-stops-malicious-pdfs-from-calling-home/">Adobe Reader Zero-Day Micropatch Stops Malicious PDFs from Calling Home</a>                        │
+│                                                                                                 │
+│                                                                                                 │
+│ <bb>┌────┐┌────┐┌────┐┌───┐  ┌───┐ ┌───┐┌────┐┌───┐ ┌───┐</bb>                                           │
+│ <bb>│ ┌──┘│ ┌┐ ││ ┌┐ ││ ┌┐└┐ │ ┌┐│ │ ┌─┘│ ┌┐ ││ ┌┐└┐│ ┌─┘</bb>                                           │
+│ <bb>│ │┌─┐│ ││ ││ ││ ││ ││ │ │ └┘└┐│ └┐ │ ││ ││ ││ ││ └─┐</bb>                                           │
+│ <bb>│ ││ ││ ││ ││ ││ ││ ││ │ │ ┌┐ ││ ┌┘ │ └┘ ││ ││ │└─┐ │</bb>                                           │
+│ <bb>│ └┘ ││ └┘ ││ └┘ ││ └┘ │ │ ││ ││ └─┐│ ┌┐ ││ └┘ │┌─┘ │</bb>                                           │
+│ <bb>└────┘└────┘└────┘└────┘ └─┘└─┘└───┘└─┘└─┘└────┘└───┘</bb>                                           │
+│                                                                                                 │
+╞═ <a href="https://youtube.googleblog.com/2019/01/continuing-our-work-to-improve.html">Continuing our work to improve recommendations on YouTube</a>                                      │
+│                                                                                                 │
+╞═ <a href="https://blog.benjojo.co.uk/post/eve-online-bgp-internet">What would a EvE online Internet look like?</a>                                                    │
+│                                                                                                 │
+╞═ <a href="https://opensource.googleblog.com/2019/02/open-sourcing-clusterfuzz.html">ClusterFuzz (16,000 bugs in Chrome and over 11,000 in other Open Source Projects)</a>              │
+│                                                                                                 │
+╞═ <a href="https://www.cybereason.com/blog/banking-trojan-delivered-by-lolbins-ramnit-trojan">LOLBins and Trojans: How the Ramnit Trojan Spreads Via sLoad In A Cyber Attack</a>                 │
+│                                                                                                 │
+╞═ <a href="https://twitter.com/duniel_pls/status/1093565709630824448">Atrient Android App Analysis</a>                                                                   │
+│                                                                                                 │
+╞═ <a href="https://www.bleepingcomputer.com/news/security/mail-attachment-builds-ransomware-downloader-from-super-mario-image/">Mail Attachment Builds Ransomware Downloader from Super Mario Image</a>                            │
+│                                                                                                 │
+╞═ <a href="https://medium.com/@shehackspurple/pentesting-azure-the-report-3bf32fc3d12e">Pentesting Azure - The Report</a>                                                                  │
+│                                                                                                 │
+│ <bb>┌────┐┌─┐┌─┐┌───┐┌────┐┌─────┐ ┌────┐┌────┐┌───┐ ┌───┐┌───┐</bb>                                     │
+│ <bb>│ ┌──┘│ ││ ││ ┌─┘│ ┌┐ │└─┐ ┌─┘ │ ┌──┘│ ┌┐ ││ ┌┐└┐│ ┌─┘│ ┌─┘</bb>                                     │
+│ <bb>│ │   │ └┘ ││ └┐ │ ││ │  │ │   │ │   │ ││ ││ ││ ││ └┐ │ └─┐</bb>                                     │
+│ <bb>│ │   │ ┌┐ ││ ┌┘ │ └┘ │  │ │   │ │   │ ││ ││ ││ ││ ┌┘ └─┐ │</bb>                                     │
+│ <bb>│ └──┐│ ││ ││ └─┐│ ┌┐ │  │ │   │ └──┐│ └┘ ││ └┘ ││ └─┐┌─┘ │</bb>                                     │
+│ <bb>└────┘└─┘└─┘└───┘└─┘└─┘  └─┘   └────┘└────┘└────┘└───┘└───┘</bb>                                     │
+│                                                                                                 │
+╞═ <a href="https://shenaniganslabs.io/2019/02/13/Dirty-Sock.html">Privilege Escalation in Ubuntu Linux (dirty_sock exploit)</a>                                      │
+│                                                                                                 │
+╞═ <a href="https://lgtm.com/blog/ghostscript_CVE-2018-19134_exploit">Exploiting CVE-2018-19134: remote code execution through type confusion in Ghostscript</a>         │
+│                                                                                                 │
+╞═ <a href="https://embedi.org/blog/remotely-compromise-devices-by-using-bugs-in-marvell-avastar-wi-fi-from-zero-knowledge-to-zero-click-rce/">Remotely compromise devices by using bugs in Marvell Avastar Wi-Fi: from zero knowledge to</a>     │
+│  <a href="https://embedi.org/blog/remotely-compromise-devices-by-using-bugs-in-marvell-avastar-wi-fi-from-zero-knowledge-to-zero-click-rce/">zero-click RCE</a>                                                                                 │
+│                                                                                                 │
+╞═ <a href="https://github.com/yuudev/reversi">Reversi: Generate very tiny reverse shell binaries for Linux [x86_64]</a>                          │
+│                                                                                                 │
+╞═ <a href="https://blog.erbbysam.com/index.php/2019/02/09/dnsgrep/">DNSGrep - Quickly Searching Large DNS Datasets</a>                                                 │
+│                                                                                                 │
+╞═ <a href="https://twitter.com/verysmallegg/status/1095060472791994373">GreyNoise CLI Tool</a>                                                                             │
+│                                                                                                 │
+╞═ <a href="https://gist.github.com/yuudev/6b18034a32168fde4df8966612a869b8">pubsploit.py - Quick public exploit search for CVEs</a>                                            │
+│                                                                                                 │
+╞═ <a href="https://github.com/whid-injector/awesome-GO-offensive-tools">awesome-GO-offensive-tools</a>                                                                     │
+│                                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+</pre>
+</div>
+</center>
+</body>
+</html>

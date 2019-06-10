@@ -1,0 +1,162 @@
+<html>
+<head>
+    <title>20190115</title>
+    <meta charset="cp-437">
+    <style>
+      @font-face {
+           font-family:"TopazPlus a600a1200a4000";
+           src: url(../public/fonts/topazplus120010.ttf);
+           /*font-family:"BigBlue Terminal Plus";
+           src: url(fonts/BigBlue_TerminalPlus.TTF);*/
+      }
+      body {
+         color: #d1d1d1;
+         /*background-color: #0d0d18;*/
+         background-color: black;
+      }
+      pre {
+        font-family:"TopazPlus a600a1200a4000", "Lucida Console", monospace, Monaco;
+      }
+      a {
+        color: #fff58e;
+        text-decoration: none;
+      }
+      iky { color: #74ee15; }
+      y   { color: #f0c674; }
+      gr  { color: #b5bd68; }
+      r   { color: #f22e2e; }
+      w   { color: #ffffff; }
+      pnk { color: #f4b6e5; }
+      bb  { color: #5cc2ca; }
+      prp { color: #7a80a2; }
+      l   { color: #c5c8c6; }
+      lg  { color: #9de9a9; }
+      stk { color: #c45100; }
+      gry { color: #a5b2b7; }
+      gx0 { color: #686868; }
+      gx1 { color: #696969; }
+      gx2 { color: #707070; }
+      gx3 { color: #787878; }
+      gx4 { color: #808080; }
+      gx5 { color: #888888; }
+      gx6 { color: #909090; }
+      gx7 { color: #989898; }
+      gx8 { color: #A0A0A0; }
+      gx9 { color: #A8A8A8; }
+      gxA { color: #A9A9A9; }
+      gxB { color: #B0B0B0; }
+      gxC { color: #B8B8B8; }
+      gxD { color: #BEBEBE; }
+      gxE { color: #C0C0C0; }
+      gxF { color: #C8C8C8; }
+      .blinking{
+          animation:blinkingText 0.8s infinite;
+      }
+      @keyframes blinkingText{
+          0%   { color: #c45100; }
+          50%  { color: transparent; }
+          100% { color: #c45100; }
+      }
+
+  </style>
+</head>
+<body class="hack dark">
+<center>
+<div style="display: inline-block; text-align: left;"><pre>
+<r>
+                 ______________     ______      ___                             
+                 \   _    _   /----/     /_____/   \________                    
+                 /___/    /___\  _/     //    /    /   _    \                   
+                    /    //      \     //    /    /    /    /                   
+                   /_____\       /_____\ _________\_____   /                    
+                          \_____/       \/     \___________\                    
+              _________  ___________ ________ _______   _________               
+            _/        /_ )   ._    //  __    X      /___\______  \              
+            \     |__/  \_   |/  _/     /   //     /      /   /   >             
+             \    |       /  /    \_   /    /_    /\     /   /   /              
+              \__________/   \      /______/ /____/\___  X      /               
+                        \___/ \____/                   \/ \____/                
+</r>
+                Episode 42 | Tuesday January 15th | 21:30 PM EST                
+<r>
+ <a href="https://twitch.tv/hardchat">TWITCH</a> | <a href="https://twitter.com/thugcrowd">TWITTER</a> | <a href="https://patreon.com/thugcrowd">PATREON</a> | <a href="https://itunes.apple.com/us/podcast/thugcrowd/id1448045736?mt-2">iTUNES</a> | <a href="https://open.spotify.com/show/1q1UO8s05MiSTtKEEfzjP6?si=BSCugTiwS3qTtQ71KYYGnw">SPOTIFY</a> | <a href="https://instagram.com/thugcrowd">INSTAGRAM</a> | <a href="snapchat://add/thugcrowd">SNAPCHAT</a> | <a href="http://vm.tiktok.com/J3Dfk8/">TIKTOK</a>
+</r>
+<r>::: <w>SPECIAL GUESTS</w> :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::</r>
+<w>
+?????????IIIIIII:..........................?IIIIIIIII???????:+=.................
+???????IIIIIIIII...........................?IIIIIIIIIIIII???:+=.................
+????IIIIIIIIIII?...........................?IIIIIIIIIIIIIII?:+=.................
+IIIIIIIIIIIIIII:............................IIIIIIIIIIIIIII::+=...<r>RED</r>.<r>TEAMING</r>...
+IIIIIIIIIIIIIII.............................IIIIIIIIIIIIIII::+=.................
+IIIIIIIIIIIIIII............?II?IIIIII+......IIIIIIIIIIIIIII::+=......<r>WITH</r>.......
+IIIIIIIIIIIIIII..........++++???~~~IIIII??..IIIIIIIIIIIIIII::+=.................
+IIIIIIIIIIIIII?...........I?I.....::=I:..:.IIIIIIIIIIIIIIII::+=.<a href="https://twitter.com/icommitfelonies">ICOMMITFELONIES</a>.
+IIIIIIIIIIIIII?............:I?++=?I?I?.=...IIIIIIIIIIIIIIII::+=.................
+IIIIIIIIIIIIII................?IIII?II==:..IIIIIIIIIIIIIIII::+=.......<r>AND</r>.......
+IIIIIIIIIIIIII....................???I?...IIIIIIIIIIIIIIIII::+=.................
+IIIIIIIIIIIIII...........................:IIIIIIIIIIIIIIIII::+=....<a href="https://twitter.com/HydeNS33k">JEK</a>.<a href="https://twitter.com/HydeNS33k">HYDE</a>.....
+IIIIIIIIIIIII............................:IIIIIIIIIIIIIIIII::+=.................
+IIIIIIIIIIII............................IIIIIIIIIIIIIIIIIII::+=.................
+</w>
+<r>::: <w>NEWS</w> :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::</r>
+<stk>
+>>> <a href="https://thehackernews.com/2019/01/linux-systemd-exploit.html">New Systemd Privilege Escalation Flaws Affect Most Linux Distributions</a>
+    --> <a href="https://www.qualys.com/2019/01/09/system-down/system-down.txt">"System Down" Write Up</a>
+
+>>> <a href="https://www.zdnet.com/article/scp-implementations-impacted-by-36-years-old-security-flaws/">SCP implementations impacted by 36-years-old security flaws</a>
+
+>>> <a href="https://theintercept.com/2019/01/10/amazon-ring-security-camera/">Amazon Ring Goofs n' Gaffes</a>
+
+>>> <a href="https://www.zdnet.com/article/government-shutdown-tls-certificates-not-renewed-many-websites-are-down/">Government shutdown: TLS certificates not renewed, many websites are down</a>
+
+>>> <a href="https://www.theverge.com/2019/1/9/18174631/old-people-fake-news-facebook-share-nyu-princeton">People older than 65 share the most fake news, a new study finds</a>
+
+>>> <a href="https://www.theloop.ca/ctvnews/father-creates-app-that-forces-children-to-answer-parentrsquos-texts/">Father creates app that forces children to answer parent's texts</a>
+
+>>> <a href="https://www.theregister.co.uk/2019/01/11/notpetya_insurance_claim/">Zurich won't pay for NotPetya clean-up - claims it's 'an act of war'</a>
+
+>>> <a href="http://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180SB1001">SB-1001 Bots: disclosure.</a>
+
+>>> <a href="https://thehackernews.com/2019/01/phishing-zero-width-spaces.html">Hackers Using Zero-Width Spaces to Bypass MS Office 365 Protection</a>
+
+>>> <a href="https://www.zdnet.com/google-amp/article/malware-found-preinstalled-on-some-alcatel-smartphones/">Malware found preinstalled on some Alcatel smartphones</a>
+</stk>
+<r>::: <w>GOOD READS</w> :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::</r>
+<stk>
+>>> <a href="https://arxiv.org/pdf/1901.03535.pdf">Detecting Drones via Network Traffic Analysis</a>
+
+>>> <a href="https://medium.com/@z3roTrust/mobile-device-digital-forensics-6c28d04c4e21">Mobile Device Digital Forensics</a>
+
+>>> <a href="https://www.igorkromin.net/index.php/2019/01/13/godaddy-is-sneakily-injecting-javascript-into-your-website-and-how-to-stop-it/">GoDaddy is sneakily injecting JavaScript into your website & how to stop it</a>
+
+>>> <a href="https://boingboing.net/2019/01/10/narcomorlocks-vs-eloi.html">El Chapo went down because his sysadmin sold him out</a>
+</stk>
+<r>::: <w>CHEAT CODES</w> ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::</r>
+<stk>
+>>> <a href="https://twitter.com/404death/status/1084770410195910657">Popping calc with excel</a>
+
+>>> <a href="https://bugs.chromium.org/p/project-zero/issues/detail?id=1692">polkit: temporary auth hijacking via PID reuse and non-atomic fork</a>
+
+>>> <a href="https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190109-esa-dos">Cisco Email Security Appliance Memory Corruption Denial of Service Vuln</a>
+</stk>
+<r>::: <w>PLAYLIST</w> :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::</r>
+<stk>
+>>> <a href="https://soundcloud.com/luhzay1k/evol">LUH ZAY 1K - Evol People (intro)</a>
+
+>>> <a href="https://soundcloud.com/drettifranks/polo-raincoat-prod-dretti">DRETTI FRANKS - POLO RAINCOAT (PROD. DRETTI FRANKS)</a>
+
+>>> <a href="https://soundcloud.com/brokechic/grenadine">BROKE CHIC - Grenadine</a>
+
+>>> <a href="https://soundcloud.com/vibesforeveryt/zotiyac-fantasia-vibesforever-exclusive">ZOTiYAC - Fantasia Freestyle (Prod. CXRPSE)</a>
+
+>>> <a href="https://soundcloud.com/tenngagebeats/devilish-trio-reprimand">DEVILISH TRIO - REPRIMAND</a>
+
+>>> <a href="https://soundcloud.com/cosmastly/clairton-blvd">COSMASTLY - CLAIRTON BLVD FT. PNUT</a>
+
+>>> <a href="https://soundcloud.com/dg4e/atmos-the-ill-kid-diss-exploits-out-of-touch-cord">Atmos The ILL KID - Dissploits OUT OF TOUCH</a>
+</stk>
+</pre>
+</div>
+</center>
+</body>
+</html>

