@@ -274,7 +274,7 @@ div.clear
                             {
                                 display: inline-block;
                                 *display: inline; /* for IE7 */
-                                border-right: 1px solid #062143;
+                                'border-right: 1px solid #062143; no borders allowed'
                                 border-left: 1px solid #183559;
                                 padding: 15px 50px 15px 50px;
                                 width: 75px;
