@@ -1,0 +1,1597 @@
+/* START  */
+/* FOIA web site styles
+ * 
+ * Author: Christopher Lincoln, A/GIS/IPS/AAS (Contractor: MetroStar Systems, Inc.)
+ * Created: 24 JAN 2013
+ */
+
+html 
+{
+    background: #FFFFFF;
+    background-image: url('bkg-gradient-tile.jpg');
+    background-position: top;
+    background-repeat: repeat-x;
+}
+
+.hidden
+{
+    visibility:hidden;
+}
+body.foia
+{
+    margin: 0px auto 0px auto;
+    padding: 0px;
+    width: 100%;
+    
+    background: url('bkg-flag05.jpg') no-repeat center top;
+    font-family: Lucida Grande, Verdana, Arial, sans-serif;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+  
+a
+{
+    color: #395799;
+    text-decoration: none;
+}
+    a:focus
+    {
+        color: #A10F23;
+        text-decoration: underline;
+    }
+    a:hover 
+    {
+        color: #A10F23;
+        text-decoration: underline;
+    }
+    a[disabled]
+    {
+        color: Gray;
+        text-decoration:none;
+    }
+    a.Button
+    {
+        display: inline-block;
+        padding: 5px 15px 5px 15px;
+                                
+       /* 508 fixes - Sai commented the code - background: #609BC8; 
+        added new code below :#3d78a5*/
+       background: #1f5a87 ;
+        color: #FAFAFA;
+        font-size: 1.1em;
+        line-height: 1.3em;
+    }
+        a.Button:hover
+        {
+             background: #8AB8DA;
+            text-decoration: none;
+        }
+    a img.Link-External 
+    {
+        border: 0px;
+        margin-left: 5px;
+    }
+input.SearchInput
+{
+    border: 1px solid #AFAFAF;
+    padding: 5px;
+}
+    input.SearchInput:focus
+    {
+        border-color: #609BC8;
+    }
+
+div.rfdSelectBox  /* override for Telerik FormDecorator; ensures left-alignment for styled drop-down menus */
+{
+    text-align: left;
+}
+
+div.clear 
+{
+    clear: both;
+}
+
+#wrapper /* top-level parent */
+{
+    display: inline-block;
+    width: 900px;
+    
+    background: url('bkg-flag05.jpg') no-repeat center top;
+}
+    #TopArea
+    {
+        
+    }
+        #LogoArea /* top region containing the Department logo */
+        {
+            display: inline-block;
+            *display: block; /* for IE7 */
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 590px;
+            
+            float: left;
+            
+            white-space: nowrap;
+        }
+            #LogoArea a, 
+            #LogoArea a img
+            {
+                border: none;
+            }
+            #LogoArea #LogoTitle
+            {
+                padding-top: 6px;
+                padding-left: 10px;
+                vertical-align: top;
+            }
+            #LogoArea #tagline
+            {
+                padding: 3px 0px 0px 12px;
+                text-align: left;
+                letter-spacing: 2px;
+                font-size: 13px;
+                color:#b3cfeb;
+                text-transform: uppercase;
+            }
+    
+        .SearchArea /* top-right "floating" search control */
+        {
+            display: block;
+            margin-top: 35px;
+            
+            float: right;
+            
+            text-align: right;
+            vertical-align: top;
+            white-space: nowrap;
+            width: 300px;
+        }
+            .SearchArea input[type="text"]
+            {
+                display: inline;
+                border: 1px solid transparent;
+                padding: 4px 5px 5px 5px;
+                vertical-align: top;
+                height: 20px;
+                width: 175px;
+            
+                color: #C0C0C0;
+                font-size: 11px;
+                font-style: italic;
+            }
+                .SearchArea input[type="text"]:focus, 
+                .SearchArea input[type="text"].Active
+                {
+                    color: #333333;
+                    font-style: normal;
+                }
+            .SearchArea a
+            {
+                height: 20px;
+            }
+    
+    #MainArea, #TopMenuArea, #FooterArea
+    {
+        margin: 0px;
+    }
+        
+        #TopMenuArea /* top navigation */
+        {
+            display: block;
+        }
+            #TopMenuArea .HomeTopMenuArea
+            {
+                padding: 10px 10px 0px 5px;
+                text-align: right;
+                background-image: url('bk-hometopnav.png');
+                background-position: top left;
+                background-repeat: no-repeat;
+            }
+                #TopMenuArea .HomeTopMenu 
+                {
+                    padding: 0px;
+                    width: 100%;
+                    text-align: right;
+                }
+                    #TopMenuArea .HomeTopMenu ul 
+                    {
+                        display: block;
+                        margin: 0px;
+                        *margin: 10px 0px 0px 0px; /* for IE7 */
+                        float: none !important;
+                        white-space: nowrap;               
+                        background: #FFFFFF;
+                    }
+                        #TopMenuArea .HomeTopMenu ul li 
+                        {
+                            display: inline-block;
+                           *display: inline; /* for IE7 */
+                            margin-left: 10px;
+                            /*border-left: 1px solid #DADADA;*/
+                            padding-right: 0px;
+                            padding-left: 10px;
+                        }
+                            #TopMenuArea .HomeTopMenu ul li a 
+                            {
+                                *display: inline; /* for IE7 */
+                                padding: 2px 10px 2px 10px;
+                                color: #A22538;
+                                font-family: 'Lucida Grande', Arial, Verdana, sans-serif;
+                                font-size: 1em;
+                                font-weight: bold;
+                            }
+                                #TopMenuArea .HomeTopMenu ul li a:hover 
+                                {
+                                    color: #333333;
+                                    text-decoration: underline;
+                                }
+            #TopMenuArea .MainTopMenuArea
+            {
+                padding-top: 9px;
+                height: 63px;
+                
+                background-image: url('bk-maintopnav.png');
+                background-position: top left;
+                background-repeat: no-repeat;
+            }
+                #TopMenuArea .MainTopMenuArea .MainTopMenu
+                {
+                    padding: 0px 0px 10px 0px;
+                    width: 100%;
+                    
+                    float: none !important;
+                    
+                    background: #A40B20;
+                }
+                    #TopMenuArea .MainTopMenuArea .MainTopMenu ul
+                    {
+                        display: block;
+                        padding: 0px;
+                        *padding-top: 15px; /* for IE7 */
+                        *height: 33px;
+                        width: 100% !important;
+                        
+                        float: none !important;
+                        position: static !important;
+                        text-align: center;
+                        
+                        background-color: #09274D;
+                        background-image: url('bk-maintopnav.gif');
+                        background-position: 0px 0px;
+                        background-repeat: repeat-x;
+                        text-align: center;
+                    }
+                        #TopMenuArea .MainTopMenuArea .MainTopMenu ul li 
+                        {
+                            display: inline-block;
+                            *display: inline; /* for IE7 */
+                            
+                            float: none !important;
+                        }
+                            #TopMenuArea .MainTopMenuArea .MainTopMenu ul li a 
+                            {
+                                display: inline-block;
+                                *display: inline; /* for IE7 */
+                                border-right: 1px solid #062143;
+                                border-left: 1px solid #183559;
+                                padding: 15px 50px 15px 50px;
+                                width: 75px;
+                                
+                                X*float: left !important; /* for IE7 */
+                                
+                                background-color: #09274D;
+                                background-image: url('bk-maintopnav.gif');
+                                background-position: 0px 0px;
+                                background-repeat: repeat-x;
+                                color: #DFDFDF;
+                                font-family: Verdana, Georgia, Times New Roman, serif;
+                                font-size: 1.25em;
+                                font-weight: normal;
+                                letter-spacing: 2px;
+                                text-transform: uppercase;
+                            }
+                                #TopMenuArea .MainTopMenuArea .MainTopMenu ul li a:hover 
+                                {
+                                    border-color: #255492;
+
+                                    background-image: url('bk-maintopnav.gif');
+                                    background-position: 0px -70px;
+                                    background-repeat: repeat-x;
+                                }
+                                #TopMenuArea .MainTopMenuArea .MainTopMenu ul li a.selected 
+                                {
+                                    background-image: url('bk-maintopnav.gif');
+                                    background-position: 0px -140px;
+                                    background-repeat: repeat-x;
+                                }
+                                    #TopMenuArea .MainTopMenuArea .MainTopMenu ul li a.selected:hover 
+                                    {
+                                        border-right-color: #062143;
+                                        border-left-color: #183559;
+                                    } 
+                #TopMenuArea .MainTopMenuArea .shadow  /* drop shadow */
+                {
+                    display: block;
+                    height: 5px;
+                    
+                    background: #FFFFFF;
+                    background-image: url('bk-shadow-top.png');
+                    background-position: bottom;
+                    background-repeat: repeat-x;
+                }
+        
+        #BreadcrumbArea /* breadcrumb */
+        {
+            width: 900px;
+            
+            background-color: #FFFFFF;
+            text-align: left;
+        }
+            #BreadcrumbArea .Breadcrumb 
+            {
+                display: block;
+                border-bottom: 1px solid #E0E0E0;
+                padding: 5px 10px 10px 10px;
+                
+                color: #555555;
+                cursor: default;
+                font-size: 0.9em;
+                letter-spacing: 1px;
+            }
+                #BreadcrumbArea .Breadcrumb .Divider 
+                {
+                    padding-right: 5px;
+                    padding-left: 5px;
+                    
+                  /* changed to fix the section 508 compliance - Sai 08/16/2016
+                    color: #999999;767676 */
+                  color: #595959;
+                  
+                }
+        
+        #MainArea /* body */
+        {
+            padding-bottom: 20px;
+            min-height: 600px;
+            width: 900px;
+            
+            background-color: #FFFFFF;
+            text-align: left;
+        }
+            #LeftMenuArea /* left navigation */
+            {
+                display: inline-block;
+                *display: inline; /* for IE7 */
+                *margin-left:0px; /* Necessary with antique browsers for displaying JS dynamic menus on the left. */
+                width: 250px;
+                
+                float: left;
+                
+                vertical-align: top;
+            }
+                .SectionLogo 
+                {
+                    margin-right: 15px;
+                    height: 120px;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    /*border:1px solid #395799;
+                    border-left:0px;
+                    border-bottom:0px;*/
+                }
+                .MainLeftMenu
+                {
+                    
+                }
+                    .MainLeftMenu li 
+                    {
+                        width: 250px;
+                    }
+                        .MainLeftMenu li a
+                        {
+                            white-space: normal !important;
+                            
+                            font-size: 0.9em;
+                        }
+
+                        .MainLeftMenu li a.level1 /* headers */
+                        {
+                            margin: 0px 0px 0px 0px !important;
+                            padding: 15px 28px 15px 10px !important;
+                            
+                            background-image: url('bk-leftnav.gif') !important;
+                            background-position: right 0px !important;
+                            background-repeat: no-repeat !important;
+                            color: #EAEAEA;
+                        }
+                            .MainLeftMenu li a.level1:hover 
+                            {
+                                background-position: right -130px !important;
+                            }
+                            .MainLeftMenu li a.level1.selected 
+                            {
+                                background: #2060A0;
+                                background-image: url('bk-leftnav-selected.gif') !important;
+                                background-position: right center !important;
+                            }
+                            .MainLeftMenu li a.level1.selectedParent 
+                            {
+                                background: #2060A0;
+                                background-position: right -260px !important;
+                            }
+                        .MainLeftMenu li ul /* sub menus */
+                        {
+                            display: block !important;
+                            
+                            position: static !important;
+                        }
+                            .MainLeftMenu li ul li 
+                            {
+                                background-image: url('bk-submenu-inactive.gif');
+                                background-position: right;
+                                background-repeat: repeat-y;
+                            }
+                                .MainLeftMenu li ul li a 
+                                {
+                                    display: block;
+                                    margin-right: 13px;
+                                    border-right: 1px solid #DADADA;
+                                    padding: 6px 25px 6px 25px;
+                                    
+                                    background-image: url('bk-listitem.png');
+                                    background-position: 10px center;
+                                    background-repeat: no-repeat;
+                                    color: #2060A0;
+                                }
+                                    .MainLeftMenu li ul li a:hover 
+                                    {
+                                        color: #333333 !important;
+                                        text-decoration: underline !important;
+                                    }
+                                .MainLeftMenu li ul li a.selected 
+                                {
+                                    background-image: url('bk-listitem.png');
+                                    background-position: 10px center;
+                                    background-repeat: no-repeat;
+                                    color: #333333;
+                                    color: #A40B20;
+                                }
+                                    
+            #MainContentArea
+            {
+                display: inline-block;
+                *display: inline; /* for IE7 */
+                padding: 10px 20px 10px 0px;
+                
+                width: 600px;
+                
+                float: right;
+                
+                vertical-align: top;
+            }
+                .MainTitle 
+                {
+                    display: block;
+                    padding-bottom: 10px;
+
+                    color: #A40B20;
+                    font-family: Georgia, Times New Roman, serif;
+                    font-size: 2em;
+                    letter-spacing: 1px;
+                }
+                .MainContent 
+                {
+                    width:600px;
+                    color: #333333;
+                }
+                    .MainContent h1 
+                    {
+                        display: block;
+                        margin: 0px 0px 10px 0px;
+                        padding-bottom: 10px;
+
+                        color: #A40B20;
+                        font-family: Georgia, Times New Roman, serif;
+                        font-size: 2em;
+                        letter-spacing: 1px;
+                    }
+                    .MainContent h2 
+                    {
+                        display: block;
+                        margin: 0px 0px 10px 0px;
+                        
+                        color: #333333;
+                        font-family: 'Lucida Grande', Verdana, Arial, sans-serif;
+                        font-size: 1.5em;
+                        letter-spacing: 0px;
+                    }
+                        .MainContent h2.serif 
+                        {
+                            display: block;
+                            margin: 0px 0px 10px 0px;
+                        
+                            color: #333333;
+                            font-family: 'Georgia', Times New Roman, serif;
+                            font-size: 1.5em;
+                            font-style: italic;
+                            font-weight: normal;
+                            letter-spacing: 1px;
+                        }   
+                    .MainContent h3 
+                    {
+                        display: block;
+                        margin: 0px 0px 4px 0px;
+                        
+                        color: #333333;
+                        font-family: 'Lucida Grande', Verdana, Arial, sans-serif;
+                        font-size: 1.2em;
+                        letter-spacing: 0px;
+                    }
+                    .MainContent h4 
+                    {
+                        margin: 0px;
+                    }
+                    .MainContent p 
+                    {
+                        margin-top: 0px;
+                    }
+                    .MainContent div.TopSection 
+                    {
+                        margin-bottom: 15px;
+                        border-bottom: 1px solid #C0C0C0;
+                        padding-bottom: 5px;
+                    } 
+                    .MainContent ul 
+                    {
+                        margin: 0px;
+                        padding: 0px 0px 10px 18px;
+                    }
+                    .MainContent ul.Checkboxes
+                    {
+                        list-style-image: url('checkbox.gif');
+                    } 
+                        .MainContent ul.Checkboxes li
+                        {
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                        }
+                    .MainContent ul.Letters 
+                    {
+                        list-style-type: lower-latin;
+                    } 
+                    .MainContent ul.LinkList 
+                    {
+                        padding-left: 0px;
+                        
+                        list-style-type: none;
+                    }
+                        .MainContent ul.LinkList a /* hyperlinks without HREF attributes; CSS2 for IE 6/7 compatibility */
+                        {
+                            display: block;
+                            margin-top: 10px;
+                            margin-bottom: 5px;
+                            
+                            color: #333333;
+                            font-weight: bold;
+                            line-height: normal;
+                        }
+                            .MainContent ul.LinkList a:hover 
+                            {
+                                text-decoration: none;
+                            }
+                        .MainContent ul.LinkList a[href] /* hyperlinks with HREF attributes */
+                        {
+                            display: inline;
+                            margin: 0px;
+                            
+                            color: #395799;
+                            font-weight: normal;
+                            line-height: 2.5em;
+                        }
+                            .MainContent ul.LinkList a[href]:hover 
+                            {
+                                color: #A10F23;
+                                text-decoration: underline;
+                            }
+                        .MainContent ul.LinkList span.LinkDescription
+                        {
+                            display:block;
+                            padding: 0px 10px 0px 15px;
+                        }
+                        .HelpMessage, 
+                        .InfoMessage
+                        {
+                            margin: 10px 0px 10px 0px;
+                            border: 1px solid #c1dcf0;
+                            padding: 10px 10px 10px 40px;
+                            
+                            cursor: default;
+                        }
+                        .HelpMessage 
+                        {
+                            background: #e8eff5;
+                            background-image: url('help.gif');
+                            background-position: 10px 10px;
+                            background-repeat: no-repeat;
+                        }
+                        .InfoMessage 
+                        {
+                            background: #e8eff5;
+                            background-image: url('info.gif');
+                            background-position: 10px 10px;
+                            background-repeat: no-repeat;
+                        }
+                            .HelpMessage p, 
+                            .InfoMessage p
+                            {
+                                margin: 5px 0px 0px 0px;
+        
+                                color: #333333;
+                                font-size: 0.9em;
+                            }
+                            .HelpMessage p.Header, 
+                            .InfoMessage p.Header 
+                            {
+                                margin: 0px;
+                                font-weight: bold;
+                            }
+                    .MainContent .SmallText 
+                    {
+                        color: #999999;
+                    }
+                    .MainContent .ElectronicSubmission-PrintTitle /* hidden page title displayed only when user prints electronic request form (see ElectronicRequestPrint.css) */
+                    {
+                        display: none;
+                    }
+                    .MainContent .Required-Legend { /* Required field legend */
+                        border-bottom: 1px solid #E0E0E0;
+                        padding: 0px 10px 10px 10px;
+                        
+                        color: #595959;
+                        font-size: 0.9em;
+                        font-style: italic;
+                        text-align: right;
+                        
+                    }
+                    .MainContent .Required-Indicator /* required field indicator */
+                    {
+                        vertical-align: top;
+                       /* changed to fix the section 508 compliance - Sai 08/16/2016
+                       color: #f00; */
+                        color: #e00;
+                    }
+                    .MainContent .ElectronicSubmission-Body .Required-Indicator
+                    {
+                        font-size: 0.9em;
+                    }
+                    .MainContent .Link-Help 
+                    {
+                        float: right;
+
+                        font-size: 0.9em;
+                    }
+                    .MainContent #cphMainContent_ManualSubmissionArea 
+                    {
+                        margin-bottom: 10px;
+
+                        float: none !important;
+                        text-align: right;
+                    }
+                    .MainContent .ElectronicSubmission-Tabs /* tabs for electronics request */
+                    {
+                        margin-bottom: 20px;
+                    }
+                    .MainContent .ElectronicSubmission-ErrorOutput /* electronic request form validation output */ 
+                    {
+                        margin-bottom: 10px;
+                        border: 1px solid #ffcc7d;
+                        
+                        background: #fff6e8;
+                    }
+                        .MainContent .ElectronicSubmission-ErrorOutput ul 
+                        {
+                            margin: 10px 0px 0px 0px;
+                            padding: 0px;
+
+                            list-style: none;
+                        }
+                            .MainContent .ElectronicSubmission-ErrorOutput ul li 
+                            {
+                                margin-bottom: 10px;
+                                padding: 0px 10px 0px 10px;
+
+                                /* Section 508 fixes - Sai 08/23/2016 
+                                changed color from color: #f00; to #a20000;*/
+                                color: #a20000;
+                            }
+                    .MainContent .RequestPanel /* electronic request form */
+                    {
+                        margin-bottom: 20px;
+                    }
+                        .MainContent .RequestPanel fieldset 
+                        {
+                            padding: 10px;
+                            border: 1px solid #2060A0;
+                            
+                            overflow: hidden;
+                            
+                            background: #FFFFFF;
+                        }
+                            .MainContent .RequestPanel fieldset legend /* section title */
+                            {
+                                color: #09274D;
+                                color: #2060A0;
+                                font-size: 1.5em;
+                                font-weight: normal;
+                            }
+                            .MainContent .RequestPanel fieldset .ElectronicSubmission-Form /* form step */
+                            {
+                                width: 100%;
+                            }
+                                .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .FieldTitle /* field title text */
+                                {
+                                    color: #333333;
+                                    font-size: 1.1em;
+                                    font-weight: bold;
+                                }
+                                .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Label /* field label column */
+                                {
+                                    border-bottom: 1px solid #E0E0E0;
+                                    padding: 10px 10px 10px 0px;
+                                    Xwidth: 200px;
+                                    
+                                    text-align: left;
+                                    vertical-align: top;
+                                    white-space: nowrap;
+                                }
+                                    .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Label .Help /* "?" button */ 
+                                    {
+                                        display: inline-block;
+                                        padding-right: 5px;
+                                        padding-left: 5px;
+                                        height: 16px;
+                                        width: 16px;
+                                        
+                                        float: right;
+
+                                        background: url('help.gif') no-repeat center;
+                                        cursor: pointer;
+                                    }
+                                    .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Label .Description /* description text */ 
+                                    {
+                                        color: #999999;
+                                        font-size: 0.9em;
+                                    }
+                                .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body  /* field input column */
+                                {
+                                    border-bottom: 1px solid #E0E0E0;
+                                    padding: 10px 10px 10px 10px;
+                                    width: 100%;
+                                    
+                                    vertical-align: top;
+                                    
+                                    /*background-image: url('_includes/Styles/../Images/bk-noise-white.gif');
+                                    background-repeat: repeat;*/
+                                    font-size: 1em;
+                                }
+                                    .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body input, 
+                                    .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body select 
+                                    {
+                                        padding: 4px;
+                                    }
+                                    .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body input[type="text"], 
+                                    .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body textarea, 
+                                    .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body select 
+                                    {
+                                        border: 1px solid rgb(155, 171, 194);
+                                        padding: 4px;
+                                        /*2014/10/16: Matches the Telerik controls styles.*/
+                                        font-size:12px;
+                                        font-family: 'segoe ui', Arial, Sans-Serif;
+                                    }
+                                        .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body input.RightAlign 
+                                        {
+                                            text-align: right;
+                                        }
+                                        .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body input.riTextBox 
+                                        {
+                                            *width: 300px !important; /* mitigates IE 6/7 issue causing controls to render with 100% width */
+                                        }
+                                        .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .currency input.riTextBox 
+                                        {
+                                            *width: 50px !important; /* ensures inline currency field displays properly */
+                                        }
+                                    .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .Checkbox 
+                                    {
+
+                                    }
+                                        .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .Checkbox input 
+                                        {
+                                            float: left;
+                                        }
+                                        .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .Checkbox label 
+                                        {
+                                            display: inline-block;
+                                            margin-top: 4px;
+                                            width: 750px;
+                                            
+                                            cursor: default;
+                                        } 
+                                    .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .CheckboxList
+                                    {
+
+                                    }
+                                        .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .CheckboxList input 
+                                        {
+                                            float: left;
+                                        } 
+                                        .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .CheckboxList label 
+                                        {
+                                            display: inline-block;
+                                            margin-top: 4px;
+                                            width: 750px;
+
+                                            cursor: default;
+                                        }
+                                    .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .RadioList 
+                                    {
+
+                                    }
+                                        .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .RadioList input 
+                                        {
+                                            float: left;
+                                        } 
+                                        .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .RadioList label 
+                                        {
+                                            display: inline-block;
+                                            margin-top: 4px;
+                                            width: 750px;
+
+                                            cursor: default;
+                                        }
+                                    .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .DatePicker-Container /* document time frame controls */
+                                    {
+                                        text-align:center;
+                                    }
+                                        .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .DatePicker-Container .DatePicker-Table 
+                                        {
+                                            display: inline-block;
+                                        }
+                                            .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .DatePicker-Container .DatePicker-Table .DatePicker-Left 
+                                            {
+                                                vertical-align:top;
+                                                text-align: right;
+                                            }
+                                            .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .DatePicker-Container .DatePicker-Table .DatePicker-Right 
+                                            {
+                                                vertical-align:top;
+                                                text-align: left;
+                                            }
+                                            .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .DatePicker-Container .DatePicker-Table .DatePicker-Label 
+                                            {
+                                                padding-bottom: 5px;
+                                                width: 125px;
+                                                
+                                                font-size: 1em;
+                                                font-weight: bold;
+                                                text-align: left;
+                                            }
+                                            .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .DatePicker-Container .DatePicker-Table .DatePicker-Control 
+                                            {
+                                                width: 125px;
+                                                
+                                                text-align: left;
+                                            }
+                                                .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .DatePicker-Container .DatePicker-Table .DatePicker-Control img 
+                                                {
+                                                    margin-left: 5px;
+                                                    
+                                                    cursor: pointer;
+                                                }
+                                                .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .DatePicker-Container .DatePicker-Table .DatePicker-Control .Description 
+                                                {
+                                                    text-align: left;
+                                                }
+                                    .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .Description /* description text */ 
+                                    {
+                                        /* Section 508 changes - Sai 08/16/2016
+                                        Commented and changed to 
+                                        color: #999999; */
+                                        color: #767676;
+                                        font-size: 0.9em;
+                                    }
+                                    .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .MoreInput /* friendly text above "other/more information" text areas */ 
+                                    {
+                                        display: inline-block;
+                                        margin-top: 5px;
+                                        margin-bottom: 5px;
+                                    }
+                                    .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Body .TabbedSection 
+                                    {
+                                        padding-top: 5px;
+                                        text-align: right;
+                                    }
+                                .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Notes  /* text at bottom of Review page */
+                                {
+                                    padding: 10px 10px 10px 10px;
+                                    
+                                    vertical-align: top;
+
+                                    font-size: 0.9em;
+                                }
+                                .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Controls /* button row */
+                                {
+                                    padding-top: 20px;
+
+                                    text-align: right;
+                                }
+                                    .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Controls a 
+                                    {
+                                        display: inline-block;
+                                        padding: 5px 15px 5px 15px;
+                                
+                                        /* Section 508 changes - Sai 08/16/2016
+                                        Commented and changed to 
+                                        background: #609BC8;  */
+                                        
+                                        color: #767676; 
+                                        background: #3d78a5;
+                                        color: #FAFAFA;
+                                        font-size: 1.1em;
+                                        line-height: 1.3em;
+                                    }
+                                        .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Controls a:hover 
+                                        {
+                                            background: #8AB8DA;
+                                            text-decoration: none;
+                                        }
+                                        .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Controls a[disabled ="true"]
+                                        {
+                                            background: #D0D0D0 !important;
+                                            cursor: default;
+                                        }
+                                        .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Controls a.Button-Left 
+                                        {
+                                            margin-right: 10px;
+                                            float: left;
+                                        }
+                                        .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Controls a.Button-Left-Back
+                                        {
+                                            margin-right: 10px;
+                                            float: left;
+                                            background-image: url('bk-submit-back.gif');
+                                            background-position: left 0px;
+                                            background-repeat: no-repeat;
+                                        }
+                                            .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Controls a.Button-Left-Back:hover 
+                                            {
+                                                background-position: left -27px;
+                                            }
+                                        .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Controls a.Button-Right 
+                                        {
+                                            margin-left: 10px;
+                                            float: right;
+                                            
+                                            background-image: url('bk-submit-continue.gif');
+                                            background-position: right 0px;
+                                            background-repeat: no-repeat;
+                                        }
+                                            .MainContent .RequestPanel fieldset .ElectronicSubmission-Form .ElectronicSubmission-Controls a.Button-Right:hover 
+                                            {
+                                                background-position: right -27px;
+                                            }
+                    .MainContent .Worksheet-Section /* manual request worksheet */
+                    {
+                        display: none;
+                        width: 100%;
+                    }
+                        .MainContent .Worksheet-Section td.Label, 
+                        .MainContent .Worksheet-Section td.Body 
+                        {
+                            border-top: 1px solid #D0D0D0;
+                            padding: 10px;
+                            
+                            line-height: 3em;
+                        }
+                        .MainContent .Worksheet-Section td.Label
+                        {
+                            width: 30%;
+                            
+                            vertical-align: top;
+                            white-space: nowrap;
+                        }
+                            .MainContent .Worksheet-Section td.Label span 
+                            {
+                                font-weight: bold;
+                            }
+                        .MainContent .Worksheet-Section td.Body 
+                        {
+                            font-size: 11pt;
+                        }
+                            .MainContent .Worksheet-Section td.Body .Description
+                            {
+                                color: #454545;
+                                font-size: 8pt;
+                            }
+                    .MainContent .Guide-TOC
+                    {
+                        list-style-type: upper-roman;
+                    }
+                        .MainContent .Guide-TOC li
+                        {
+                            padding-bottom: 20px;
+                            
+                            font-weight: bold;
+                        }
+                            .MainContent .Guide-TOC li ol
+                            {
+                                padding-top: 4px;
+                                padding-left: 20px;
+                            } 
+                                .MainContent .Guide-TOC li ol li 
+                                {
+                                    padding-top: 2px;
+                                    padding-bottom: 2px;
+                                    
+                                    font-weight: normal;
+                                }
+                    .MainContent .Guide-Section 
+                    {
+                        margin-top: 30px;
+                        border-top: 1px solid #DADADA;
+                        padding-top: 20px;
+                    }
+                        .MainContent .Guide-Section .Guide-Header
+                        {
+                            font-size: 1.5em;
+                            font-weight: normal;
+                        }
+                        .MainContent .Guide-Section .Guide-SubSections
+                        {
+                            padding-left: 0px;
+                        }
+                        .MainContent .Guide-Section .Guide-SubSection
+                        {
+                            padding-top: 20px;
+                        }
+                            .MainContent .Guide-Section .Guide-SubSection .Guide-SubHeader
+                            {
+                                font-size: 1.2em;
+                                font-weight: bold;
+                            }
+                        .MainContent .Guide-Section .Guide-TopLink
+                        {
+                            float: right;
+                        }
+                    .MainContent .Footer 
+                    {
+                        padding-right: 10px;
+                        padding-left: 10px;
+
+                        color: #595959;
+                        font-size: 0.9em;
+                        line-height: 1.5em;
+                    }
+        
+        #FooterArea /* footer */
+        {
+            height: 50px;
+            
+            text-align: center;
+            
+            background-image: url('bk-footer.png');
+            background-position: center top;
+            background-repeat: no-repeat;
+        }
+            .left-footer
+            {
+                display: inline-block !important;
+                width: auto;
+                
+                float: left;
+                
+                text-align: left;
+            }
+                .left-footer .external-links
+                {
+                    margin: 10px 0px 0px 0px;
+                    padding: 0px;
+                }
+                    .left-footer .external-links li 
+                    {
+                        display: inline-block;
+                        *display: inline; /* for IE7 */
+                        margin: 0px 5px 10px 0px;
+                        padding: 0px;
+                        
+                        text-align: left;
+                    }
+                        .left-footer .external-links li a
+                        {
+                            display: inline-block;
+                        }
+                            .left-footer .external-links li a img 
+                            {
+                                border: none;
+                            }
+            .right-footer
+            {
+                display: inline-block;
+                width: auto;
+                
+                float: right;
+            }
+                .right-footer .external-links 
+                {
+                    display: inline;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    border-right: 1px solid #C0C0C0;
+                    padding-top: 5px;
+                    padding-right: 15px;
+                    padding-bottom: 10px;
+                    
+                    float: left;
+                    
+                    vertical-align: top;
+                }
+                    .right-footer .external-links a,
+                    .right-footer .external-links a:visited 
+                    {
+                        margin-left: 10px;
+                        
+                        color: #09274D;
+                        font-size: 0.85em;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                    }
+                        .right-footer .external-links a:hover 
+                        {
+                            color: #A10F23;
+                            text-decoration: underline !important;
+                        }
+                        .right-footer .external-links a img 
+                        {
+                            display: none;
+                        }
+                .right-footer .internal-links
+                {
+                    display: inline;
+                    
+                    float: none !important;
+                }
+                    .right-footer .internal-links ul 
+                    {
+                        display: inline;
+                        
+                        float: none !important;
+                        position: inherit !important;
+                        vertical-align: bottom;
+                    }
+                    .right-footer .internal-links ul li
+                    {
+                        display: inline !important;
+                    }
+                        .right-footer .internal-links ul li a, 
+                        .right-footer .internal-links ul li a:visited
+                        {
+                            display: inline-block !important;
+                            *display: inline !important; /* IE 6/7 */
+                            margin: 15px 0px 0px 10px;
+                            
+                            color: #09274D;
+                            font-size: 0.85em;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                        }
+                            .right-footer .internal-links ul li a:hover 
+                            {
+                                color: #A10F23;
+                                text-decoration: underline !important;
+                            }
+            a.version
+            {
+                margin: 10px 5px 0px 10px;
+                
+                float: right;
+                /* Commented - for section 508 compliance - Sai
+                color: #AFAFAF; added Black*/
+                color: Black;
+                cursor: default;
+                font-size: 0.75em;
+                letter-spacing: 1px;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+                a.version:hover 
+                {
+                    color: #333333;
+                    text-decoration: none;
+                }
+
+.Print 
+{
+    display: none;
+}
+
+@media all
+{
+    .page-break
+    {
+        display:none;
+    }   
+}
+
+@media print {
+    
+    #BreadcrumbArea,
+    #TopArea, 
+    .SearchArea,
+    #TopMenuArea, 
+    #LeftMenuArea, 
+    #FooterArea, 
+    a.version, 
+    .NoPrint
+    {
+        display: none !important;
+    }
+
+    #MainContentArea 
+    {
+        padding-left: 20px;
+        width: auto;
+    }
+    
+    .Worksheet-Section 
+    {
+        display: block !important;
+    }
+    
+    .Print 
+    {
+        display: block;
+        position: relative;
+    }
+    
+    .PageBreak
+    {
+        page-break-before: always;
+    }
+}
+
+
+/* ALL CONTENT BELOW NEEDS TO BE REFACTORED  */
+
+
+
+/***********************************
+Modal Windows
+***********************************/
+
+#mask
+{
+    left:0px;
+    top:0px;
+    position:absolute;
+    z-index:9000; /* z-index must be lower than .window to ensure that the .window appears in front of this. */
+    background-color:#036;
+    display:none;
+}
+ 
+.ModalWindow
+{
+    position:fixed;   
+    display:none;   
+    z-index:9999;           
+    background:White;
+    border:solid 2px #036;
+    /*width:440px;   
+    height:200px;
+    padding:20px;*/
+    max-width:70%;
+    max-height:100%;
+    /* Scrollbars should not be necessary unless a browser as old as IE7 is used. */
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+.ModalWindow div:first-child
+{
+    background-color: White;      
+    background-image: url('titlebg.png');      
+    background-repeat: repeat-y;
+    background-position:center left;
+    padding-top:2px;
+    padding-bottom:2px;
+}
+      
+.ModalMainContent
+{
+    margin:20px;
+    font-size:smaller;
+}
+      
+/* Show the rest of the styles for the subtitle except for the display and padding */
+.ModalWindow div span
+{
+    color:#036;
+    font-weight:bold;
+    display:inherit;
+    padding:5px;
+}
+
+.ModalWindow .ModalMainContent span
+{
+    display:inline;
+}
+
+#MainContentArea .ModalWindow ul li, #MainContentArea .ModalWindow ol li
+{
+    margin-left:15px;
+}
+* #MainContentArea .ModalWindow ul li, * #MainContentArea .ModalWindow ol li
+{
+    margin-left:18px;
+}
+
+/****************************************
+Printing
+***************************************/
+.BlankSpacer, .BlankSpacerLarge, .BlankSpacerLarger
+{
+    width:525px;
+    border-bottom:1px solid Black;
+}
+
+.BlankSpacerLarge, .BlankSpacerLarger
+{
+    height: 100px;
+    border: 1px solid Black;
+}
+
+.BlankSpacerLarger
+{
+    height: 400px;
+}
+
+.PrintTable
+{
+    border-spacing:10px;   
+}
+
+.PrintTable td.SubTitle
+{
+    width:25px;
+}
+
+/***********************************
+Help Link Icon
+/***********************************/
+
+.HelpLink, .HelpLinkSmall, .HelpLinkPrint
+{
+    width: 16px;
+    height: 16px;
+    background: url('help.gif') no-repeat center;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.HelpLinkSmall
+{
+    width:10px;
+    height:10px;
+    background:url('help.gif') no-repeat center;
+    cursor: pointer;
+}
+
+.HelpLinkPrint
+{
+    padding:0px;
+    margin-right:10px;
+}
+
+/***********************************
+Information Access Guide 
+***************************************/
+/* Uncomment this out to show the dynamic bookmark menu for the user guide.
+#floatMenu
+{    
+    position: absolute;
+    border: 1px outset #185A9C;
+    width: 15%;
+    z-index: 9999;
+    background-color: #D2E0ED;
+    overflow: auto;
+    padding: 5px 2px 5px 2px;
+    border-radius:15px;
+}
+
+#floatMenu > div:first-child
+{
+    text-align:center;  
+}
+
+#floatMenu hr
+{
+    color: #185A9C;
+    height:1px;
+    background-color: #185A9C;
+    width:75%;
+}
+
+#floatMenu ol
+{
+    list-style-type: upper-roman;
+    padding-left:30px;
+}
+
+#floatMenu li
+{
+    margin: 0px;
+    padding: 1px 1px 0px 0px;
+    margin-left: 5px;
+    * margin-left:-25px;
+}
+
+#floatMenu ol li a span, #floatMenu a
+{
+    font-weight:bold; 
+    font-size:10px; 
+    color: #185A9C;  
+}
+
+#floatMenu ol li a span:hover, #floatMenu a:hover
+{
+    text-decoration:underline;
+}
+*/
+/* END  */
+/* START  */
+.initialHide {      display:none;}
+.tableContainer{    display:table;
+					padding-top:10px;
+				}
+.row{           display:table-row;}
+.left, .right{  display:table-cell;
+				padding-right:20px;                      
+				}   
+					  
+.mousepointer { cursor: pointer; }
+.link{ color:#00008B;
+	text-decoration: underline;
+	cursor:pointer;	
+}
+/*
+.x-grid-cell {
+	background-color: Fuchsia !important;	
+	background: blue !important;
+}
+
+.x-grid-row 
+{
+	background-color: Lime !important;
+	background: yellow !important;
+}
+
+.x-grid-row-alt 
+{	
+	color: #ba0 !important; 
+	background-color: Black !important; 
+	background: #800 !important;
+}*/
+
+.DocLink
+{
+    color:blue;
+    cursor:pointer;
+    text-decoration:underline;
+}
+
+#frmPDF 
+{
+    width: 100%;
+    /* height: 500px; */
+}
+
+.TableResults
+{
+    width:100%;
+    border: thin solid #99bce8;
+}
+
+.TableResults tr th
+{
+    text-align:center;
+    background-color:#99bce8;
+    cursor:pointer;
+    font-size: 14px;
+    text-decoration:underline;
+    padding-top:2px;
+    padding-bottom:2px;
+    color:blue;
+}
+
+.TableResults tr td
+{
+    padding-left:2px;
+    font-family: Arial;
+    border: thin solid silver;
+}
+
+.Label
+{
+    font-weight:bold;
+}
+
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
+}
+
+.SubjectColumn
+{
+    width:60%;
+}
+
+.PDFViewerControls
+{
+    text-align:center;
+    background-color:#99bce8;
+    padding:2px;
+}
+
+input
+{
+    font-family: Arial;
+}
+
+.NavButton
+{
+    text-decoration: none;
+    display: inline-block;
+    padding: 6px 16px;
+    background-color: #f1f1f1;
+    color: black;
+    border-radius: 25%;
+    font-size:large;
+    font-weight:bold;
+}
+
+.NavButton:hover 
+{
+    background-color: #ddd;
+    color: black;
+}
+
+.PageBox
+{
+    width:50px;
+}
+
+.ResultsArea
+{
+    font-weight:bold;
+    font-family: Arial;
+}
+/* END  */
+/* START Telerik.Web.UI.Skins.ToolTip.css */
+.RadToolTip.rtLoading{width:auto;height:100%}div.RadToolTip{position:absolute;cursor:default}div.RadToolTip div.rtCallout{display:none}div.RadToolTip.rtVisibleCallout div.rtCallout{display:block}div.RadToolTip table.rtWrapper{padding:0;margin:0;border-collapse:collapse}.RadToolTip table.rtWrapper td.rtWrapperTopLeft,.RadToolTip table.rtWrapper td.rtWrapperTopRight,.RadToolTip table.rtWrapper td.rtWrapperBottomLeft,.RadToolTip table.rtWrapper td.rtWrapperBottomRight{width:3px;height:3px;line-height:1px;font-size:1px;background-color:transparent;background-repeat:no-repeat}div.RadToolTip table.rtWrapper td.rtWrapperTopLeft{background-position:0 -12px}div.RadToolTip table.rtWrapper td.rtWrapperTopRight{background-position:right -12px}div.RadToolTip table.rtWrapper td.rtWrapperBottomLeft{background-position:0 -63px}div.RadToolTip table.rtWrapper td.rtWrapperBottomRight{background-position:right -63px}div.RadToolTip table.rtWrapper td.rtWrapperTopCenter,div.RadToolTip table.rtWrapper td.rtWrapperBottomCenter{height:3px;line-height:0;font-size:1px;background-repeat:repeat-x}div.RadToolTip table.rtWrapper td.rtWrapperTopCenter{background-position:0 -66px}div.RadToolTip table.rtWrapper td.rtWrapperBottomCenter{background-position:0 -120px}div.RadToolTip table.rtWrapper td.rtWrapperLeftMiddle,div.RadToolTip table.rtWrapper td.rtWrapperRightMiddle{background-repeat:repeat-y;font-size:1px;width:3px}div.RadToolTip table.rtWrapper td.rtWrapperLeftMiddle{background-position:0 0}div.RadToolTip table.rtWrapper td.rtWrapperRightMiddle{background-position:-3px 0}div.RadToolTip table.rtWrapper td.rtWrapperContent{font:normal 12px "Segoe UI",Arial,Sans-serif;height:100%;padding:7px}div.RadToolTip div.rtTitlebar{font:normal 16px/22px "Segoe UI",Arial,Sans-serif;float:left;line-height:22px;margin:7px 0 0 7px}div.RadToolTip a.rtCloseButton{display:block;float:right;position:absolute;right:-7px;top:-7px;width:16px;height:16px;font-size:1px;line-height:1px;background-position:0 -250px;background-repeat:no-repeat;text-indent:-9999px;outline:none}div.RadToolTip a.rtCloseButton:hover{background-position:0 -270px}div.RadToolTip .rtShadow a.rtCloseButton{right:-9px;top:-10px}*+html div.RadToolTip .rtShadow a.rtCloseButton{top:-13px}div.RadToolTip_rtl a.rtCloseButton,div.RadToolTip_rtl a.rtCloseButton:hover{float:left;text-decoration:none;outline:none;left:-6px;margin-left:1px;right:auto;margin-right:auto}div.RadToolTip_rtl table.rtShadow td a.rtCloseButton,div.RadToolTip_rtl table.rtShadow td a.rtCloseButton:hover{left:-2px;margin-right:auto}*+html div.RadToolTip_rtl table.rtShadow td a.rtCloseButton{left:6px;right:auto}div.RadToolTip_rtl div.rtTitlebar,div.RadToolTip_rtl table.rtWrapper td.rtWrapperTopCenter div.rtTitlebar div{float:right;margin-right:7px}div.RadToolTip_rtl .rtCalloutCenter{right:0;left:auto}.RadToolTip_rtl .rtCalloutTopLeft{margin-right:-8px;left:0}.RadToolTip_rtl .rtCalloutTopCenter{margin-right:10px}.RadToolTip_rtl .rtCalloutTopRight{margin-right:20px}.RadToolTip_rtl .rtCalloutBottomCenter{margin-right:10px}.RadToolTip_rtl .rtCalloutBottomRight{margin-right:40px}.RadToolTip_rtl .rtCalloutBottomLeft{margin-right:-20px;left:0}.RadToolTip_rtl .rtCalloutMiddleLeft{margin-right:10px;left:0}.RadToolTip_rtl .rtCalloutMiddleRight{margin-right:1px}div.RadToolTip_rtl .rtShadow .rtCloseButton,div.RadToolTip_rtl .rtShadow a.rtCloseButton:hover{left:10px}*+html div.RadToolTip_rtl .rtShadow .rtCloseButton,*+html div.RadToolTip_rtl .rtShadow a.rtCloseButton:hover{left:17px}div.RadToolTip div.rtCallout{position:absolute;height:11px;width:11px;line-height:0;font-size:1px;background-repeat:no-repeat}div.RadToolTip .rtCalloutCenter{visibility:hidden}.RadToolTip .rtCalloutTopLeft{margin-top:-10px;margin-left:20px;background-position:0 -22px}.RadToolTip .rtCalloutTopCenter{left:50%;margin-top:-9px;margin-left:-10px;background-position:0 0}.RadToolTip .rtCalloutTopRight{left:100%;margin-top:-10px;margin-left:-20px;background-position:0 -11px}.RadToolTip .rtCalloutBottomCenter{top:100%;left:50%;margin-left:-10px;margin-top:-1px;background-position:0 -55px}.RadToolTip .rtCalloutBottomRight{top:100%;left:100%;margin-left:-40px;margin-top:-1px;background-position:0 -66px}.RadToolTip .rtCalloutBottomLeft{top:100%;margin-left:20px;margin-top:-1px;background-position:0 -77px}.RadToolTip .rtCalloutMiddleLeft{top:50%;margin-left:-10px;margin-top:-7px;background-position:0 -44px}.RadToolTip .rtCalloutMiddleRight{left:100%;top:50%;margin-left:-1px;margin-top:-10px;background-position:0 -33px}.RadToolTip table.rtWrapper td.rtWrapperTopLeft,.RadToolTip table.rtWrapper td.rtWrapperTopCenter,.RadToolTip table.rtWrapper td.rtWrapperTopRight,.RadToolTip table.rtWrapper td.rtWrapperLeftMiddle,.RadToolTip table.rtWrapper td.rtWrapperContent,.RadToolTip table.rtWrapper td.rtWrapperRightMiddle,.RadToolTip table.rtWrapper td.rtWrapperBottomLeft,.RadToolTip table.rtWrapper td.rtWrapperBottomCenter,.RadToolTip table.rtWrapper td.rtWrapperBottomRight{padding:0;border:0;border-collapse:collapse}.RadToolTip table.rtShadow td.rtWrapperTopLeft,.RadToolTip table.rtShadow td.rtWrapperTopRight,.RadToolTip table.rtShadow td.rtWrapperBottomLeft,.RadToolTip table.rtShadow td.rtWrapperBottomRight{width:7px;height:7px;line-height:1px;font-size:1px;background-color:transparent;background-repeat:no-repeat}div.RadToolTip table.rtShadow td.rtWrapperTopLeft{background-position:0 -128px}div.RadToolTip table.rtShadow td.rtWrapperTopRight{background-position:-9px -128px}div.RadToolTip table.rtShadow td.rtWrapperBottomLeft{background-position:0 -135px}div.RadToolTip table.rtShadow td.rtWrapperBottomRight{background-position:-9px -135px}div.RadToolTip table.rtShadow td.rtWrapperTopCenter,div.RadToolTip table.rtShadow td.rtWrapperBottomCenter{height:7px;line-height:0;font-size:1px;background-repeat:repeat-x}div.RadToolTip table.rtShadow td.rtWrapperTopCenter{background-position:0 -145px}div.RadToolTip table.rtShadow td.rtWrapperBottomCenter{background-position:0 -152px}div.RadToolTip table.rtShadow td.rtWrapperLeftMiddle,div.RadToolTip table.rtShadow td.rtWrapperRightMiddle{background-repeat:repeat-y;font-size:1px;width:7px}div.RadToolTip table.rtShadow td.rtWrapperLeftMiddle{background-position:-7px 0}div.RadToolTip table.rtShadow td.rtWrapperRightMiddle{background-position:-14px 0}.RadToolTip.rtShadow .rtCalloutTopLeft,.RadToolTip.rtShadow .rtCalloutTopRight{margin-top:-4px}.RadToolTip.rtShadow .rtCalloutTopCenter{margin-top:-3px}.RadToolTip.rtShadow .rtCalloutMiddleRight{margin-left:-7px}.RadToolTip.rtShadow .rtCalloutMiddleLeft{margin-left:-4px}.RadToolTip.rtShadow .rtCalloutBottomRight,.RadToolTip.rtShadow .rtCalloutBottomCenter,.RadToolTip.rtShadow .rtCalloutBottomLeft{margin-top:-7px}div.RadToolTip table.rtShadow a.rtCloseButton{margin-top:6px;margin-right:8px}*+html div.RadToolTip table.rtShadow a.rtCloseButton{margin-top:10px;margin-right:8px}*+html div.RadToolTip_rtl.rtShadow .rtCalloutMiddleLeft{margin-right:4px!important}div.RadToolTip table.rtShadow .rtVisibleTitleBar td.rtWrapperTopLeft{background-position:0 -205px}div.RadToolTip table.rtShadow .rtVisibleTitleBar td.rtWrapperTopCenter{background-position:0 -165px}div.RadToolTip table.rtShadow .rtVisibleTitleBar td.rtWrapperTopRight{background-position:-7px -205px}
+/* END Telerik.Web.UI.Skins.ToolTip.css */
+/* START Telerik.Web.UI.Skins.Metro.ToolTip.Metro.css */
+.RadToolTip_Metro.rtLoading{background-image:url('loading.gif');background-repeat:no-repeat;background-position:center center}div.RadToolTip_Metro{position:absolute;cursor:default}div.RadToolTip_Metro div.rtCallout{display:none}div.RadToolTip_Metro.rtVisibleCallout div.rtCallout{display:block}div.RadToolTip_Metro table.rtWrapper{padding:0;margin:0;border-collapse:collapse}div.RadToolTip_Metro table.rtWrapper td.rtWrapperTopLeft,div.RadToolTip_Metro table.rtWrapper td.rtWrapperTopRight,div.RadToolTip_Metro table.rtWrapper td.rtWrapperBottomLeft,div.RadToolTip_Metro table.rtWrapper td.rtWrapperBottomRight{width:3px;height:3px;line-height:1px;font-size:1px}div.RadToolTip_Metro table.rtWrapper td.rtWrapperTopCenter,div.RadToolTip_Metro table.rtWrapper td.rtWrapperBottomCenter,div.RadToolTip_Metro table.rtWrapper td.rtWrapperTopLeft,div.RadToolTip_Metro table.rtWrapper td.rtWrapperTopRight,div.RadToolTip_Metro table.rtWrapper td.rtWrapperBottomLeft,div.RadToolTip_Metro table.rtWrapper td.rtWrapperBottomRight,div.RadToolTip_Metro table.rtWrapper td.rtWrapperTopCenter,div.RadToolTip_Metro table.rtWrapper td.rtWrapperBottomCenter,div.RadToolTip_Metro table.rtWrapper td.rtWrapperLeftMiddle,div.RadToolTip_Metro table.rtWrapper td.rtWrapperRightMiddle{background-color:#25a0da}div.RadToolTip_Metro table.rtWrapper td.rtWrapperTopCenter,div.RadToolTip_Metro table.rtWrapper td.rtWrapperBottomCenter{height:3px;line-height:0;font-size:1px}div.RadToolTip_Metro table.rtWrapper td.rtWrapperTopCenter{background-position:0 -66px}div.RadToolTip_Metro table.rtWrapper td.rtWrapperBottomCenter{background-position:0 -120px}div.RadToolTip_Metro table.rtWrapper td.rtWrapperLeftMiddle,div.RadToolTip_Metro table.rtWrapper td.rtWrapperRightMiddle{font-size:1px;width:3px}div.RadToolTip_Metro table.rtWrapper td.rtWrapperLeftMiddle{background-position:0 0}div.RadToolTip_Metro table.rtWrapper td.rtWrapperRightMiddle{background-position:-3px 0}div.RadToolTip_Metro table.rtWrapper td.rtWrapperContent{font:normal 12px "Segoe UI",Arial,Sans-serif;height:100%;background-color:#25a0da;padding:7px!important;color:#fff}div.RadToolTip_Metro .rtWrapperTopCenter div.rtTitlebar{color:#fff;font:normal 14px "Segoe UI",Arial,Sans-serif;text-transform:uppercase;float:left;line-height:22px}div.RadToolTip_Metro a.rtCloseButton{display:block;float:right;position:absolute;right:-9px;top:-13px;width:16px;height:16px;font-size:1px;line-height:1px;margin-top:5px;margin-right:3px;background-image:url('/WebResource.axd?d=r72SmSM0QmXZqkZE-LX9dqrzS5FhPTGOkeqS4HU44blKrgLQ8KjkN5yx4Dsa1HAEodfsxV6u5ZAhNAXibRYDczbzbTvpsG3758BMOYrdz4HVxEpsjVscd5P0etiBJPuu_LqciMFasEzLwe5PBydlRODodzNywqfUMeVyvCdcmK6yMD4NddNkyiu6LMbg93V80&t=636740795599862676');background-position:0 0;background-repeat:no-repeat;text-indent:-9999px;outline:none}div.RadToolTip_Metro a.rtCloseButton:hover{background-position:0 -16px}div.RadToolTip_Metro_rtl a.rtCloseButton,div.RadToolTip_Metro_rtl a.rtCloseButton:hover{float:left;text-decoration:none;outline:none;left:-9px;top:-9px;margin-left:1px;right:auto;margin-right:auto}div.RadToolTip_Metro_rtl div.rtTitlebar,div.RadToolTip_Metro_rtl table.rtWrapper td.rtWrapperTopCenter div.rtTitlebar div{float:right}div.RadToolTip_Metro_rtl .rtCalloutCenter{right:0;left:auto}.RadToolTip_Metro_rtl .rtCalloutTopLeft{margin-right:-8px;left:0}.RadToolTip_Metro_rtl .rtCalloutTopCenter{margin-right:10px}.RadToolTip_Metro_rtl .rtCalloutTopRight{margin-right:20px}.RadToolTip_Metro_rtl .rtCalloutBottomCenter{margin-right:10px}.RadToolTip_Metro_rtl .rtCalloutBottomRight{margin-right:40px}.RadToolTip_Metro_rtl .rtCalloutBottomLeft{margin-right:-20px;left:0}.RadToolTip_Metro_rtl .rtCalloutMiddleLeft{margin-right:10px;left:0}.RadToolTip_Metro_rtl .rtCalloutMiddleRight{margin-right:1px}*+html div.RadToolTip_Metro.RadToolTip_rtl.rtShadow .rtCalloutMiddleLeft{margin-right:10px!important}div.RadToolTip_Metro.RadToolTip_rtl.rtShadow a.rtCloseButton,div.RadToolTip_Metro.RadToolTip_rtl.rtShadow a.rtCloseButton:hover{float:left;left:-9px;top:-9px;right:auto}div.RadToolTip_Metro div.rtCallout{position:absolute;height:11px;width:11px;line-height:0;font-size:1px;background-image:url('/WebResource.axd?d=o8W2mBsd9lFhFFlv5YJR9-Ier3kFsatlrbpNf7mPEt41jqOfXj7WRuusOo_pa73buHuWzzU552d_G_woMdpCBGbVdYvbMupDaEj1L7jDrzU30LAGEUXi-ox01ekJVKlclGo0SAllqeq2M-Sat025NMCwD5X5bvK9PNV74f1Ys241&t=636740795599862676');background-repeat:no-repeat}div.RadToolTip_Metro .rtCalloutCenter{visibility:hidden}.RadToolTip_Metro .rtCalloutTopLeft{margin-top:-10px;margin-left:20px;background-position:0 -22px}.RadToolTip_Metro .rtCalloutTopCenter{left:50%;margin-top:-9px;margin-left:-10px;background-position:0 0}.RadToolTip_Metro .rtCalloutTopRight{left:100%;margin-top:-10px;margin-left:-20px;background-position:0 -11px}.RadToolTip_Metro .rtCalloutBottomCenter{top:100%;left:50%;margin-left:-10px;margin-top:-1px;background-position:0 -55px}.RadToolTip_Metro .rtCalloutBottomRight{top:100%;left:100%;margin-left:-40px;margin-top:-1px;background-position:0 -66px}.RadToolTip_Metro .rtCalloutBottomLeft{top:100%;margin-left:20px;margin-top:-1px;background-position:0 -77px}.RadToolTip_Metro .rtCalloutMiddleLeft{top:50%;margin-left:-10px;margin-top:-7px;background-position:0 -44px}.RadToolTip_Metro .rtCalloutMiddleRight{left:100%;top:50%;margin-left:-1px;margin-top:-10px;background-position:0 -33px}div.RadToolTip_Metro table.rtWrapper td.rtWrapperTopLeft,div.RadToolTip_Metro table.rtWrapper td.rtWrapperTopCenter,div.RadToolTip_Metro table.rtWrapper td.rtWrapperTopRight,div.RadToolTip_Metro table.rtWrapper td.rtWrapperLeftMiddle,div.RadToolTip_Metro table.rtWrapper td.rtWrapperContent,div.RadToolTip_Metro table.rtWrapper td.rtWrapperRightMiddle,div.RadToolTip_Metro table.rtWrapper td.rtWrapperBottomLeft,div.RadToolTip_Metro table.rtWrapper td.rtWrapperBottomCenter,div.RadToolTip_Metro table.rtWrapper td.rtWrapperBottomRight{padding:0;border:0;border-collapse:collapse}div.RadToolTip_Metro table.rtWrapper td.rtWrapperBottomCenter,div.RadToolTip_Metro table.rtWrapper td.rtWrapperBottomRight,div.RadToolTip_Metro table.rtWrapper td.rtWrapperBottomLeft{border-bottom:solid 1px #25a0da}div.RadToolTip_Metro table.rtWrapper td.rtWrapperBottomRight,div.RadToolTip_Metro table.rtWrapper td.rtWrapperRightMiddle,div.RadToolTip_Metro table.rtWrapper td.rtWrapperTopRight{border-right:solid 1px #25a0da}div.RadToolTip_Metro table.rtWrapper td.rtWrapperTopRight,div.RadToolTip_Metro table.rtWrapper td.rtWrapperTopCenter,div.RadToolTip_Metro table.rtWrapper td.rtWrapperTopLeft{border-top:solid 1px #25a0da}div.RadToolTip_Metro table.rtWrapper td.rtWrapperTopLeft,div.RadToolTip_Metro table.rtWrapper td.rtWrapperLeftMiddle,div.RadToolTip_Metro table.rtWrapper td.rtWrapperBottomLeft{border-left:solid 1px #25a0da}div.RadToolTip_Metro.rtShadow .rtCalloutTopLeft,div.RadToolTip_Metro.rtShadow .rtCalloutTopRight{margin-top:-10px}div.RadToolTip_Metro.rtShadow .rtCalloutTopCenter{margin-top:-9px}div.RadToolTip_Metro.rtShadow .rtCalloutMiddleRight{margin-left:-1px}div.RadToolTip_Metro.rtShadow .rtCalloutMiddleLeft{margin-left:-10px}div.RadToolTip_Metro.rtShadow .rtCalloutBottomRight,div.RadToolTip_Metro.rtShadow .rtCalloutBottomCenter,div.RadToolTip_Metro.rtShadow .rtCalloutBottomLeft{margin-top:-1px}div.RadToolTip_Metro table.rtShadow td a.rtCloseButton{margin-right:auto;margin-top:auto}div.RadToolTip_Metro .rtShadow td a.rtCloseButton{right:-7px;top:-7px}div.RadToolTip_Metro.RadToolTip_rtl td a.rtCloseButton{right:auto}
+/* END Telerik.Web.UI.Skins.Metro.ToolTip.Metro.css */
