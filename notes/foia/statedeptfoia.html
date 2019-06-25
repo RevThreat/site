@@ -146,7 +146,7 @@
         <div id="wrapper">
             <script type="text/javascript">
                 //<![CDATA[
-                Sys.WebForms.PageRequestManager._initialize('ctl00$rsmFOIAScripts', 'form1', ['tctl00$rttManagerRTMPanel', '', 'tctl00$uplGenericSearchContent', 'uplGenericSearchContent', 'tctl00$uplMainContent', 'uplMainContent'], [], [], 90, 'ctl00');
+                //Sys.WebForms.PageRequestManager._initialize('ctl00$rsmFOIAScripts', 'form1', ['tctl00$rttManagerRTMPanel', '', 'tctl00$uplGenericSearchContent', 'uplGenericSearchContent', 'tctl00$uplMainContent', 'uplMainContent'], [], [], 90, 'ctl00');
                 //]]>
             </script>
 
@@ -161,13 +161,13 @@
                 <div id="LogoArea">
 
                     <div style="float: left; cursor: pointer" onclick="window.location='/';" onkeypress="window.location='/';">
-                        <img id="LogoSeal" src="logo_small.png" alt="Seal of the U.S. Department of State" />
+                        <img id="LogoSeal" src="logo_small.png" height="60" width="60" alt="Seal of the U.S. Department of State" />
                     </div>
 
                     <div style="float: left; cursor: pointer" onclick="window.location='/';" onkeypress="window.location='/';">
                         <img id="LogoTitle" src="title_small.png" alt="U.S. Department of State: Freedom of Information Act" />
                         <div id="tagline" style="color: #E5DBD1;">
-                            Freedom of Information Act
+                             &nbsp;Freedom of Information Act
                         </div>
                     </div>
 
@@ -279,9 +279,9 @@
 
                         <script type="text/javascript">
                             //The tooltipmanager has to be loaded during this event.
-                            Sys.Application.add_load(function() {
-                                window.UserControls.LinkList.OnLoad('ctl00_rttManager');
-                            });
+                            //Sys.Application.add_load(function() {
+                            //    window.UserControls.LinkList.OnLoad('ctl00_rttManager');
+                            //});
                         </script>
                         <!-- Start Our Stuff -->
                         <div class="LinkContent" name='News'>
@@ -437,44 +437,6 @@
                 tabIndex: 4,
                 disabled: false
             });
-        </script>
-        <script type="text/javascript">
-            //<![CDATA[
-            ;
-            (function() {
-                function loadHandler() {
-                    var hf = $get('rssmFOIAStyles_TSSM');
-                    if (!hf._RSSM_init) {
-                        hf._RSSM_init = true;
-                        hf.value = '';
-                    }
-                    hf.value += ';|636852322664223737:4af999ef:17b84db7;Telerik.Web.UI, Version=2012.1.411.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4:en-US:ebfa5361-1bb0-4d72-bf6d-db0befdf104a:53e1db5a;Telerik.Web.UI.Skins, Version=2012.1.411.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4:en-US:45c8f008-e8e7-48f6-a5be-f77628933227:7e226990';
-                    Sys.Application.remove_load(loadHandler);
-                };
-                Sys.Application.add_load(loadHandler);
-            })();
-            WebForm_AutoFocus('cphLeftMenu_mnuLeftMenu');
-            Sys.Application.add_init(function() {
-                $create(Telerik.Web.UI.RadToolTipManager, {
-                    "_cssClass": "",
-                    "_manualCloseButtonText": "Close",
-                    "_updatePanelUniqueId": "ctl00$rttManagerRTMPanel",
-                    "clientStateFieldID": "ctl00_rttManager_ClientState",
-                    "formID": "form1",
-                    "isToolTipFactory": true,
-                    "loadOnDemand": false,
-                    "skin": "Metro",
-                    "targetControls": "[]"
-                }, null, null, $get("ctl00_rttManager"));
-            });
-            Sys.Application.add_init(function() {
-                $create(Sys.UI._UpdateProgress, {
-                    "associatedUpdatePanelId": "uplMainContent",
-                    "displayAfter": 500,
-                    "dynamicLayout": true
-                }, null, null, $get("uprogProcessing"));
-            });
-            //]]>
         </script>
     </form>
 </body>
