@@ -1,0 +1,162 @@
+<html>
+<head>
+<title>20190709</title>
+<meta charset="utf-8">
+<style>
+      body { color: white; background-color: black; }
+@font-face { font-family: "unscii"; src: url("unscii-16.woff") format('woff'); }
+       pre { font-family: "unscii", "Lucida Console", monospace, Monaco; font-size: 16px; line-height: 1.0; }
+         a { color: #9de9a9;  text-decoration: none; }
+         o { color: #aaa2d0; }
+         c { color: #f5ff98; }
+        lg { color: #9de9a9; }
+         r { color: #ff98f5; }
+         w { color: #ffffff; }
+        bg { background-color: #0d1720; }
+
+</style>
+</head>
+<body>
+<center><div style="display: inline-block; text-align: left;"><pre>
+root@thugs.mil.es:~# bluetoothctl
+[<lg>NEW</lg>] Controller EE:EE:EE:EE:EE:EE [default]
+[bluetooth]# power on
+[<c>CHG</c>] Controller EE:EE:EE:EE:EE:EE Class: 0x300100
+Changing power on succeeded
+[<c>CHG</c>] Controller EE:EE:EE:EE:EE:EE Powered: yes
+[bluetooth]# pairable on
+Changing pairable on succeeded
+[bluetooth]# scan on
+Discovery started
+[<c>CHG</c>] Controller EE:EE:EE:EE:EE:EE Discovering: yes
+[bluetooth]# random: nonblocking pool is initialized
+[<lg>NEW</lg>] Device B8:6C:E8:60:C0:8F Galaxy S9
+[<lg>NEW</lg>] Device 74:68:75:2E:67:67 thug0
+[bluetooth]# scan off
+[<c>CHG</c>] Device 74:68:75:2E:67:67 RSSI is nil
+[<c>CHG</c>] Device B8:6C:E8:60:C0:8F RSSI is nil
+[<c>CHG</c>] Controller EE:EE:EE:EE:EE:EE Discovering: no
+Discovery stopped
+[bluetooth]# pair 74:68:75:2E:67:67
+Attempting to pair with 74:68:75:2E:67:67
+[<c>CHG</c>] Device 74:68:75:2E:67:67 Connected: yes
+[<c>CHG</c>] Device 74:68:75:2E:67:67 UUIDs: 00001105-0000-1000-8000-00805f9b34fb
+[<c>CHG</c>] Device 74:68:75:2E:67:67 UUIDs: 0000110a-0000-1000-8000-00805f9b34fb
+[<c>CHG</c>] Device 74:68:75:2E:67:67 UUIDs: 0000110c-0000-1000-8000-00805f9b34fb
+[<c>CHG</c>] Device 74:68:75:2E:67:67 UUIDs: 0000111f-0000-1000-8000-00805f9b34fb
+[<c>CHG</c>] Device 74:68:75:2E:67:67 Paired: yes
+Pairing successful
+[<c>CHG</c>] Device 74:68:75:2E:67:67 Connected: no
+[bluetooth]# trust 74:68:75:2E:67:67
+[<c>CHG</c>] Device 74:68:75:2E:67:67 Trusted: yes
+Changing 74:68:75:2E:67:67 trust succeeded
+[bluetooth]# info 74:68:75:2E:67:67
+<o>Device</o> 74:68:75:2E:67:67
+<o>Name:</o> thug0
+<o>Alias:</o> TwitchViewbot
+<o>Class:</o> 0x5d253f98
+<o>Icon:</o> phone
+<o>Paired:</o> yes
+<o>Trusted:</o> yes
+<o>Blocked:</o> no
+<o>Connected:</o> no
+<o>LegacyPairing:</o> no
+<o>UUID:</o> OBEX Object Push (00001105-0000-1000-8000-00805f9b34fb)
+<o>UUID:</o> Audio Source (0000110a-0000-1000-8000-00805f9b34fb)
+<o>UUID:</o> A/V Remote Control Target (0000110c-0000-1000-8000-00805f9b34fb)
+<o>UUID:</o> Handsfree Audio Gateway (0000111f-0000-1000-8000-00805f9b34fb)
+[bluetooth]# quit
+[<r>DEL</r>] Controller EE:EE:EE:EE:EE:EE [default]
+root@thugs.mil.es:~# DBUS_SESSION_BUS_ADDRESS=unix:path=/var/run/dbus/system_bus_socket obexctl
+[<lg>NEW</lg>] Client /org/bluez/obex 
+[obex]# connect 74:68:75:2E:67:67
+Attempting to connect to 74:68:75:2E:67:67
+[<lg>NEW</lg>] Session /org/bluez/obex/client/session0 [default]
+[<lg>NEW</lg>] ObjectPush /org/bluez/obex/client/session0 
+Connection successful
+[74:68:75:2E:67:67]# send /dev/shm/.thugkit0/20190709.apk
+Attempting to send /dev/shm/.thugkit0/20190709.apk to /org/bluez/obex/client/session0
+[<lg>NEW</lg>] Transfer /org/bluez/obex/client/session0/transfer0 
+Transfer /org/bluez/obex/client/session0/transfer0
+        Status: queued
+        Name: 20190709.apk
+        Size: 42000
+        Filename: /dev/shm/.thugkit0/20190709.apk
+        Session: /org/bluez/obex/client/session0
+[<c>CHG</c>] Transfer /org/bluez/obex/client/session0/transfer0 Status: complete
+[<r>DEL</r>] Transfer /org/bluez/obex/client/session0/transfer0 
+^C 
+root@thugs.mil.es:~# apktool d 20190709.apk
+root@thugs.mil.es:~# cat 20190709/NOTES.NFO
+                             ┌─────────────────────┐             ┌────────────────────┐
+                             │                     │             │                    │
+                             │     ┌───────┐       │             │        ┌─────────┐ │
+       ┌─────┐               │     │  ┌─┐┌─┼─┐    ┌──┐  ┌────┐   │        │   ┌───┐ │ │
+       │┌──┐ │┌────┐  ┌─┐    │┌─┐┌─┼──┼─┘│┌┼─┼─┐┌─┼──┼─┐│┌───┼─┐┌┼┐ ┌─┐  ┌┼┐┌─┼──┐│ │ │
+       │└──┼─┼┼────┘  │ │┌─┐ ││ ││┌┼──┘  │││ │ ││┌┼──┼─┼┼┼───┼┐││││ │ │  ││││┌┼──┼┼┐│ │
+       │   │ │└──┐┌┐  │ ││ │ ││ ││││     │││ └─┘││││ │ │││   ││││││ │ │  ││││││  ││││ │
+       │   │ │   │││  │ ││ │ ││ ││││     │││    │└┼│─┼─┘││   ││││││ │ │  ││││││  ││││ │
+       │   │ │   │└┼──┼─┘│ │ ││ ││││  ┌─┐│││    │┌┼│─┼─┐││   ││││││ │ │  ││││││  ││││ │
+       │   │ │   │ │  │┌┐│ │ ││ ││││  │ ││││    ││││ │ │││   ││││││ │ │  ││││││  ││││ │
+       │   │ │   │ │  ││││ │┌┘│ ││└┼──┼┐││││ ┌─┐││││ │ ││└───┼┘│└┼┼─┼─┼──┼┼┘│└┼──┼┘││ │
+       │   └─┘   └─┘  └┼┘└─┼┼─┼─┘└─┼──┼┼┘│└┼─┼─┘└┼┘│ └─┘└────┼─┘ └┼─┼─┼──┼┘ └─┼──┼─┘│ │
+       │               └───┘└┐└────┼──┘│ └─┘ └───┘ │         └────┘ │ └──┘    │  └──┘ │
+       │                     │     └───┘           │                └─────────┘       │
+       │                     │                     │                                  │
+       └─────────────────────┘                     └──────────────────────────────────┘
+       ┌─────────────────────┐ 20190709 - hackgnar ┌──────────────────────────────────┐
+       │                                                                              │
+       │   Tonight, we're talking to <a href="https://twitter.com/hackgnar">@hackgnar</a> about hardware, wireless and BLECTF!   │
+       │                                                                              │
+       ├── N E W S ───────────────────────────────────────────────────────────────────┤
+       │ ─ <a href="https://medium.com/bugbountywriteup/zoom-zero-day-4-million-webcams-maybe-an-rce-just-get-them-to-visit-your-website-ac75c83f4ef5">Zoom 0day</a>                                                                  │
+       │ ─ <a href="https://www.zdnet.com/article/canonical-github-account-hacked-ubuntu-source-code-safe/">Canonical GitHub account hacked, Ubuntu source code safe</a>                   │
+       │   ─ <a href="https://web.archive.org/web/20190706144600/https://github.com/CanonicalLtd">Archived Page</a>                                                            │
+       │ ─ <a href="https://www.computerweekly.com/news/252466203/Top-VPNs-secretly-owned-by-Chinese-firms">Top VPNs secretly owned by Chinese firms                                   </a>│
+       │ ─ <a href="https://www.databreachtoday.com/hackers-slurp-500000-through-7-eleven-mobile-payment-app-a-12729">Criminals Slurp $500,000 Through 7-Eleven Mobile Payment App               </a>│
+       │ ─ <a href="https://www.forbes.com/sites/gordonkelly/2019/07/06/microsoft-windows-10-upgrade-vpn-warning-upgrade-windows/#d7bd50453d52">Microsoft Issues Warning For 50M Windows 10 Users                          </a>│
+       │ ─ <a href="https://www.deccanherald.com/city/bengaluru-crime/tn-men-use-bluetooth-enabled-tablet-to-steal-cars-744639.html">TN men use Bluetooth-enabled tablet to steal cars                          </a>│
+       │ ─ <a href="https://apnews.com/0117a85d02ff4890b5a66f1c9f3c376e">Server image mystery in Georgia election security case                     </a>│
+       │ ─ <a href="https://www.zdnet.com/article/silence-hackers-hit-banks-in-bangladesh-india-sri-lanka-and-kyrgyzstan/">'Silence' hit banks in Bangladesh, India, Sri Lanka, and Kyrgyzstan        </a>│
+       │ ─ <a href="https://www.zdnet.com/article/logitech-wireless-usb-dongles-vulnerable-to-new-hijacking-flaws/">Logitech wireless USB dongles vulnerable to new hijacking flaws            </a>│
+       │ ─ <a href="https://www.digitalhealth.net/2019/07/calls-for-urgent-improvements-in-nhs-cyber-security-presented-to-parliament/">Calls for 'urgent' improvements in NHS cyber security presented to         </a>│
+       │   <a href="https://www.digitalhealth.net/2019/07/calls-for-urgent-improvements-in-nhs-cyber-security-presented-to-parliament/">Parliament                                                                 </a>│
+       │ ─ <a href="https://www.nytimes.com/2019/07/08/business/british-airways-data-breach-fine.html">After a Data Breach, British Airways Faces a Record Fine                   </a>│
+       │ ─ <a href="https://thenextweb.com/hardfork/2019/07/04/monero-cryptocurrency-security-flaw-bug-hackerone-disclosure-hack/">Monero security flaw could've seen XMR stolen from crypto exchanges        </a>│
+       │ ─ <a href="https://www.zdnet.com/article/philadelphia-federal-credit-union-customer-accounts-pilfered-by-hackers/">Philadelphia Federal Credit Union customer accounts pilfered by fraudsters </a>│
+       ├── A C T I O N ───────────────────────────────────────────────────────────────┤
+       │ ─ <a href="https://www.change.org/p/google-inc-a-clearly-defined-consistently-applied-youtube-content-policy">Petition for Google/Youtube regarding hacking video ban                    </a>│
+       │ ─ <a href="https://www.banfacialrecognition.com/">Fight For the Future - BAN FACIAL RECOGNITION                              </a>│
+       ├── G O O D R E A D S ─────────────────────────────────────────────────────────┤
+       │ ─ <a href="https://www.forbes.com/sites/thomasbrewster/2019/07/02/exclusive-fbi-investigates-leak-of-1000-pages-of-top-secret-air-force-intelligence/#6aef1b542973">FBI Investigates Leak Of 1,000 Pages Of Top Secret Air Force Intelligence  </a>│
+       │ ─ <a href="https://danielmiessler.com/blog/youtubes-ban-of-hacking-videos-moves-us-closer-to-an-entertainment-only-world/">YouTube's Ban of Hacking Videos Moves Us Closer to an Entertainment-only   </a>│
+       │   <a href="https://danielmiessler.com/blog/youtubes-ban-of-hacking-videos-moves-us-closer-to-an-entertainment-only-world/">Public Sphere                                                              </a>│
+       │ ─ <a href="https://github.com/privy-cafe/discordspyware/blob/master/README.md">Discord Spyware                                                            </a>│
+       │ ─ <a href="https://github.com/mame82/UnifyingVulnsDisclosureRepo">Logitech Vulns Disclosed                                                   </a>│
+       │ ─ <a href="https://nakedsecurity.sophos.com/2019/07/04/open-sesame-zipatos-smart-hub-hacked-to-open-front-doors/">Open Sesame! Zipato's smart hub hacked to open front doors                 </a>│
+       ├── U S E F U L / P R O J E C T S  ────────────────────────────────────────────┤
+       │ ─ <a href="https://www.zdnet.com/google-amp/article/how-to-enable-dns-over-https-doh-in-firefox/">How to enable DNS-over-HTTPS in Firefox                                    </a>│
+       │ ─ <a href="https://concentrationcamps.us/">2600: concentrationcamps.us                                                </a>│
+       │ ─ <a href="https://github.com/motherboardgithub/bxaq">BXAQ/Fengcai APK                                                           </a>│
+       │ ─ <a href="https://www.bamsoftware.com/hacks/zipbomb/">"A Better Zip Bomb"                                                        </a>│
+       ├── C H E A T S  ──────────────────────────────────────────────────────────────┤
+       │ ─ <a href="https://medium.com/@technicalsyn/eternalrelayx-py-non-admin-ntlm-relaying-eternalblue-exploitation-dab9e2b97337">eternalrelayx.py — Non-Admin NTLM Relaying & ETERNALBLUE Exploitation      </a>│
+       ├── S A F A R I  ──────────────────────────────────────────────────────────────┤
+       │ ─ <a href="https://www.google.com/search?q=intext:"Pre-installed+scripts+including+the+phpbb+discussion+board"">[hermit] phpbb dork                                                        </a>│
+       │ ─ <a href="https://www.nhc.noaa.gov/archive/recon/1996/bertha/">[hermit] A whole lot of NOAA weather data                                  </a>│
+       │ ─ <a href="https://www.google.com/search?q=inurl:add_vhost.php">[hermit] WAMP Dork 1                                                       </a>│
+       │ ─ <a href='https://www.google.com/search?q=intitle:"wampserver homepage"'>[hermit] WAMP Dork 2                                                       </a>│
+       │ ─ <a href="https://twitter.com/leet_sauce/status/1146939640278114305">[leet_sauce] Toshiba: WAMP WAMP WAMP                                       </a>│
+       │ ─ <a href="http://13.234.115.157:8080/job/Jenkins%20Update/62/console">[plazmaz] Crypto mining via jenkins jobs                                   </a>│
+       │ ─ <a href="https://smallbusinesscommunity.org/award-press-poster/">[yuu] Small Business Community Award?                                      </a>│
+       │ ─ <a href="http://cartme.in/session_hijack/">[yuu] Someone's subtle session hijack tool [WARNING: MALICIOUS]            </a>│
+       │ ─ <a href="https://out7.hex-rays.com/files/">[x0] hex-rays file transfer                                                </a>│
+       │ ─ <a href="https://pastebin.com/raw/BQwFdk97">[x0] "this defacement"                                                     </a>│
+       │ ─ <a href="https://pastebin.com/4a9HXfCf">[x0] POC REGMEM                                                            </a>│
+       ├──────────────────────────────────────────────────────────────────────────────┤
+       │                                                                              │
+       │                          <a href="https://soundcloud.com/thugcrowd">W E E K L Y M I X</a> by <a href="https://twitter.com/0katz">@0katz</a>                         │
+       │                                                                              │
+       └──────────────────────────────────────────────────────────────────────────────┘
+
+</pre></div></center></body></html>

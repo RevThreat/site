@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>In Store Demo</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./public/css/hack.css"/>
+<style>
+@font-face {
+         font-family:"TopazPlus";
+         src: url(https://thugcrowd.com/public/fonts/topazplus120010.ttf); }
+  body { color: #DDDDDD; background-color: black; }
+   pre { font-family:"TopazPlus", "Lucida Console", monospace, Monaco;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;}
+     a { color: #54d7f9; text-decoration: none; }
+    ik { color: #74ee15; }
+     y { color: #f0c674; }
+    gr { color: #b5bd68; }
+     r { color: #9e0034; }
+     w { color: #ffffff; }
+  pink { color: #f4b6e5; }
+    bb { color: #5cc2ca; } /* baby blue */ 
+  purp { color: #7a80a2; }
+     l { color: #c5c8c6; }
+    lg { color: #9de9a9; }
+   sea { color: #93ff4c; }
+     p { color: #e5e5e5; font-family:"TopazPlus", "Lucida Console", monospace, Monaco; } 
+#binfo { width: 25%; float: left;}
+#linkz { width: 25%; float: left;}
+.pod {    
+          padding:4px;
+          text-align:center;
+          vertical-align:top;
+          border:1px solid white;
+          height:40vh;
+          width:50%;
+           }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+var ipinfo;
+$.getJSON("https://ipinfo.io", function (data) {
+   $("#ipinfo").html("<pink>IP:</pink> " + data.ip + "\n  <pink>City:</pink> " + data.city + "\n  <pink>Country:</pink> " + data.country + "\n  <pink>Loc:</pink> " + data.loc + "\n  <pink>Org:</pink> " + data.org + "\n  <pink>Postal Code:</pink> " + data.postal + "\n  <pink>Region:</pink> " + data.region + "")
+})
+</script>
+</head>
+<body onload="getInfo()">
+<center>
+  <div style="width:100%; text-align: left;">
+  <center>
+    <table style="width:50%;">
+      <tr>
+        <td colspan=2 align=center>
+          <pre>
+          <purp>
+--------------------------------------------------------------------------------</purp><ik>
+                              THUGCROWD KIOSK MODE                              </ik><purp>
+--------------------------------------------------------------------------------<pink>
+    
+                 ______________     ______      ___                             
+                 \   _    _   /----/     /_____/   \________                    
+                 /___/    /___\  _/     //    /    /   _    \                   
+                    /    //      \     //    /    /    /    /                   
+                   /_____\       /_____\ _________\_____   /                    
+                          \_____/       \/     \___________\                    
+              _________  ___________ ________ _______   _________               
+            _/        /_ )   ._    //  __    X      /___\______  \              
+            \     |__/  \_   |/  _/     /   //     /      /   /   >             
+             \    |       /  /    \_   /    /_    /\     /   /   /              
+              \__________/   \      /______/ /____/\___  X      /               
+                        \___/ \____/                   \/ \____/                </pink>
+
+--------------------------------------------------------------------------------
+                        <w>~ Make Your Selection, Hacker ~</w>                         
+--------------------------------------------------------------------------------</purp>
+          </pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="pod">
+        <div style="text-align:left;">
+          <pre>
+  <r>Browser Info</r>
+
+  <zz id="ipinfo"></zz>
+  <zz id="ua"></zz>
+  <zz id="geo"></zz>
+          </pre>
+        </div>
+        </td>
+        <td class="pod">
+        <div style="text-align:left;">
+        <pre>
+  <r>Useful Links</r>
+
+  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">RickRoll</a>
+  <a href="https://www.youtube.com/watch?v=57ycoIxU6gw">RickRoll (acoustic)</a>
+  <a href="https://www.youtube.com/watch?v=SXmv8quf_xM">nextgenhacker101</a>
+  <a href="https://thugcrowd.com">ThugCrowd Website</a>
+  <a href="https://twitter.com/thugcrowd">ThugCrowd Twitter</a>
+  <a href="https://thugcrowd.com/notes/20190716/">uWannaThug2.0</a>
+  <a href="http://nyan.cat">Nyan Cat</a>
+  <a href="file://C:/Windows/System32/cmd.exe">Open cmd.exe (Windows)</a>
+  <a href="market://details?id=com.termux">Open Play Store (Android)</a>
+  <a href="#" onclick="alert('OWNED');">alert('OWNED');</a>
+  <a href="tunnel.html">tunnel demo</a>
+  <a href="/dvd">DVD Screensaver</a>
+    </pre></div>
+    </td>
+  </tr>
+</table>
+</center>
+</div>
+</center>
+<script>
+var ua = document.getElementById("ua")
+var gl = document.getElementById("geo"); 
+
+function showPosition(position) {
+    gl.innerHTML = "<pink>Browser Geolocation:</pink> " + position.coords.latitude + ", " + position.coords.longitude; 
+}
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        gl.innerHTML = "<r>Geolocation is not supported by this browser.</r>";
+    }
+}
+
+function getInfo() {
+    var userAgent = "<pink>User-agent:</pink> " + navigator.userAgent;
+    ua.innerHTML = userAgent;
+    getLocation();
+}
+</script>
+</body>
+</html>
